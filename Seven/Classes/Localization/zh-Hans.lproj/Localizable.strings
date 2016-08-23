@@ -1,0 +1,37 @@
+/*
+  Localizable.strings
+  InternationDome
+
+  Created by HeDong on 16/7/3.
+  Copyright © 2016年 hedong. All rights reserved.
+*/
+
+/*******  VCTitle *******/
+homeText = "首页";
+lookForGameText = "找游戏";
+classifyText = "分类";
+makeMoneyText = "赚钱";
+squareText = "广场";
+meText = "我";
+
+/*******  NSDate *******/
+TimeText1 = "1分钟内";
+TimeText2 = "%.f分钟前";
+TimeText3 = "%.f小时前";
+TimeText4 = "%.f天前";
+TimeText5 = "M月d日";
+TimeText6 = "%.f年前";
+TimeText7 = "昨天 %@";
+TimeText8 = "昨天HH:mm";
+TimeText9 = "凌晨hh:mm";
+TimeText10 = "上午hh:mm";
+TimeText11 = "下午hh:mm";
+TimeText12 = "晚上hh:mm";
+TimeText13 = "昨天HH:mm";
+TimeText14 = "今天 %@";
+
+/*******  Test *******/
+apple = "苹果";
+woman = "女人";
+country = "国家";
+wife = "妻子";

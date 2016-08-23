@@ -1,0 +1,37 @@
+/*
+  Localizable.strings
+  InternationDome
+
+  Created by HeDong on 16/7/3.
+  Copyright © 2016年 hedong. All rights reserved.
+*/
+
+/*******  VCTitle *******/
+homeText = "Home";
+lookForGameText = "Game";
+classifyText = "Classify";
+makeMoneyText = "Money";
+squareText = "Square";
+meText = "Me";
+
+/*******  NSDate *******/
+TimeText1 = "one minute";
+TimeText2 = "%.f minutes ago";
+TimeText3 = "%.f hours ago";
+TimeText4 = "%.f days ago";
+TimeText5 = "M-d";
+TimeText6 = "%.f years ago";
+TimeText7 = "M-d %@";
+TimeText8 = "M-d HH:mm";
+TimeText9 = "aa hh:mm";
+TimeText10 = "aa hh:mm";
+TimeText11 = "aa hh:mm";
+TimeText12 = "aa hh:mm";
+TimeText13 = "M-d HH:mm";
+TimeText14 = "today %@";
+
+/*******  Test *******/
+apple = "apple";
+woman = "woman";
+country = "country";
+wife = "wife";

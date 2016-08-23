@@ -1,0 +1,20 @@
+//
+//  PrefixHeader.pch
+//  Test
+//
+//  Created by HeDong on 16/7/28.
+//  Copyright © 2016年 hedong. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#import "HDDefine.h"
+#import "HDLocalizableConst.h"
+#import "HDNetworking.h"
+#import "NSString+HDExtension.h"
+#import "UIView+HDExtension.h"
+#import "UITextField+HDExtension.h"
+#import "UIColor+HDExtension.h"
+
+#endif /* PrefixHeader_pch */

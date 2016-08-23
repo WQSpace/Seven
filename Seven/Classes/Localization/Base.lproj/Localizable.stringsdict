@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!--
+   Localizable.plist
+   InternationDome
+
+   Created by HeDong on 16/7/3.
+   Copyright (c) 2016年 hedong. All rights reserved.
+ 
+/******************************/
+ 如果在Localizable.stringsdict(base)文件添加国际化内容,那么用NSLocalizedString(@"apple", nil)和[NSString localizedStringWithFormat:NSLocalizedString(@"apple", nil), 1]就不会去Localizable.strings文件查找对应的国际化Key和Value;就只会查找Localizable.stringsdict文件里对应的国际化Key和Value(换句话说Localizable.strings这种方式的国际化就无效了)!除非在Localizable.stringsdict文件没有对应的Key才会去Localizable.strings文件查找对应的Key显示对应的国际化语言,如果这两个文件都没有那么就显示使用的@"apple"字符串!
+/******************************/
+-->
+
+<!-- /*******  Test *******/ -->
+<plist version="1.0">
+    <dict>
+        <key>apple</key>
+        <dict>
+            <key>NSStringLocalizedFormatKey</key>
+            <string>%#@files@</string>
+            <key>files</key>
+            <dict>
+                <key>NSStringFormatSpecTypeKey</key>
+                <string>NSStringPluralRuleType</string>
+                <key>NSStringFormatValueTypeKey</key>
+                <string>d</string>
+                <key>zero</key>
+                <string>%d apple</string>
+                <key>one</key>
+                <string>%d apple</string>
+                <key>other</key>
+                <string>%d apples</string>
+            </dict>
+        </dict>
+        
+        <key>woman</key>
+        <dict>
+            <key>NSStringLocalizedFormatKey</key>
+            <string>%#@files@</string>
+            <key>files</key>
+            <dict>
+                <key>NSStringFormatSpecTypeKey</key>
+                <string>NSStringPluralRuleType</string>
+                <key>NSStringFormatValueTypeKey</key>
+                <string>d</string>
+                <key>zero</key>
+                <string>woman</string>
+                <key>one</key>
+                <string>woman</string>
+                <key>other</key>
+                <string>women</string>
+            </dict>
+        </dict>
+        
+        <key>country</key>
+        <dict>
+            <key>NSStringLocalizedFormatKey</key>
+            <string>%#@files@</string>
+            <key>files</key>
+            <dict>
+                <key>NSStringFormatSpecTypeKey</key>
+                <string>NSStringPluralRuleType</string>
+                <key>NSStringFormatValueTypeKey</key>
+                <string>d</string>
+                <key>zero</key>
+                <string>country</string>
+                <key>one</key>
+                <string>country</string>
+                <key>other</key>
+                <string>countries</string>
+            </dict>
+        </dict>
+        
+        <key>wife</key>
+        <dict>
+            <key>NSStringLocalizedFormatKey</key>
+            <string>%#@files@</string>
+            <key>files</key>
+            <dict>
+                <key>NSStringFormatSpecTypeKey</key>
+                <string>NSStringPluralRuleType</string>
+                <key>NSStringFormatValueTypeKey</key>
+                <string>d</string>
+                <key>zero</key>
+                <string>wife</string>
+                <key>one</key>
+                <string>wife</string>
+                <key>other</key>
+                <string>wives</string>
+            </dict>
+            
+        </dict>
+    </dict>
+</plist>
