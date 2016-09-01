@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6702F4F51D77C40400EAA8FA /* HDAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6702F4F41D77C40400EAA8FA /* HDAlertView.m */; };
+		6702F4F61D77C40400EAA8FA /* HDAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6702F4F41D77C40400EAA8FA /* HDAlertView.m */; };
 		67052CCC1D55D29F00CF53EE /* HDBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 67052CCB1D55D29F00CF53EE /* HDBaseViewController.m */; };
 		67052CCD1D55D29F00CF53EE /* HDBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 67052CCB1D55D29F00CF53EE /* HDBaseViewController.m */; };
 		67052CD11D55DB2000CF53EE /* HDHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 67052CD01D55DB2000CF53EE /* HDHomeViewController.m */; };
@@ -119,6 +121,8 @@
 		3B030430D11A45DE67F1522E /* libPods-Seven_AppStore.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Seven_AppStore.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4809E5D5EEDAD7C8B2C18E3F /* Pods-Seven.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Seven.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Seven/Pods-Seven.debug.xcconfig"; sourceTree = "<group>"; };
 		600CBFC0C6D60F58119622E4 /* Pods-Seven_AppStore.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Seven_AppStore.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Seven_AppStore/Pods-Seven_AppStore.debug.xcconfig"; sourceTree = "<group>"; };
+		6702F4F31D77C40400EAA8FA /* HDAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDAlertView.h; sourceTree = "<group>"; };
+		6702F4F41D77C40400EAA8FA /* HDAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDAlertView.m; sourceTree = "<group>"; };
 		67052CCA1D55D29F00CF53EE /* HDBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDBaseViewController.h; sourceTree = "<group>"; };
 		67052CCB1D55D29F00CF53EE /* HDBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDBaseViewController.m; sourceTree = "<group>"; };
 		67052CCF1D55DB2000CF53EE /* HDHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDHomeViewController.h; sourceTree = "<group>"; };
@@ -288,6 +292,15 @@
 				3B030430D11A45DE67F1522E /* libPods-Seven_AppStore.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6702F4F21D77C3FD00EAA8FA /* HDAlertView */ = {
+			isa = PBXGroup;
+			children = (
+				6702F4F31D77C40400EAA8FA /* HDAlertView.h */,
+				6702F4F41D77C40400EAA8FA /* HDAlertView.m */,
+			);
+			path = HDAlertView;
 			sourceTree = "<group>";
 		};
 		67052CCE1D55D9A200CF53EE /* Home */ = {
@@ -495,6 +508,7 @@
 		67DB7CFC1D55C98F000B789E /* View */ = {
 			isa = PBXGroup;
 			children = (
+				6702F4F21D77C3FD00EAA8FA /* HDAlertView */,
 				67052CD31D55DBCA00CF53EE /* HDTabBar */,
 			);
 			path = View;
@@ -826,6 +840,7 @@
 				67E82DA31D57061400725FF8 /* HDGrowingManager.m in Sources */,
 				67DB7D111D55C98F000B789E /* UIView+HDExtension.m in Sources */,
 				67DB7D1F1D55C98F000B789E /* HDDDLogManager.m in Sources */,
+				6702F4F51D77C40400EAA8FA /* HDAlertView.m in Sources */,
 				67DB7CFD1D55C98F000B789E /* Foundation+HDLog.m in Sources */,
 				67052CD61D55DBE000CF53EE /* HDTabBar.m in Sources */,
 				67E82DE01D5769A800725FF8 /* HDSquareViewController.m in Sources */,
@@ -865,6 +880,7 @@
 				67E82DA41D57061400725FF8 /* HDGrowingManager.m in Sources */,
 				67DB7D121D55C98F000B789E /* UIView+HDExtension.m in Sources */,
 				67DB7D201D55C98F000B789E /* HDDDLogManager.m in Sources */,
+				6702F4F61D77C40400EAA8FA /* HDAlertView.m in Sources */,
 				67DB7CFE1D55C98F000B789E /* Foundation+HDLog.m in Sources */,
 				67052CD71D55DBE000CF53EE /* HDTabBar.m in Sources */,
 				67E82DE11D5769A800725FF8 /* HDSquareViewController.m in Sources */,

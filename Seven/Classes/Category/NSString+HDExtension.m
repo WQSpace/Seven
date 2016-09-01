@@ -12,6 +12,7 @@
 
 @implementation NSString (HDExtension)
 
+
 #pragma mark - 散列函数
 - (instancetype)hd_md5String {
     const char *str = self.UTF8String;
@@ -67,6 +68,7 @@
     return [self hd_stringFromBytes:buffer length:CC_SHA512_DIGEST_LENGTH];
 }
 
+
 #pragma mark - HMAC 散列函数
 - (instancetype)hd_hmacMD5StringWithKey:(NSString *)key {
     const char *keyData = key.UTF8String;
@@ -107,6 +109,7 @@
     
     return [self hd_stringFromBytes:buffer length:CC_SHA512_DIGEST_LENGTH];
 }
+
 
 #pragma mark - 文件散列函数
 #define FileHashDefaultChunkSizeForReadingData 4096
@@ -206,6 +209,7 @@
     return [self hd_stringFromBytes:buffer length:CC_SHA512_DIGEST_LENGTH];
 }
 
+
 #pragma mark - Base64编码
 - (instancetype)hd_base64Encode {
     NSData *data = [self dataUsingEncoding:NSUTF8StringEncoding];
@@ -218,6 +222,7 @@
     
     return [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
 }
+
 
 #pragma mark - 路径方法
 + (instancetype)hd_pathForDocuments {
@@ -268,16 +273,29 @@
     return [[self hd_pathForSystemFile:directory] stringByAppendingPathComponent:fileName];
 }
 
+
 #pragma mark - 文本计算方法
-- (CGSize)hd_sizeWithFont:(UIFont *)font andMaxSize:(CGSize)maxSize {
-    NSDictionary *arrts = @{NSFontAttributeName:font};
+- (CGSize)hd_sizeWithSystemFont:(UIFont *)font constrainedToSize:(CGSize)size lineBreakMode:(NSLineBreakMode)mode {
+    NSMutableParagraphStyle *paragraphStyle = [NSMutableParagraphStyle new];
+    paragraphStyle.lineBreakMode = mode;
+    paragraphStyle.alignment = NSTextAlignmentLeft;
     
-    return [self boundingRectWithSize:maxSize options:NSStringDrawingUsesLineFragmentOrigin attributes:arrts context:nil].size;
+    NSDictionary *attributes = @{NSFontAttributeName : font,
+                                 NSParagraphStyleAttributeName : paragraphStyle};
+    
+    CGRect bounds = [self boundingRectWithSize:size options:NSStringDrawingUsesLineFragmentOrigin attributes:attributes context:nil];
+    
+    return CGSizeMake(ceil(bounds.size.width), ceil(bounds.size.height));
 }
 
-+ (CGSize)hd_sizeWithText:(NSString *)text andFont:(UIFont *)font andMaxSize:(CGSize)maxSize {
-    return [text hd_sizeWithFont:font andMaxSize:maxSize];
+- (CGSize)hd_sizeWithSystemFont:(UIFont *)font constrainedToSize:(CGSize)size {
+    return [self hd_sizeWithSystemFont:font constrainedToSize:size lineBreakMode:NSLineBreakByWordWrapping];
 }
+
++ (CGSize)hd_sizeWithText:(NSString *)text systemFont:(UIFont *)font constrainedToSize:(CGSize)size {
+    return [text hd_sizeWithSystemFont:font constrainedToSize:size];
+}
+
 
 #pragma mark - 其他
 /**
@@ -300,11 +318,8 @@
 
 /**
  *  设备版本
- *
- *  @return e.g. iPhone 5S
  */
-+ (NSString *)hd_deviceVersion
-{
++ (instancetype)hd_deviceVersion {
     // 需要#import "sys/utsname.h"
     struct utsname systemInfo;
     uname(&systemInfo);
@@ -367,6 +382,24 @@
     if ([deviceString isEqualToString:@"iPad4,7"]
         ||[deviceString isEqualToString:@"iPad4,8"]
         ||[deviceString isEqualToString:@"iPad4,9"])    return @"iPad mini 3";
+    
+    return deviceString;
+}
+
+
+NSString *const iPhone6 = @"iPhone6";
+NSString *const iPhone6Plus = @"iPhone6Plus";
+
++ (instancetype)hd_deviceType {
+    struct utsname systemInfo;
+    uname(&systemInfo);
+    NSString *deviceString = [NSString stringWithCString:systemInfo.machine encoding:NSUTF8StringEncoding];
+    
+    // iPhone
+    if ([deviceString isEqualToString:@"iPhone7,1"])    return iPhone6Plus;
+    if ([deviceString isEqualToString:@"iPhone7,2"])    return iPhone6;
+    if ([deviceString isEqualToString:@"iPhone8,1"])    return iPhone6;
+    if ([deviceString isEqualToString:@"iPhone8,2"])    return iPhone6Plus;
     
     return deviceString;
 }

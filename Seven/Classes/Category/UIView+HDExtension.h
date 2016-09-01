@@ -8,13 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-typedef NS_ENUM(NSInteger, HDAnimationType)
-{
+typedef NS_ENUM(NSInteger, HDAnimationType) {
     HDAnimationOpen, // 动画开启
     HDAnimationClose // 动画关闭
 };
 
 @interface UIView (HDExtension)
+
 
 #pragma mark - 快速设置控件的frame
 @property (nonatomic, assign) CGFloat hd_x;
@@ -24,9 +24,16 @@ typedef NS_ENUM(NSInteger, HDAnimationType)
 @property (nonatomic, assign) CGFloat hd_width;
 @property (nonatomic, assign) CGFloat hd_height;
 @property (nonatomic, assign) CGPoint hd_origin;
-@property (nonatomic, assign) CGSize hd_size;
+@property (nonatomic, assign) CGSize  hd_size;
 @property (nonatomic, assign) CGFloat hb_right;
 @property (nonatomic, assign) CGFloat hb_bottom;
+
+
+#pragma mark - 视图相关
+/**
+ *  移除全部的子视图
+ */
+- (void)hd_removeAllSubviews;
 
 #pragma mark - 动画相关
 /**

@@ -144,4 +144,13 @@
  */
 - (instancetype)hd_blearImageWithBlurLevel:(CGFloat)blurLevel;
 
+/**
+ *  根据颜色返回图片
+ *
+ *  @param color 颜色
+ *
+ *  @return 图片
+ */
++ (instancetype)hd_imageWithColor:(UIColor *)color;
+
 @end

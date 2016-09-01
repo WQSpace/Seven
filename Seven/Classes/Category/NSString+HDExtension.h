@@ -296,31 +296,50 @@
 
 #pragma mark - 文本计算方法
 /**
- *  快速计算出文本的真实尺寸
+ *  计算文字大小
  *
- *  @param font    文字的字体
- *  @param maxSize 文本的最大尺寸
+ *  @param font 字体
+ *  @param size 计算范围的大小
+ *  @param mode 段落样式
  *
- *  @return 快速计算出文本的真实尺寸
+ *  @return 计算出来的大小
  */
-- (CGSize)hd_sizeWithFont:(UIFont *)font andMaxSize:(CGSize)maxSize;
+- (CGSize)hd_sizeWithSystemFont:(UIFont *)font constrainedToSize:(CGSize)size lineBreakMode:(NSLineBreakMode)mode;
 
 /**
- *  快速计算出文本的真实尺寸
+ *  计算文字大小
  *
- *  @param text    需要计算尺寸的文本
- *  @param font    文字的字体
- *  @param maxSize 文本的最大尺寸
+ *  @param font 字体
+ *  @param size 计算范围的大小
  *
- *  @return 快速计算出文本的真实尺寸
+ *  @return 计算出来的大小
  */
-+ (CGSize)hd_sizeWithText:(NSString *)text andFont:(UIFont *)font andMaxSize:(CGSize)maxSize;
+- (CGSize)hd_sizeWithSystemFont:(UIFont *)font constrainedToSize:(CGSize)size;
+
+/**
+ *  计算文字大小
+ *
+ *  @param text 文字
+ *  @param font 字体
+ *  @param size 计算范围的大小
+ *
+ *  @return 计算出来的大小
+ */
++ (CGSize)hd_sizeWithText:(NSString *)text systemFont:(UIFont *)font constrainedToSize:(CGSize)size;
+
 
 #pragma mark - 其他
 /**
  *  设备版本
  */
 + (instancetype)hd_deviceVersion;
+
+/**
+ *  设备类型(用于区分iPhone屏幕大小)
+ */
+HD_EXTERN NSString *const iPhone6;
+HD_EXTERN NSString *const iPhone6Plus;
++ (instancetype)hd_deviceType;
 
 /**
  *  判断是否是邮箱

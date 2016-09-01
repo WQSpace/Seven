@@ -111,6 +111,15 @@
     return self.frame.origin.y + self.frame.size.height;
 }
 
+
+#pragma mark - 视图相关
+- (void)hd_removeAllSubviews {
+    while (self.subviews.count) {
+        [self.subviews.lastObject removeFromSuperview];
+    }
+}
+
+
 #pragma mark - 动画相关
 - (instancetype)hd_addAnimationAtPoint:(CGPoint)point; {
     CAShapeLayer *shapeLayer = [CAShapeLayer layer];
