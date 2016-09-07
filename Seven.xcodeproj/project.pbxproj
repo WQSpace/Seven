@@ -7,6 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6701D2C41D7FCC8B005AED94 /* HDTableViewBaseController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6701D2C31D7FCC8B005AED94 /* HDTableViewBaseController.m */; };
+		6701D2C51D7FCC8B005AED94 /* HDTableViewBaseController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6701D2C31D7FCC8B005AED94 /* HDTableViewBaseController.m */; };
+		6701D2C91D7FCCA7005AED94 /* HDTableViewBaseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6701D2C81D7FCCA7005AED94 /* HDTableViewBaseCell.m */; };
+		6701D2CA1D7FCCA7005AED94 /* HDTableViewBaseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6701D2C81D7FCCA7005AED94 /* HDTableViewBaseCell.m */; };
+		6701D2D21D7FCCDE005AED94 /* HDTableViewBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6701D2CD1D7FCCDE005AED94 /* HDTableViewBaseModel.m */; };
+		6701D2D31D7FCCDE005AED94 /* HDTableViewBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6701D2CD1D7FCCDE005AED94 /* HDTableViewBaseModel.m */; };
+		6701D2D41D7FCCDE005AED94 /* HDTableViewGroupModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6701D2CF1D7FCCDE005AED94 /* HDTableViewGroupModel.m */; };
+		6701D2D51D7FCCDE005AED94 /* HDTableViewGroupModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6701D2CF1D7FCCDE005AED94 /* HDTableViewGroupModel.m */; };
+		6701D2D61D7FCCDE005AED94 /* HDTableViewPushModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6701D2D11D7FCCDE005AED94 /* HDTableViewPushModel.m */; };
+		6701D2D71D7FCCDE005AED94 /* HDTableViewPushModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6701D2D11D7FCCDE005AED94 /* HDTableViewPushModel.m */; };
+		6701D2DB1D7FCD61005AED94 /* HDMenuViewControllerBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6701D2DA1D7FCD61005AED94 /* HDMenuViewControllerBaseModel.m */; };
+		6701D2DC1D7FCD61005AED94 /* HDMenuViewControllerBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6701D2DA1D7FCD61005AED94 /* HDMenuViewControllerBaseModel.m */; };
+		6701D2DF1D7FFF07005AED94 /* HDTableViewPushCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6701D2DE1D7FFF07005AED94 /* HDTableViewPushCell.m */; };
+		6701D2E01D7FFF07005AED94 /* HDTableViewPushCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6701D2DE1D7FFF07005AED94 /* HDTableViewPushCell.m */; };
 		6702F4F51D77C40400EAA8FA /* HDAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6702F4F41D77C40400EAA8FA /* HDAlertView.m */; };
 		6702F4F61D77C40400EAA8FA /* HDAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6702F4F41D77C40400EAA8FA /* HDAlertView.m */; };
 		67052CCC1D55D29F00CF53EE /* HDBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 67052CCB1D55D29F00CF53EE /* HDBaseViewController.m */; };
@@ -97,8 +111,6 @@
 		67E82DBB1D571D6D00725FF8 /* HDNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 67E82DB61D571D6D00725FF8 /* HDNetworking.m */; };
 		67E82DBC1D571D6D00725FF8 /* HDPicModle.m in Sources */ = {isa = PBXBuildFile; fileRef = 67E82DB91D571D6D00725FF8 /* HDPicModle.m */; };
 		67E82DBD1D571D6D00725FF8 /* HDPicModle.m in Sources */ = {isa = PBXBuildFile; fileRef = 67E82DB91D571D6D00725FF8 /* HDPicModle.m */; };
-		67E82DCA1D57389900725FF8 /* HDBaseViewControllerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 67E82DC91D57389900725FF8 /* HDBaseViewControllerModel.m */; };
-		67E82DCB1D57389900725FF8 /* HDBaseViewControllerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 67E82DC91D57389900725FF8 /* HDBaseViewControllerModel.m */; };
 		67E82DD41D57686500725FF8 /* HDLookForGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 67E82DD31D57686500725FF8 /* HDLookForGameViewController.m */; };
 		67E82DD51D57686500725FF8 /* HDLookForGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 67E82DD31D57686500725FF8 /* HDLookForGameViewController.m */; };
 		67E82DD81D57698900725FF8 /* HDClassifyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 67E82DD71D57698900725FF8 /* HDClassifyViewController.m */; };
@@ -121,6 +133,20 @@
 		3B030430D11A45DE67F1522E /* libPods-Seven_AppStore.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Seven_AppStore.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4809E5D5EEDAD7C8B2C18E3F /* Pods-Seven.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Seven.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Seven/Pods-Seven.debug.xcconfig"; sourceTree = "<group>"; };
 		600CBFC0C6D60F58119622E4 /* Pods-Seven_AppStore.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Seven_AppStore.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Seven_AppStore/Pods-Seven_AppStore.debug.xcconfig"; sourceTree = "<group>"; };
+		6701D2C21D7FCC8B005AED94 /* HDTableViewBaseController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDTableViewBaseController.h; sourceTree = "<group>"; };
+		6701D2C31D7FCC8B005AED94 /* HDTableViewBaseController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDTableViewBaseController.m; sourceTree = "<group>"; };
+		6701D2C71D7FCCA7005AED94 /* HDTableViewBaseCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDTableViewBaseCell.h; sourceTree = "<group>"; };
+		6701D2C81D7FCCA7005AED94 /* HDTableViewBaseCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDTableViewBaseCell.m; sourceTree = "<group>"; };
+		6701D2CC1D7FCCDE005AED94 /* HDTableViewBaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDTableViewBaseModel.h; sourceTree = "<group>"; };
+		6701D2CD1D7FCCDE005AED94 /* HDTableViewBaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDTableViewBaseModel.m; sourceTree = "<group>"; };
+		6701D2CE1D7FCCDE005AED94 /* HDTableViewGroupModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDTableViewGroupModel.h; sourceTree = "<group>"; };
+		6701D2CF1D7FCCDE005AED94 /* HDTableViewGroupModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDTableViewGroupModel.m; sourceTree = "<group>"; };
+		6701D2D01D7FCCDE005AED94 /* HDTableViewPushModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDTableViewPushModel.h; sourceTree = "<group>"; };
+		6701D2D11D7FCCDE005AED94 /* HDTableViewPushModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDTableViewPushModel.m; sourceTree = "<group>"; };
+		6701D2D91D7FCD61005AED94 /* HDMenuViewControllerBaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDMenuViewControllerBaseModel.h; sourceTree = "<group>"; };
+		6701D2DA1D7FCD61005AED94 /* HDMenuViewControllerBaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDMenuViewControllerBaseModel.m; sourceTree = "<group>"; };
+		6701D2DD1D7FFF07005AED94 /* HDTableViewPushCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDTableViewPushCell.h; sourceTree = "<group>"; };
+		6701D2DE1D7FFF07005AED94 /* HDTableViewPushCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDTableViewPushCell.m; sourceTree = "<group>"; };
 		6702F4F31D77C40400EAA8FA /* HDAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDAlertView.h; sourceTree = "<group>"; };
 		6702F4F41D77C40400EAA8FA /* HDAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDAlertView.m; sourceTree = "<group>"; };
 		67052CCA1D55D29F00CF53EE /* HDBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDBaseViewController.h; sourceTree = "<group>"; };
@@ -200,8 +226,6 @@
 		67E82DB61D571D6D00725FF8 /* HDNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDNetworking.m; sourceTree = "<group>"; };
 		67E82DB81D571D6D00725FF8 /* HDPicModle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDPicModle.h; sourceTree = "<group>"; };
 		67E82DB91D571D6D00725FF8 /* HDPicModle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDPicModle.m; sourceTree = "<group>"; };
-		67E82DC81D57389900725FF8 /* HDBaseViewControllerModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDBaseViewControllerModel.h; sourceTree = "<group>"; };
-		67E82DC91D57389900725FF8 /* HDBaseViewControllerModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDBaseViewControllerModel.m; sourceTree = "<group>"; };
 		67E82DD21D57686500725FF8 /* HDLookForGameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDLookForGameViewController.h; sourceTree = "<group>"; };
 		67E82DD31D57686500725FF8 /* HDLookForGameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDLookForGameViewController.m; sourceTree = "<group>"; };
 		67E82DD61D57698900725FF8 /* HDClassifyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDClassifyViewController.h; sourceTree = "<group>"; };
@@ -292,6 +316,48 @@
 				3B030430D11A45DE67F1522E /* libPods-Seven_AppStore.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6701D2C11D7FCC8B005AED94 /* TableViewBaseController */ = {
+			isa = PBXGroup;
+			children = (
+				6701D2C21D7FCC8B005AED94 /* HDTableViewBaseController.h */,
+				6701D2C31D7FCC8B005AED94 /* HDTableViewBaseController.m */,
+			);
+			path = TableViewBaseController;
+			sourceTree = "<group>";
+		};
+		6701D2C61D7FCCA7005AED94 /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				6701D2C71D7FCCA7005AED94 /* HDTableViewBaseCell.h */,
+				6701D2C81D7FCCA7005AED94 /* HDTableViewBaseCell.m */,
+				6701D2DD1D7FFF07005AED94 /* HDTableViewPushCell.h */,
+				6701D2DE1D7FFF07005AED94 /* HDTableViewPushCell.m */,
+			);
+			path = TableViewCell;
+			sourceTree = "<group>";
+		};
+		6701D2CB1D7FCCDE005AED94 /* TableViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				6701D2CC1D7FCCDE005AED94 /* HDTableViewBaseModel.h */,
+				6701D2CD1D7FCCDE005AED94 /* HDTableViewBaseModel.m */,
+				6701D2CE1D7FCCDE005AED94 /* HDTableViewGroupModel.h */,
+				6701D2CF1D7FCCDE005AED94 /* HDTableViewGroupModel.m */,
+				6701D2D01D7FCCDE005AED94 /* HDTableViewPushModel.h */,
+				6701D2D11D7FCCDE005AED94 /* HDTableViewPushModel.m */,
+			);
+			path = TableViewModel;
+			sourceTree = "<group>";
+		};
+		6701D2D81D7FCD61005AED94 /* MenuViewControllerModel */ = {
+			isa = PBXGroup;
+			children = (
+				6701D2D91D7FCD61005AED94 /* HDMenuViewControllerBaseModel.h */,
+				6701D2DA1D7FCD61005AED94 /* HDMenuViewControllerBaseModel.m */,
+			);
+			path = MenuViewControllerModel;
 			sourceTree = "<group>";
 		};
 		6702F4F21D77C3FD00EAA8FA /* HDAlertView */ = {
@@ -426,6 +492,7 @@
 		67DB7CDD1D55C98F000B789E /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				6701D2C11D7FCC8B005AED94 /* TableViewBaseController */,
 				67E82DE61D577B9A00725FF8 /* Menu */,
 				67052CCE1D55D9A200CF53EE /* Home */,
 				67DB7CDE1D55C98F000B789E /* Main */,
@@ -461,7 +528,8 @@
 		67DB7CF21D55C98F000B789E /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				67E82DC31D5737E900725FF8 /* BaseModel */,
+				6701D2D81D7FCD61005AED94 /* MenuViewControllerModel */,
+				6701D2CB1D7FCCDE005AED94 /* TableViewModel */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -508,6 +576,7 @@
 		67DB7CFC1D55C98F000B789E /* View */ = {
 			isa = PBXGroup;
 			children = (
+				6701D2C61D7FCCA7005AED94 /* TableViewCell */,
 				6702F4F21D77C3FD00EAA8FA /* HDAlertView */,
 				67052CD31D55DBCA00CF53EE /* HDTabBar */,
 			);
@@ -578,15 +647,6 @@
 				67E82DB91D571D6D00725FF8 /* HDPicModle.m */,
 			);
 			path = Modle;
-			sourceTree = "<group>";
-		};
-		67E82DC31D5737E900725FF8 /* BaseModel */ = {
-			isa = PBXGroup;
-			children = (
-				67E82DC81D57389900725FF8 /* HDBaseViewControllerModel.h */,
-				67E82DC91D57389900725FF8 /* HDBaseViewControllerModel.m */,
-			);
-			path = BaseModel;
 			sourceTree = "<group>";
 		};
 		67E82DE61D577B9A00725FF8 /* Menu */ = {
@@ -820,17 +880,20 @@
 				67E82DD41D57686500725FF8 /* HDLookForGameViewController.m in Sources */,
 				678F40041D55C0C000C736D8 /* main.m in Sources */,
 				67DB7D151D55C98F000B789E /* HDMainTabBarController.m in Sources */,
+				6701D2C91D7FCCA7005AED94 /* HDTableViewBaseCell.m in Sources */,
 				67E82DE91D577B9A00725FF8 /* HDMenuViewController.m in Sources */,
+				6701D2C41D7FCC8B005AED94 /* HDTableViewBaseController.m in Sources */,
 				67052CCC1D55D29F00CF53EE /* HDBaseViewController.m in Sources */,
 				67DB7D0B1D55C98F000B789E /* UIImage+HDExtension.m in Sources */,
+				6701D2D21D7FCCDE005AED94 /* HDTableViewBaseModel.m in Sources */,
 				67E82DE41D5769D000725FF8 /* HDMeViewController.m in Sources */,
+				6701D2DB1D7FCD61005AED94 /* HDMenuViewControllerBaseModel.m in Sources */,
 				67DB7CFF1D55C98F000B789E /* NSDate+HDExtension.m in Sources */,
 				67E82DDC1D57699900725FF8 /* HDMakeMoneyViewController.m in Sources */,
 				67E82D9E1D56FAA300725FF8 /* HDCrashMasterManager.m in Sources */,
 				67052CD11D55DB2000CF53EE /* HDHomeViewController.m in Sources */,
 				67E82DBA1D571D6D00725FF8 /* HDNetworking.m in Sources */,
 				67DB7D051D55C98F000B789E /* UIBarButtonItem+HDExtension.m in Sources */,
-				67E82DCA1D57389900725FF8 /* HDBaseViewControllerModel.m in Sources */,
 				67DB7D0F1D55C98F000B789E /* UITextField+HDExtension.m in Sources */,
 				67DB7D1D1D55C98F000B789E /* HDLocalizableConst.m in Sources */,
 				67E82DD81D57698900725FF8 /* HDClassifyViewController.m in Sources */,
@@ -840,12 +903,15 @@
 				67E82DA31D57061400725FF8 /* HDGrowingManager.m in Sources */,
 				67DB7D111D55C98F000B789E /* UIView+HDExtension.m in Sources */,
 				67DB7D1F1D55C98F000B789E /* HDDDLogManager.m in Sources */,
+				6701D2D41D7FCCDE005AED94 /* HDTableViewGroupModel.m in Sources */,
 				6702F4F51D77C40400EAA8FA /* HDAlertView.m in Sources */,
 				67DB7CFD1D55C98F000B789E /* Foundation+HDLog.m in Sources */,
 				67052CD61D55DBE000CF53EE /* HDTabBar.m in Sources */,
 				67E82DE01D5769A800725FF8 /* HDSquareViewController.m in Sources */,
 				67DB7D131D55C98F000B789E /* HDMainNavigationController.m in Sources */,
 				67DB7D071D55C98F000B789E /* UIButton+HDExtension.m in Sources */,
+				6701D2DF1D7FFF07005AED94 /* HDTableViewPushCell.m in Sources */,
+				6701D2D61D7FCCDE005AED94 /* HDTableViewPushModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -860,17 +926,20 @@
 				67E82DD51D57686500725FF8 /* HDLookForGameViewController.m in Sources */,
 				67DB7CC41D55C8BC000B789E /* main.m in Sources */,
 				67DB7D161D55C98F000B789E /* HDMainTabBarController.m in Sources */,
+				6701D2CA1D7FCCA7005AED94 /* HDTableViewBaseCell.m in Sources */,
 				67E82DEA1D577B9A00725FF8 /* HDMenuViewController.m in Sources */,
+				6701D2C51D7FCC8B005AED94 /* HDTableViewBaseController.m in Sources */,
 				67052CCD1D55D29F00CF53EE /* HDBaseViewController.m in Sources */,
 				67DB7D0C1D55C98F000B789E /* UIImage+HDExtension.m in Sources */,
+				6701D2D31D7FCCDE005AED94 /* HDTableViewBaseModel.m in Sources */,
 				67E82DE51D5769D000725FF8 /* HDMeViewController.m in Sources */,
+				6701D2DC1D7FCD61005AED94 /* HDMenuViewControllerBaseModel.m in Sources */,
 				67DB7D001D55C98F000B789E /* NSDate+HDExtension.m in Sources */,
 				67E82DDD1D57699900725FF8 /* HDMakeMoneyViewController.m in Sources */,
 				67E82D9F1D56FAA300725FF8 /* HDCrashMasterManager.m in Sources */,
 				67052CD21D55DB2000CF53EE /* HDHomeViewController.m in Sources */,
 				67E82DBB1D571D6D00725FF8 /* HDNetworking.m in Sources */,
 				67DB7D061D55C98F000B789E /* UIBarButtonItem+HDExtension.m in Sources */,
-				67E82DCB1D57389900725FF8 /* HDBaseViewControllerModel.m in Sources */,
 				67DB7D101D55C98F000B789E /* UITextField+HDExtension.m in Sources */,
 				67DB7D1E1D55C98F000B789E /* HDLocalizableConst.m in Sources */,
 				67E82DD91D57698900725FF8 /* HDClassifyViewController.m in Sources */,
@@ -880,12 +949,15 @@
 				67E82DA41D57061400725FF8 /* HDGrowingManager.m in Sources */,
 				67DB7D121D55C98F000B789E /* UIView+HDExtension.m in Sources */,
 				67DB7D201D55C98F000B789E /* HDDDLogManager.m in Sources */,
+				6701D2D51D7FCCDE005AED94 /* HDTableViewGroupModel.m in Sources */,
 				6702F4F61D77C40400EAA8FA /* HDAlertView.m in Sources */,
 				67DB7CFE1D55C98F000B789E /* Foundation+HDLog.m in Sources */,
 				67052CD71D55DBE000CF53EE /* HDTabBar.m in Sources */,
 				67E82DE11D5769A800725FF8 /* HDSquareViewController.m in Sources */,
 				67DB7D141D55C98F000B789E /* HDMainNavigationController.m in Sources */,
 				67DB7D081D55C98F000B789E /* UIButton+HDExtension.m in Sources */,
+				6701D2E01D7FFF07005AED94 /* HDTableViewPushCell.m in Sources */,
+				6701D2D71D7FCCDE005AED94 /* HDTableViewPushModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

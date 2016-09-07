@@ -48,13 +48,13 @@
  *  设置菜单视图控制器相关
  */
 - (void)setUpMenuViewController {
-    HDBaseViewControllerModel *lookForGame = [HDBaseViewControllerModel baseViewControllerModelWithTitle:NSLocalizedString(lookForGameText, @"找游戏") controllerClass:[HDLookForGameViewController class]];
-    HDBaseViewControllerModel *classify = [HDBaseViewControllerModel baseViewControllerModelWithTitle:NSLocalizedString(classifyText, @"分类") controllerClass:[HDClassifyViewController class]];
-    HDBaseViewControllerModel *makeMoney = [HDBaseViewControllerModel baseViewControllerModelWithTitle:NSLocalizedString(makeMoneyText, @"赚钱") controllerClass:[HDMakeMoneyViewController class]];
-    HDBaseViewControllerModel *square = [HDBaseViewControllerModel baseViewControllerModelWithTitle:NSLocalizedString(squareText, @"广场") controllerClass:[HDSquareViewController class]];
-    HDBaseViewControllerModel *me = [HDBaseViewControllerModel baseViewControllerModelWithTitle:NSLocalizedString(meText, @"我") controllerClass:[HDMeViewController class]];
+    HDMenuViewControllerBaseModel *lookForGame = [HDMenuViewControllerBaseModel menuViewControllerBaseModelWithTitle:NSLocalizedString(lookForGameText, @"找游戏") controllerClass:[HDLookForGameViewController class]];
+    HDMenuViewControllerBaseModel *classify = [HDMenuViewControllerBaseModel menuViewControllerBaseModelWithTitle:NSLocalizedString(classifyText, @"分类") controllerClass:[HDClassifyViewController class]];
+    HDMenuViewControllerBaseModel *makeMoney = [HDMenuViewControllerBaseModel menuViewControllerBaseModelWithTitle:NSLocalizedString(makeMoneyText, @"赚钱") controllerClass:[HDMakeMoneyViewController class]];
+    HDMenuViewControllerBaseModel *square = [HDMenuViewControllerBaseModel menuViewControllerBaseModelWithTitle:NSLocalizedString(squareText, @"广场") controllerClass:[HDSquareViewController class]];
+    HDMenuViewControllerBaseModel *me = [HDMenuViewControllerBaseModel menuViewControllerBaseModelWithTitle:NSLocalizedString(meText, @"我") controllerClass:[HDMeViewController class]];
     
-    self.baseVCArr = @[lookForGame, classify, makeMoney, square, me];
+    self.menuVCBaseModelArr = @[lookForGame, classify, makeMoney, square, me];
     
     [self showMenuViewController];
 }

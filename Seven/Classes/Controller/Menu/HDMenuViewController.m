@@ -36,7 +36,7 @@
 - (NSArray<NSString *> *)menuTitlesForMagicView:(VTMagicView *)magicView {
     NSMutableArray *arr = [NSMutableArray array];
     
-    [self.baseVCArr enumerateObjectsUsingBlock:^(HDBaseViewControllerModel * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+    [self.menuVCBaseModelArr enumerateObjectsUsingBlock:^(HDMenuViewControllerBaseModel * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         [arr addObject:obj.title];
     }];
     
@@ -60,7 +60,7 @@
 //    UIViewController *viewController = [magicView dequeueReusablePageWithIdentifier:viewControllerID];
     
 //    if (!viewController) {
-        HDBaseViewControllerModel *baseVCModel = self.baseVCArr[pageIndex];
+        HDMenuViewControllerBaseModel *baseVCModel = self.menuVCBaseModelArr[pageIndex];
         UIViewController *viewController = [[baseVCModel.controllerClass alloc] init];
 //    }
     
@@ -72,13 +72,14 @@
     //    viewController = [[baseVCModel.controllerClass alloc] init];
 }
 
+
 #pragma mark - 懒加载
-- (NSArray<HDBaseViewControllerModel *> *)baseVCArr {
-    if (!_baseVCArr) {
-        _baseVCArr = [NSArray array];
+- (NSArray<HDMenuViewControllerBaseModel *> *)menuVCBaseModelArr {
+    if (!_menuVCBaseModelArr) {
+        _menuVCBaseModelArr = [NSArray array];
     }
     
-    return _baseVCArr;
+    return _menuVCBaseModelArr;
 }
 
 - (VTMagicController *)homeController {
@@ -95,4 +96,5 @@
     }
     return _homeController;
 }
+
 @end
