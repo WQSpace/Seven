@@ -31,6 +31,21 @@
  */
 + (instancetype)hd_r:(CGFloat)r g:(CGFloat)g b:(CGFloat)b a:(CGFloat)a;
 
+/**
+ *  根据16进制生成颜色
+ *
+ *  @param hexColor 如:0x000000/0x7e7e7e
+ */
++ (instancetype)hd_colorWithHex:(NSInteger)hexColor;
+
+/**
+ *  根据16进制生成颜色
+ *
+ *  @param hexColor 如:0x000000/0x7e7e7e
+ *  @param alpha    透明度
+ */
++ (instancetype)hd_colorWithHex:(NSInteger)hexColor alpha:(CGFloat)alpha;
+
 #pragma mark - github上找的分类
 + (instancetype)crayolaAbsoluteZeroColor;
 + (instancetype)crayolaAlienArmpitColor;

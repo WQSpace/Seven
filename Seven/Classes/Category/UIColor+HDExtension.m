@@ -22,6 +22,19 @@
     return [UIColor colorWithRed:(r) / 255.0 green:(g) / 255.0  blue:(b) / 255.0  alpha:a];
 }
 
++ (instancetype)hd_colorWithHex:(NSInteger)hexColor {
+    return [UIColor hd_colorWithHex:hexColor alpha:1.0];
+}
+
++ (instancetype)hd_colorWithHex:(NSInteger)hexColor alpha:(CGFloat)alpha {
+    CGFloat red = ((CGFloat)((hexColor & 0xFF0000) >> 16)) / 255.0;
+    CGFloat green = ((CGFloat)((hexColor & 0xFF00) >> 8)) / 255.0;
+    CGFloat blue = ((CGFloat)(hexColor & 0xFF)) / 255.0;
+    
+    return [UIColor hd_r:red g:green b:blue a:alpha];
+}
+
+
 #pragma mark - github上找的分类
 + (instancetype)crayolaAbsoluteZeroColor
 {
