@@ -73,6 +73,9 @@ HDSingletonM(HDNetworking) // 单例实现
 }
 
 - (NSURLSessionDataTask *)GET:(HDRequestModel *)requestModel progress:(Progress)progress success:(Success)success failure:(Failure)failure {
+    HDParameterAssert(requestModel);
+    HDParameterAssert(requestModel.hostURL);
+    
     NSMutableSet *contentTypes = [[NSMutableSet alloc] initWithSet:self.manager.responseSerializer.acceptableContentTypes];
     [self addContentTypes:contentTypes];
     
@@ -106,6 +109,8 @@ HDSingletonM(HDNetworking) // 单例实现
 }
 
 - (NSURLSessionDataTask *)POST:(HDRequestModel *)requestModel progress:(Progress)progress success:(Success)success failure:(Failure)failure {
+    HDParameterAssert(requestModel);
+    HDParameterAssert(requestModel.hostURL);
     
     NSMutableSet *contentTypes = [[NSMutableSet alloc] initWithSet:self.manager.responseSerializer.acceptableContentTypes];
     [self addContentTypes:contentTypes];

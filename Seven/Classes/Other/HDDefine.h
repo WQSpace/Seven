@@ -112,6 +112,7 @@ dispatch_async(dispatch_get_main_queue(), block);   \
 
 
 #define HDAssert(...) NSAssert(__VA_ARGS__)
+#define HDParameterAssert(condition) NSAssert((condition), @"Invalid parameter not satisfying: %@", @#condition)
 
 static const int ddLogLevel = LOG_LEVEL_VERBOSE;
 
@@ -124,6 +125,7 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
 #define HDLogDebug(frmt, ...)
 
 #define HDAssert(...)
+#define HDParameterAssert(condition)
 static const int ddLogLevel = LOG_LEVEL_OFF;
 
 #endif
