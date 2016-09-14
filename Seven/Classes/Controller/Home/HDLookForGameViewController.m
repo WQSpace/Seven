@@ -7,6 +7,7 @@
 //
 
 #import "HDLookForGameViewController.h"
+#import "HDNetModel.h"
 
 @interface HDLookForGameViewController ()
 
@@ -21,15 +22,24 @@
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-
-    [[HDNetworking sharedHDNetworking] GET:@"http://cdn.4399sj.com/app/iphone/v3.0/home.html?n=25&p=1" parameters:@{} success:^(id  _Nonnull responseObject) {
-        HDLog(@"成功 = %@", responseObject);
-        NSData *jsonData = [NSJSONSerialization dataWithJSONObject:responseObject options:0 error:nil];
-        NSString *jsonStr = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
-        HDLog(@"%@", jsonStr);
+    HDRequestBodyModel *requestBody = [[HDRequestBodyModel alloc] init];
+    HDRequestModel *requestModel = [HDRequestModel requestModelWithBody:requestBody];
+    
+    [[HDNetworking sharedHDNetworking] POST:requestModel progress:^(NSProgress * _Nullable progress) {
+        HDLog(@"进度 == %@", progress);
+    } success:^(HDResponseBodyModel * _Nonnull responseBodyModel) {
+        HDLog(@"成功 = %@", responseBodyModel);
+    } failure:^(HDNetworkingErrorCode * _Nonnull error) {
+        HDLog(@"error = %@", error);
         
-    } failure:^(NSError * _Nonnull error) {
-        HDLog(@"失败");
+        switch (error.code) {
+            case HDNetworkingResponseErrorCode_NetError:
+
+                break;
+                
+            default:
+                break;
+        }
     }];
 }
 

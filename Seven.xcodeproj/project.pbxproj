@@ -23,10 +23,22 @@
 		67052CD21D55DB2000CF53EE /* HDHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 67052CD01D55DB2000CF53EE /* HDHomeViewController.m */; };
 		67052CD61D55DBE000CF53EE /* HDTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 67052CD51D55DBE000CF53EE /* HDTabBar.m */; };
 		67052CD71D55DBE000CF53EE /* HDTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 67052CD51D55DBE000CF53EE /* HDTabBar.m */; };
+		670F17F21D88F2420073B645 /* HDNetworkingErrorCode.m in Sources */ = {isa = PBXBuildFile; fileRef = 670F17F11D88F2420073B645 /* HDNetworkingErrorCode.m */; };
+		670F17F31D88F2420073B645 /* HDNetworkingErrorCode.m in Sources */ = {isa = PBXBuildFile; fileRef = 670F17F11D88F2420073B645 /* HDNetworkingErrorCode.m */; };
+		670F17F61D88F38F0073B645 /* HDNetworkingServerConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 670F17F51D88F38F0073B645 /* HDNetworkingServerConfig.m */; };
+		670F17F71D88F38F0073B645 /* HDNetworkingServerConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 670F17F51D88F38F0073B645 /* HDNetworkingServerConfig.m */; };
 		67521AF51D5A0F8E00B4BE28 /* HDUserEquipmentManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 67521AF41D5A0F8E00B4BE28 /* HDUserEquipmentManager.m */; };
 		67521AF61D5A0F8E00B4BE28 /* HDUserEquipmentManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 67521AF41D5A0F8E00B4BE28 /* HDUserEquipmentManager.m */; };
 		67521AF81D5A106500B4BE28 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67521AF71D5A106500B4BE28 /* AVFoundation.framework */; };
 		67521AF91D5A106E00B4BE28 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67521AF71D5A106500B4BE28 /* AVFoundation.framework */; };
+		677633EA1D88F8D200DDFCA7 /* HDResponseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 677633DA1D88F8D200DDFCA7 /* HDResponseModel.m */; };
+		677633EB1D88F8D200DDFCA7 /* HDResponseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 677633DA1D88F8D200DDFCA7 /* HDResponseModel.m */; };
+		677633EC1D88F8D200DDFCA7 /* HDResponseBodyModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 677633DD1D88F8D200DDFCA7 /* HDResponseBodyModel.m */; };
+		677633ED1D88F8D200DDFCA7 /* HDResponseBodyModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 677633DD1D88F8D200DDFCA7 /* HDResponseBodyModel.m */; };
+		677633F01D88F8D200DDFCA7 /* HDRequestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 677633E21D88F8D200DDFCA7 /* HDRequestModel.m */; };
+		677633F11D88F8D200DDFCA7 /* HDRequestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 677633E21D88F8D200DDFCA7 /* HDRequestModel.m */; };
+		677633F21D88F8D200DDFCA7 /* HDRequestBodyModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 677633E51D88F8D200DDFCA7 /* HDRequestBodyModel.m */; };
+		677633F31D88F8D200DDFCA7 /* HDRequestBodyModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 677633E51D88F8D200DDFCA7 /* HDRequestBodyModel.m */; };
 		678F40041D55C0C000C736D8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 678F40031D55C0C000C736D8 /* main.m */; };
 		678F40071D55C0C000C736D8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 678F40061D55C0C000C736D8 /* AppDelegate.m */; };
 		67D34A4B1D82520700A37A39 /* HDTableViewBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 67D34A461D82520700A37A39 /* HDTableViewBaseModel.m */; };
@@ -109,8 +121,6 @@
 		67E82DB31D570E9E00725FF8 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67E82DB11D570E9700725FF8 /* ImageIO.framework */; };
 		67E82DBA1D571D6D00725FF8 /* HDNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 67E82DB61D571D6D00725FF8 /* HDNetworking.m */; };
 		67E82DBB1D571D6D00725FF8 /* HDNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 67E82DB61D571D6D00725FF8 /* HDNetworking.m */; };
-		67E82DBC1D571D6D00725FF8 /* HDPicModle.m in Sources */ = {isa = PBXBuildFile; fileRef = 67E82DB91D571D6D00725FF8 /* HDPicModle.m */; };
-		67E82DBD1D571D6D00725FF8 /* HDPicModle.m in Sources */ = {isa = PBXBuildFile; fileRef = 67E82DB91D571D6D00725FF8 /* HDPicModle.m */; };
 		67E82DD41D57686500725FF8 /* HDLookForGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 67E82DD31D57686500725FF8 /* HDLookForGameViewController.m */; };
 		67E82DD51D57686500725FF8 /* HDLookForGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 67E82DD31D57686500725FF8 /* HDLookForGameViewController.m */; };
 		67E82DD81D57698900725FF8 /* HDClassifyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 67E82DD71D57698900725FF8 /* HDClassifyViewController.m */; };
@@ -149,9 +159,22 @@
 		67052CD01D55DB2000CF53EE /* HDHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDHomeViewController.m; sourceTree = "<group>"; };
 		67052CD41D55DBE000CF53EE /* HDTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDTabBar.h; sourceTree = "<group>"; };
 		67052CD51D55DBE000CF53EE /* HDTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDTabBar.m; sourceTree = "<group>"; };
+		670F17F01D88F2420073B645 /* HDNetworkingErrorCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDNetworkingErrorCode.h; sourceTree = "<group>"; };
+		670F17F11D88F2420073B645 /* HDNetworkingErrorCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDNetworkingErrorCode.m; sourceTree = "<group>"; };
+		670F17F41D88F38F0073B645 /* HDNetworkingServerConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDNetworkingServerConfig.h; sourceTree = "<group>"; };
+		670F17F51D88F38F0073B645 /* HDNetworkingServerConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDNetworkingServerConfig.m; sourceTree = "<group>"; };
 		67521AF31D5A0F8E00B4BE28 /* HDUserEquipmentManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDUserEquipmentManager.h; sourceTree = "<group>"; };
 		67521AF41D5A0F8E00B4BE28 /* HDUserEquipmentManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDUserEquipmentManager.m; sourceTree = "<group>"; };
 		67521AF71D5A106500B4BE28 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		677633D51D88F8D200DDFCA7 /* HDNetModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDNetModel.h; sourceTree = "<group>"; };
+		677633D91D88F8D200DDFCA7 /* HDResponseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDResponseModel.h; sourceTree = "<group>"; };
+		677633DA1D88F8D200DDFCA7 /* HDResponseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDResponseModel.m; sourceTree = "<group>"; };
+		677633DC1D88F8D200DDFCA7 /* HDResponseBodyModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDResponseBodyModel.h; sourceTree = "<group>"; };
+		677633DD1D88F8D200DDFCA7 /* HDResponseBodyModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDResponseBodyModel.m; sourceTree = "<group>"; };
+		677633E11D88F8D200DDFCA7 /* HDRequestModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDRequestModel.h; sourceTree = "<group>"; };
+		677633E21D88F8D200DDFCA7 /* HDRequestModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDRequestModel.m; sourceTree = "<group>"; };
+		677633E41D88F8D200DDFCA7 /* HDRequestBodyModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDRequestBodyModel.h; sourceTree = "<group>"; };
+		677633E51D88F8D200DDFCA7 /* HDRequestBodyModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDRequestBodyModel.m; sourceTree = "<group>"; };
 		678F3FFF1D55C0C000C736D8 /* Seven.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Seven.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		678F40031D55C0C000C736D8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		678F40051D55C0C000C736D8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -224,8 +247,6 @@
 		67E82DB11D570E9700725FF8 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
 		67E82DB51D571D6D00725FF8 /* HDNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDNetworking.h; sourceTree = "<group>"; };
 		67E82DB61D571D6D00725FF8 /* HDNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDNetworking.m; sourceTree = "<group>"; };
-		67E82DB81D571D6D00725FF8 /* HDPicModle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDPicModle.h; sourceTree = "<group>"; };
-		67E82DB91D571D6D00725FF8 /* HDPicModle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDPicModle.m; sourceTree = "<group>"; };
 		67E82DD21D57686500725FF8 /* HDLookForGameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDLookForGameViewController.h; sourceTree = "<group>"; };
 		67E82DD31D57686500725FF8 /* HDLookForGameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDLookForGameViewController.m; sourceTree = "<group>"; };
 		67E82DD61D57698900725FF8 /* HDClassifyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDClassifyViewController.h; sourceTree = "<group>"; };
@@ -393,6 +414,54 @@
 			path = HDUserEquipmentManager;
 			sourceTree = "<group>";
 		};
+		677633D41D88F8D200DDFCA7 /* NetModel */ = {
+			isa = PBXGroup;
+			children = (
+				677633D51D88F8D200DDFCA7 /* HDNetModel.h */,
+				677633D61D88F8D200DDFCA7 /* ReponseModel */,
+				677633E01D88F8D200DDFCA7 /* RequestModel */,
+			);
+			path = NetModel;
+			sourceTree = "<group>";
+		};
+		677633D61D88F8D200DDFCA7 /* ReponseModel */ = {
+			isa = PBXGroup;
+			children = (
+				677633D91D88F8D200DDFCA7 /* HDResponseModel.h */,
+				677633DA1D88F8D200DDFCA7 /* HDResponseModel.m */,
+				677633DB1D88F8D200DDFCA7 /* ResponseBodyModel */,
+			);
+			path = ReponseModel;
+			sourceTree = "<group>";
+		};
+		677633DB1D88F8D200DDFCA7 /* ResponseBodyModel */ = {
+			isa = PBXGroup;
+			children = (
+				677633DC1D88F8D200DDFCA7 /* HDResponseBodyModel.h */,
+				677633DD1D88F8D200DDFCA7 /* HDResponseBodyModel.m */,
+			);
+			path = ResponseBodyModel;
+			sourceTree = "<group>";
+		};
+		677633E01D88F8D200DDFCA7 /* RequestModel */ = {
+			isa = PBXGroup;
+			children = (
+				677633E11D88F8D200DDFCA7 /* HDRequestModel.h */,
+				677633E21D88F8D200DDFCA7 /* HDRequestModel.m */,
+				677633E31D88F8D200DDFCA7 /* RequestBodyModel */,
+			);
+			path = RequestModel;
+			sourceTree = "<group>";
+		};
+		677633E31D88F8D200DDFCA7 /* RequestBodyModel */ = {
+			isa = PBXGroup;
+			children = (
+				677633E41D88F8D200DDFCA7 /* HDRequestBodyModel.h */,
+				677633E51D88F8D200DDFCA7 /* HDRequestBodyModel.m */,
+			);
+			path = RequestBodyModel;
+			sourceTree = "<group>";
+		};
 		678F3FF61D55C0C000C736D8 = {
 			isa = PBXGroup;
 			children = (
@@ -528,6 +597,7 @@
 		67DB7CF21D55C98F000B789E /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				677633D41D88F8D200DDFCA7 /* NetModel */,
 				67D34A441D82520700A37A39 /* TableViewCellModel */,
 				6701D2D81D7FCD61005AED94 /* MenuViewControllerModel */,
 			);
@@ -635,18 +705,12 @@
 			children = (
 				67E82DB51D571D6D00725FF8 /* HDNetworking.h */,
 				67E82DB61D571D6D00725FF8 /* HDNetworking.m */,
-				67E82DB71D571D6D00725FF8 /* Modle */,
+				670F17F01D88F2420073B645 /* HDNetworkingErrorCode.h */,
+				670F17F11D88F2420073B645 /* HDNetworkingErrorCode.m */,
+				670F17F41D88F38F0073B645 /* HDNetworkingServerConfig.h */,
+				670F17F51D88F38F0073B645 /* HDNetworkingServerConfig.m */,
 			);
 			path = HDNetworking;
-			sourceTree = "<group>";
-		};
-		67E82DB71D571D6D00725FF8 /* Modle */ = {
-			isa = PBXGroup;
-			children = (
-				67E82DB81D571D6D00725FF8 /* HDPicModle.h */,
-				67E82DB91D571D6D00725FF8 /* HDPicModle.m */,
-			);
-			path = Modle;
 			sourceTree = "<group>";
 		};
 		67E82DE61D577B9A00725FF8 /* Menu */ = {
@@ -873,8 +937,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				67E82DBC1D571D6D00725FF8 /* HDPicModle.m in Sources */,
 				678F40071D55C0C000C736D8 /* AppDelegate.m in Sources */,
+				677633F01D88F8D200DDFCA7 /* HDRequestModel.m in Sources */,
 				67DB7D0D1D55C98F000B789E /* UITableView+HDExtension.m in Sources */,
 				67DB7D031D55C98F000B789E /* NSString+HDExtension.m in Sources */,
 				67E82DD41D57686500725FF8 /* HDLookForGameViewController.m in Sources */,
@@ -889,13 +953,16 @@
 				67D34A4B1D82520700A37A39 /* HDTableViewBaseModel.m in Sources */,
 				67E82DE41D5769D000725FF8 /* HDMeViewController.m in Sources */,
 				6701D2DB1D7FCD61005AED94 /* HDMenuViewControllerBaseModel.m in Sources */,
+				677633EC1D88F8D200DDFCA7 /* HDResponseBodyModel.m in Sources */,
 				67DB7CFF1D55C98F000B789E /* NSDate+HDExtension.m in Sources */,
 				67E82DDC1D57699900725FF8 /* HDMakeMoneyViewController.m in Sources */,
 				67E82D9E1D56FAA300725FF8 /* HDCrashMasterManager.m in Sources */,
+				670F17F21D88F2420073B645 /* HDNetworkingErrorCode.m in Sources */,
 				67052CD11D55DB2000CF53EE /* HDHomeViewController.m in Sources */,
 				67E82DBA1D571D6D00725FF8 /* HDNetworking.m in Sources */,
 				67DB7D051D55C98F000B789E /* UIBarButtonItem+HDExtension.m in Sources */,
 				67DB7D0F1D55C98F000B789E /* UITextField+HDExtension.m in Sources */,
+				677633F21D88F8D200DDFCA7 /* HDRequestBodyModel.m in Sources */,
 				67DB7D1D1D55C98F000B789E /* HDLocalizableConst.m in Sources */,
 				67E82DD81D57698900725FF8 /* HDClassifyViewController.m in Sources */,
 				67DB7D091D55C98F000B789E /* UIColor+HDExtension.m in Sources */,
@@ -904,6 +971,7 @@
 				67E82DA31D57061400725FF8 /* HDGrowingManager.m in Sources */,
 				67DB7D111D55C98F000B789E /* UIView+HDExtension.m in Sources */,
 				67D34A4D1D82520700A37A39 /* HDTableViewGroupModel.m in Sources */,
+				677633EA1D88F8D200DDFCA7 /* HDResponseModel.m in Sources */,
 				67DB7D1F1D55C98F000B789E /* HDDDLogManager.m in Sources */,
 				6702F4F51D77C40400EAA8FA /* HDAlertView.m in Sources */,
 				67DB7CFD1D55C98F000B789E /* Foundation+HDLog.m in Sources */,
@@ -911,6 +979,7 @@
 				67E82DE01D5769A800725FF8 /* HDSquareViewController.m in Sources */,
 				67DB7D131D55C98F000B789E /* HDMainNavigationController.m in Sources */,
 				67DB7D071D55C98F000B789E /* UIButton+HDExtension.m in Sources */,
+				670F17F61D88F38F0073B645 /* HDNetworkingServerConfig.m in Sources */,
 				6701D2DF1D7FFF07005AED94 /* HDTableViewPushCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -919,8 +988,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				67E82DBD1D571D6D00725FF8 /* HDPicModle.m in Sources */,
 				67DB7CC31D55C8BC000B789E /* AppDelegate.m in Sources */,
+				677633F11D88F8D200DDFCA7 /* HDRequestModel.m in Sources */,
 				67DB7D0E1D55C98F000B789E /* UITableView+HDExtension.m in Sources */,
 				67DB7D041D55C98F000B789E /* NSString+HDExtension.m in Sources */,
 				67E82DD51D57686500725FF8 /* HDLookForGameViewController.m in Sources */,
@@ -935,13 +1004,16 @@
 				67D34A4C1D82520700A37A39 /* HDTableViewBaseModel.m in Sources */,
 				67E82DE51D5769D000725FF8 /* HDMeViewController.m in Sources */,
 				6701D2DC1D7FCD61005AED94 /* HDMenuViewControllerBaseModel.m in Sources */,
+				677633ED1D88F8D200DDFCA7 /* HDResponseBodyModel.m in Sources */,
 				67DB7D001D55C98F000B789E /* NSDate+HDExtension.m in Sources */,
 				67E82DDD1D57699900725FF8 /* HDMakeMoneyViewController.m in Sources */,
 				67E82D9F1D56FAA300725FF8 /* HDCrashMasterManager.m in Sources */,
+				670F17F31D88F2420073B645 /* HDNetworkingErrorCode.m in Sources */,
 				67052CD21D55DB2000CF53EE /* HDHomeViewController.m in Sources */,
 				67E82DBB1D571D6D00725FF8 /* HDNetworking.m in Sources */,
 				67DB7D061D55C98F000B789E /* UIBarButtonItem+HDExtension.m in Sources */,
 				67DB7D101D55C98F000B789E /* UITextField+HDExtension.m in Sources */,
+				677633F31D88F8D200DDFCA7 /* HDRequestBodyModel.m in Sources */,
 				67DB7D1E1D55C98F000B789E /* HDLocalizableConst.m in Sources */,
 				67E82DD91D57698900725FF8 /* HDClassifyViewController.m in Sources */,
 				67DB7D0A1D55C98F000B789E /* UIColor+HDExtension.m in Sources */,
@@ -950,6 +1022,7 @@
 				67E82DA41D57061400725FF8 /* HDGrowingManager.m in Sources */,
 				67DB7D121D55C98F000B789E /* UIView+HDExtension.m in Sources */,
 				67D34A4E1D82520700A37A39 /* HDTableViewGroupModel.m in Sources */,
+				677633EB1D88F8D200DDFCA7 /* HDResponseModel.m in Sources */,
 				67DB7D201D55C98F000B789E /* HDDDLogManager.m in Sources */,
 				6702F4F61D77C40400EAA8FA /* HDAlertView.m in Sources */,
 				67DB7CFE1D55C98F000B789E /* Foundation+HDLog.m in Sources */,
@@ -957,6 +1030,7 @@
 				67E82DE11D5769A800725FF8 /* HDSquareViewController.m in Sources */,
 				67DB7D141D55C98F000B789E /* HDMainNavigationController.m in Sources */,
 				67DB7D081D55C98F000B789E /* UIButton+HDExtension.m in Sources */,
+				670F17F71D88F38F0073B645 /* HDNetworkingServerConfig.m in Sources */,
 				6701D2E01D7FFF07005AED94 /* HDTableViewPushCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1131,6 +1205,13 @@
 					"$(PROJECT_DIR)/Seven/Classes/LibSDK/QAMaster_iOS_SDK",
 				);
 				GCC_PREFIX_HEADER = Seven/Classes/Other/PrefixHeader.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"COCOAPODS=1",
+					"$(inherited)",
+					"PIN_REMOTE_IMAGE=1",
+					APP_STORE,
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/Seven/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1151,6 +1232,13 @@
 					"$(PROJECT_DIR)/Seven/Classes/LibSDK/QAMaster_iOS_SDK",
 				);
 				GCC_PREFIX_HEADER = Seven/Classes/Other/PrefixHeader.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"COCOAPODS=1",
+					"$(inherited)",
+					"PIN_REMOTE_IMAGE=1",
+					APP_STORE,
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/Seven/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
