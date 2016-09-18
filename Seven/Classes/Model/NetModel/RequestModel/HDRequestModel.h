@@ -19,7 +19,7 @@
 @property (nonatomic, strong) HDRequestBodyModel *body;
 
 /** 超时(默认20秒) */
-@property (nonatomic, assign) float timeout;
+@property (nonatomic, assign) NSTimeInterval timeout;
 
 /** 可接受的响应内容类型 */
 @property (nonatomic, copy) NSSet <NSString *> *acceptableContentTypes;
