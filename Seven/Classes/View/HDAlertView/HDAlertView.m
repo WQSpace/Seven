@@ -403,11 +403,11 @@ NSString *const HDAlertViewDidDismissNotification   = @"HDAlertViewDidDismissNot
     
     CGFloat horizontalMargin = 25.0;
     // 真机才有效,模拟器统一是25.0
-    if ([[NSString hd_deviceType] isEqualToString:iPhone6]) {
+    if ([[NSString hd_deviceType] isEqualToString:iPhone6_6s_7]) {
         horizontalMargin = 45.0;
     }
     
-    if ([[NSString hd_deviceType] isEqualToString:iPhone6Plus]) {
+    if ([[NSString hd_deviceType] isEqualToString:iPhone6_6s_7Plus]) {
         horizontalMargin = 60.0;
     }
     
