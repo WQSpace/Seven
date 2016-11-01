@@ -18,7 +18,7 @@
     ALAuthorizationStatus author = [ALAssetsLibrary authorizationStatus];
     
     if (author == kCLAuthorizationStatusRestricted || author == kCLAuthorizationStatusDenied) {
-        UIAlertView *alertV = [[UIAlertView alloc] initWithTitle:nil message:@"请在iPhone的“设置-隐私-照片”选项中，允许同仁访问你的照片。" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+        UIAlertView *alertV = [[UIAlertView alloc] initWithTitle:nil message:@"请在iPhone的“设置-隐私-照片”选项中，允许此APP访问你的照片。" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
         [alertV show];
         
         return NO; // 无权限
@@ -36,7 +36,7 @@
     AVAuthorizationStatus authStatus = [AVCaptureDevice authorizationStatusForMediaType:mediaType];
     
     if(authStatus == ALAuthorizationStatusRestricted || authStatus == ALAuthorizationStatusDenied) {
-        UIAlertView *alertV = [[UIAlertView alloc] initWithTitle:nil message:@"请在iPhone的“设置-隐私-相机”选项中，允许同仁访问你的相机。" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+        UIAlertView *alertV = [[UIAlertView alloc] initWithTitle:nil message:@"请在iPhone的“设置-隐私-相机”选项中，允许此APP访问你的相机。" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
         [alertV show];
         
         return NO; // 无权限

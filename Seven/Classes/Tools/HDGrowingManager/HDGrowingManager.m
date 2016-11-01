@@ -12,10 +12,10 @@
 @implementation HDGrowingManager
 
 + (void)configGrowingManager {
-#ifdef DEBUG
-    
-#else
+#ifdef APP_STORE
     [self setUpGrowing]; // release版本发布之后才需要开启
+#else
+    
 #endif
 }
 

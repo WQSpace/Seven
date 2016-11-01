@@ -12,10 +12,10 @@
 @implementation HDCrashMasterManager
 
 + (void)configCrashMaster {
-#ifdef DEBUG
-//    [self setUpCrashMaster];
-#else
+#ifdef APP_STORE
     [self setUpCrashMaster]; // release版本发布之后才需要开启
+#else
+    
 #endif
 }
 

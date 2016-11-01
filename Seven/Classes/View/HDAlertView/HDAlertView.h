@@ -110,6 +110,11 @@ typedef void(^HDAlertViewHandler)(HDAlertView *alertView);
  */
 - (void)show;
 
+/**
+ *  移除视图
+ */
+- (void)removeView;
+
 @end
 
 

@@ -621,9 +621,6 @@ NSString *const HDAlertViewDidDismissNotification   = @"HDAlertViewDidDismissNot
     return button;
 }
 
-/**
- *  移除视图
- */
 - (void)removeView {
     self.alertWindow.alpha = 0;
     [self.alertWindow removeFromSuperview];
