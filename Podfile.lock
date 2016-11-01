@@ -14,14 +14,6 @@ PODS:
   - AFNetworking/Serialization (3.1.0)
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
-  - AsyncDisplayKit (1.9.81):
-    - AsyncDisplayKit/PINRemoteImage (= 1.9.81)
-  - AsyncDisplayKit/ASDealloc2MainObject (1.9.81)
-  - AsyncDisplayKit/Core (1.9.81):
-    - AsyncDisplayKit/ASDealloc2MainObject
-  - AsyncDisplayKit/PINRemoteImage (1.9.81):
-    - AsyncDisplayKit/Core
-    - PINRemoteImage/iOS (>= 3.0.0-beta.2)
   - BlocksKit (2.2.5):
     - BlocksKit/All (= 2.2.5)
   - BlocksKit/All (2.2.5):
@@ -48,128 +40,63 @@ PODS:
     - CocoaLumberjack/Core
   - CocoaLumberjack/Extensions (2.3.0):
     - CocoaLumberjack/Default
-  - DACircularProgress (2.3.1)
-  - FCUUID (1.2.0):
-    - UICKeyChainStore (~> 2.1.0)
-  - FDFullscreenPopGesture (1.1)
   - FMDB (2.6.2):
     - FMDB/standard (= 2.6.2)
   - FMDB/standard (2.6.2)
-  - FXBlurView (1.6.4)
   - GrowingIO (0.9.31)
-  - JSONModel (1.3.0)
   - JSPatch (1.1):
     - JSPatch/Core (= 1.1)
   - JSPatch/Core (1.1)
-  - LBXScan (1.1.1):
-    - ZXingObjC (~> 3.0)
   - Masonry (1.0.1)
   - MBProgressHUD (1.0.0)
   - MJExtension (3.0.13)
   - MJRefresh (3.1.12)
-  - MWPhotoBrowser (1.3.1):
-    - DACircularProgress
-    - MBProgressHUD
-    - PSTCollectionView (~> 1.2)
-    - SDWebImage (~> 3.5.4)
-  - NJKWebViewProgress (0.2.3):
-    - NJKWebViewProgress/Core (= 0.2.3)
-    - NJKWebViewProgress/ProgressView (= 0.2.3)
-  - NJKWebViewProgress/Core (0.2.3)
-  - NJKWebViewProgress/ProgressView (0.2.3)
-  - PINCache (3.0.0-beta)
-  - PINRemoteImage/Core (3.0.0-beta.3):
-    - PINCache (>= 3.0.0-beta)
-  - PINRemoteImage/iOS (3.0.0-beta.3):
-    - PINRemoteImage/Core
   - pop (1.0.9)
-  - ProtocolBuffers (1.9.11)
-  - PSTCollectionView (1.2.3)
-  - RSKImageCropper (1.5.1)
+  - SDCycleScrollView (1.3)
   - SDWebImage (3.5.4):
     - SDWebImage/Core (= 3.5.4)
   - SDWebImage/Core (3.5.4)
-  - SlackTextViewController (1.9.3)
-  - SQLCipher (3.1.0):
-    - SQLCipher/standard (= 3.1.0)
-  - SQLCipher/common (3.1.0)
-  - SQLCipher/standard (3.1.0):
-    - SQLCipher/common
   - tingyunApp (2.4.0)
-  - UICKeyChainStore (2.1.0)
   - VTMagic (1.2.3):
     - VTMagic/Core (= 1.2.3)
   - VTMagic/Core (1.2.3)
-  - YYText (1.0.5)
-  - ZXingObjC (3.1.0):
-    - ZXingObjC/All (= 3.1.0)
-  - ZXingObjC/All (3.1.0)
 
 DEPENDENCIES:
   - AFNetworking
-  - AsyncDisplayKit
   - BlocksKit
   - CocoaAsyncSocket
   - CocoaLumberjack
-  - FCUUID
-  - FDFullscreenPopGesture
   - FMDB
-  - FXBlurView
   - GrowingIO
-  - JSONModel
   - JSPatch
-  - LBXScan
   - Masonry
   - MBProgressHUD
   - MJExtension
   - MJRefresh
-  - MWPhotoBrowser
-  - NJKWebViewProgress
   - pop
-  - ProtocolBuffers
-  - RSKImageCropper
+  - SDCycleScrollView
   - SDWebImage
-  - SlackTextViewController
-  - SQLCipher
   - tingyunApp
   - VTMagic
-  - YYText
-  - ZXingObjC
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
-  AsyncDisplayKit: 011ea22a76a79a5bbfc14501fede6e0196a3c2f0
   BlocksKit: 7f422b971407001178d181a43b99014ea2591fe6
   CocoaAsyncSocket: 3baeb1ddd969f81cf9fca81053ae49ef2d1cbbfa
   CocoaLumberjack: 97fab7ee5f507fe54445cca7ea80f926729cfd15
-  DACircularProgress: 4dd437c0fc3da5161cb289e07ac449493d41db71
-  FCUUID: 9bfe031d35b7c221a7c66156a0af45d4eb49c3b6
-  FDFullscreenPopGesture: a8a620179e3d9c40e8e00256dcee1c1a27c6d0f0
   FMDB: 854a0341b4726e53276f2a8996f06f1b80f9259a
-  FXBlurView: db786c2561cb49a09ae98407f52460096ab8a44f
   GrowingIO: 33c00e582342095f6b6afbf192386299465f59cd
-  JSONModel: 81c06ecf99190a25fa6aafceea5faffa7880868a
   JSPatch: ade285ad1d8f06146ed6054a39cef87509453299
-  LBXScan: dfb4d8ae8e4cff2aa0c9e1771e43954dce1469a9
   Masonry: a1a931a0d08870ed8ae415a2ea5ea68ebcac77df
   MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
   MJExtension: 5932755f451458eefa24239358817f8d291240c7
   MJRefresh: b96cdb21c4aa75a7b07654311ab2f315c497e806
-  MWPhotoBrowser: 21c403da4f44043e0cd2cd27a6fd30a7f4c431c1
-  NJKWebViewProgress: f481fd424cb5ecc27eacae11b5397db92fba9a4d
-  PINCache: 9b66261ade3d4feb272df4b4dd2e035469909448
-  PINRemoteImage: 308731aa6534500e58fc211b9cc2bb7252df25ba
   pop: f667631a5108a2e60d9e8797c9b32ddaf2080bce
-  ProtocolBuffers: d509225eb2ea43d9582a59e94348fcf86e2abd65
-  PSTCollectionView: 6749df92885353521f55279a7ce2b293762e2be4
-  RSKImageCropper: edd65fedb3734332818deb139906d6b7f54b8a44
+  SDCycleScrollView: 90e43636fcc8e6a7f74e8b64d87418a8e96549b4
   SDWebImage: 32ca144928625f9a04d561115028cf6db3aa7b63
-  SlackTextViewController: bd2a34c188d4f7dec93cf42388f38551263fac82
-  SQLCipher: 4684434d5791db86512cd7e02172aefba575849e
   tingyunApp: 8453cf5cbbd546903c11b03d9e7fb6883372ccde
-  UICKeyChainStore: f1cbd42216a113f0165de1e733e62905b8823432
   VTMagic: c69c1dd7481e0f3f4c0b2a6f27803dde55455c96
-  YYText: ac09660c9ccd9b817f409a20caa6f5587444d2ae
-  ZXingObjC: bf15b3814f7a105b6d99f47da2333c93a063650a
 
-COCOAPODS: 0.39.0
+PODFILE CHECKSUM: ed31fbc1d3ace27823882366b32b3c9eeb7eda56
+
+COCOAPODS: 1.0.1

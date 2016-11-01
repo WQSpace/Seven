@@ -136,14 +136,13 @@
 		67E82DEA1D577B9A00725FF8 /* HDMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 67E82DE81D577B9A00725FF8 /* HDMenuViewController.m */; };
 		67E82DEE1D57829600725FF8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 67E82DF11D57829600725FF8 /* InfoPlist.strings */; };
 		67E82DEF1D57829600725FF8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 67E82DF11D57829600725FF8 /* InfoPlist.strings */; };
-		AE0B3E8C6795B4D4DDDC5FF5 /* libPods-Seven.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C71D611A1A594CFBFF130A2F /* libPods-Seven.a */; };
-		EE47314B10B6561D3E66C820 /* libPods-Seven_AppStore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B030430D11A45DE67F1522E /* libPods-Seven_AppStore.a */; };
+		B3F66AEAD8ADC9C378A3606D /* libPods-Seven_AppStore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 05A2359C342F9658BB8921CB /* libPods-Seven_AppStore.a */; };
+		B492CC2AD427C28E055CDC4B /* libPods-Seven.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B23CBF08B7E1007168DC238 /* libPods-Seven.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3B030430D11A45DE67F1522E /* libPods-Seven_AppStore.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Seven_AppStore.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		4809E5D5EEDAD7C8B2C18E3F /* Pods-Seven.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Seven.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Seven/Pods-Seven.debug.xcconfig"; sourceTree = "<group>"; };
-		600CBFC0C6D60F58119622E4 /* Pods-Seven_AppStore.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Seven_AppStore.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Seven_AppStore/Pods-Seven_AppStore.debug.xcconfig"; sourceTree = "<group>"; };
+		05A2359C342F9658BB8921CB /* libPods-Seven_AppStore.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Seven_AppStore.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4B23CBF08B7E1007168DC238 /* libPods-Seven.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Seven.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6701D2C21D7FCC8B005AED94 /* HDTableViewBaseController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDTableViewBaseController.h; sourceTree = "<group>"; };
 		6701D2C31D7FCC8B005AED94 /* HDTableViewBaseController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDTableViewBaseController.m; sourceTree = "<group>"; };
 		6701D2C71D7FCCA7005AED94 /* HDTableViewBaseCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDTableViewBaseCell.h; sourceTree = "<group>"; };
@@ -265,9 +264,10 @@
 		67E82DF01D57829600725FF8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		67E82DF21D57829800725FF8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		67E82DF31D57829900725FF8 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
-		926B6537BB97F14ACD72D335 /* Pods-Seven_AppStore.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Seven_AppStore.release.xcconfig"; path = "Pods/Target Support Files/Pods-Seven_AppStore/Pods-Seven_AppStore.release.xcconfig"; sourceTree = "<group>"; };
-		C071545E15C98A36EEA1D412 /* Pods-Seven.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Seven.release.xcconfig"; path = "Pods/Target Support Files/Pods-Seven/Pods-Seven.release.xcconfig"; sourceTree = "<group>"; };
-		C71D611A1A594CFBFF130A2F /* libPods-Seven.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Seven.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6D8941992908E09827C307D7 /* Pods-Seven_AppStore.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Seven_AppStore.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Seven_AppStore/Pods-Seven_AppStore.debug.xcconfig"; sourceTree = "<group>"; };
+		731B3CF495295A80E7A1A81A /* Pods-Seven.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Seven.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Seven/Pods-Seven.debug.xcconfig"; sourceTree = "<group>"; };
+		CFF1606787AFC5D7369357E6 /* Pods-Seven_AppStore.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Seven_AppStore.release.xcconfig"; path = "Pods/Target Support Files/Pods-Seven_AppStore/Pods-Seven_AppStore.release.xcconfig"; sourceTree = "<group>"; };
+		F6AD77F237D4BAB7109AB656 /* Pods-Seven.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Seven.release.xcconfig"; path = "Pods/Target Support Files/Pods-Seven/Pods-Seven.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -287,7 +287,7 @@
 				67E82D931D56F7EA00725FF8 /* CoreLocation.framework in Frameworks */,
 				67E82D901D56F7C000725FF8 /* CoreTelephony.framework in Frameworks */,
 				67E82D831D56F2CE00725FF8 /* CrashMaster.framework in Frameworks */,
-				AE0B3E8C6795B4D4DDDC5FF5 /* libPods-Seven.a in Frameworks */,
+				B492CC2AD427C28E055CDC4B /* libPods-Seven.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -306,24 +306,13 @@
 				67E82D941D56F7F200725FF8 /* CoreLocation.framework in Frameworks */,
 				67E82D911D56F7C800725FF8 /* CoreTelephony.framework in Frameworks */,
 				67E82D841D56F2CE00725FF8 /* CrashMaster.framework in Frameworks */,
-				EE47314B10B6561D3E66C820 /* libPods-Seven_AppStore.a in Frameworks */,
+				B3F66AEAD8ADC9C378A3606D /* libPods-Seven_AppStore.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		41C8A703CE9FC699F02D57C0 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				4809E5D5EEDAD7C8B2C18E3F /* Pods-Seven.debug.xcconfig */,
-				C071545E15C98A36EEA1D412 /* Pods-Seven.release.xcconfig */,
-				600CBFC0C6D60F58119622E4 /* Pods-Seven_AppStore.debug.xcconfig */,
-				926B6537BB97F14ACD72D335 /* Pods-Seven_AppStore.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 		63A6B9C3DA647BEDA8303537 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -337,8 +326,8 @@
 				67E82D951D56F80500725FF8 /* AudioToolbox.framework */,
 				67E82D921D56F7EA00725FF8 /* CoreLocation.framework */,
 				67E82D8F1D56F7C000725FF8 /* CoreTelephony.framework */,
-				C71D611A1A594CFBFF130A2F /* libPods-Seven.a */,
-				3B030430D11A45DE67F1522E /* libPods-Seven_AppStore.a */,
+				4B23CBF08B7E1007168DC238 /* libPods-Seven.a */,
+				05A2359C342F9658BB8921CB /* libPods-Seven_AppStore.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -562,8 +551,8 @@
 			children = (
 				678F40011D55C0C000C736D8 /* Seven */,
 				678F40001D55C0C000C736D8 /* Products */,
-				41C8A703CE9FC699F02D57C0 /* Pods */,
 				63A6B9C3DA647BEDA8303537 /* Frameworks */,
+				82246E6F7810A4E0566A6415 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -816,6 +805,17 @@
 			path = Menu;
 			sourceTree = "<group>";
 		};
+		82246E6F7810A4E0566A6415 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				731B3CF495295A80E7A1A81A /* Pods-Seven.debug.xcconfig */,
+				F6AD77F237D4BAB7109AB656 /* Pods-Seven.release.xcconfig */,
+				6D8941992908E09827C307D7 /* Pods-Seven_AppStore.debug.xcconfig */,
+				CFF1606787AFC5D7369357E6 /* Pods-Seven_AppStore.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -823,12 +823,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 678F40161D55C0C000C736D8 /* Build configuration list for PBXNativeTarget "Seven" */;
 			buildPhases = (
-				C79C20F57E4CCCBD650D3213 /* Check Pods Manifest.lock */,
+				D4DCA61024E46D09E7D0477D /* [CP] Check Pods Manifest.lock */,
 				678F3FFB1D55C0C000C736D8 /* Sources */,
 				678F3FFC1D55C0C000C736D8 /* Frameworks */,
 				678F3FFD1D55C0C000C736D8 /* Resources */,
-				77746EDEDF85AA13AD546BB2 /* Embed Pods Frameworks */,
-				656A5C00C2AE004C98EB1BD7 /* Copy Pods Resources */,
+				CD69F624C548EB4C873859C0 /* [CP] Embed Pods Frameworks */,
+				F39D3C7A936A60A6EDCFFA8A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -843,12 +843,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 67DB7CBE1D55C780000B789E /* Build configuration list for PBXNativeTarget "Seven_AppStore" */;
 			buildPhases = (
-				A91C0D7FBC1C4D62D6B16EFB /* Check Pods Manifest.lock */,
+				1F723FFEEC5CE885E4F3BEEB /* [CP] Check Pods Manifest.lock */,
 				67DB7CA61D55C780000B789E /* Sources */,
 				67DB7CA71D55C780000B789E /* Frameworks */,
 				67DB7CA81D55C780000B789E /* Resources */,
-				4574E43A734C5EFFF0AA7AE5 /* Embed Pods Frameworks */,
-				EB2ABEB1450FD1BD2C75A263 /* Copy Pods Resources */,
+				2FC936E51CD4B3945AE64CAE /* [CP] Embed Pods Frameworks */,
+				B8021620EA03310D1E220516 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -934,14 +934,29 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		4574E43A734C5EFFF0AA7AE5 /* Embed Pods Frameworks */ = {
+		1F723FFEEC5CE885E4F3BEEB /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		2FC936E51CD4B3945AE64CAE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -949,29 +964,29 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Seven_AppStore/Pods-Seven_AppStore-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		656A5C00C2AE004C98EB1BD7 /* Copy Pods Resources */ = {
+		B8021620EA03310D1E220516 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Seven/Pods-Seven-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Seven_AppStore/Pods-Seven_AppStore-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		77746EDEDF85AA13AD546BB2 /* Embed Pods Frameworks */ = {
+		CD69F624C548EB4C873859C0 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -979,14 +994,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Seven/Pods-Seven-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		A91C0D7FBC1C4D62D6B16EFB /* Check Pods Manifest.lock */ = {
+		D4DCA61024E46D09E7D0477D /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -994,34 +1009,19 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		C79C20F57E4CCCBD650D3213 /* Check Pods Manifest.lock */ = {
+		F39D3C7A936A60A6EDCFFA8A /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		EB2ABEB1450FD1BD2C75A263 /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Seven_AppStore/Pods-Seven_AppStore-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Seven/Pods-Seven-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -1249,7 +1249,7 @@
 		};
 		678F40171D55C0C000C736D8 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4809E5D5EEDAD7C8B2C18E3F /* Pods-Seven.debug.xcconfig */;
+			baseConfigurationReference = 731B3CF495295A80E7A1A81A /* Pods-Seven.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -1261,6 +1261,11 @@
 					"$(PROJECT_DIR)/Seven/Classes/LibSDK/Reveal",
 				);
 				GCC_PREFIX_HEADER = Seven/Classes/Other/PrefixHeader.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"COCOAPODS=1",
+					DD_LEGACY_MACROS,
+				);
 				INFOPLIST_FILE = Seven/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1365,7 +1370,7 @@
 		};
 		678F40181D55C0C000C736D8 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C071545E15C98A36EEA1D412 /* Pods-Seven.release.xcconfig */;
+			baseConfigurationReference = F6AD77F237D4BAB7109AB656 /* Pods-Seven.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -1377,6 +1382,11 @@
 					"$(PROJECT_DIR)/Seven/Classes/LibSDK/Reveal",
 				);
 				GCC_PREFIX_HEADER = Seven/Classes/Other/PrefixHeader.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"COCOAPODS=1",
+					DD_LEGACY_MACROS,
+				);
 				INFOPLIST_FILE = Seven/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1481,7 +1491,7 @@
 		};
 		67DB7CBF1D55C780000B789E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 600CBFC0C6D60F58119622E4 /* Pods-Seven_AppStore.debug.xcconfig */;
+			baseConfigurationReference = 6D8941992908E09827C307D7 /* Pods-Seven_AppStore.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -1498,6 +1508,7 @@
 					"$(inherited)",
 					"PIN_REMOTE_IMAGE=1",
 					APP_STORE,
+					DD_LEGACY_MACROS,
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/Seven/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -1509,7 +1520,7 @@
 		};
 		67DB7CC01D55C780000B789E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 926B6537BB97F14ACD72D335 /* Pods-Seven_AppStore.release.xcconfig */;
+			baseConfigurationReference = CFF1606787AFC5D7369357E6 /* Pods-Seven_AppStore.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -1526,6 +1537,7 @@
 					"$(inherited)",
 					"PIN_REMOTE_IMAGE=1",
 					APP_STORE,
+					DD_LEGACY_MACROS,
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/Seven/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
