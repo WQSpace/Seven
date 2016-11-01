@@ -44,6 +44,7 @@ PODS:
     - FMDB/standard (= 2.6.2)
   - FMDB/standard (2.6.2)
   - GrowingIO (0.9.31)
+  - IQKeyboardManager (3.3.7)
   - JSPatch (1.1):
     - JSPatch/Core (= 1.1)
   - JSPatch/Core (1.1)
@@ -68,6 +69,7 @@ DEPENDENCIES:
   - CocoaLumberjack
   - FMDB
   - GrowingIO
+  - IQKeyboardManager
   - JSPatch
   - Masonry
   - MBProgressHUD
@@ -86,6 +88,7 @@ SPEC CHECKSUMS:
   CocoaLumberjack: 97fab7ee5f507fe54445cca7ea80f926729cfd15
   FMDB: 854a0341b4726e53276f2a8996f06f1b80f9259a
   GrowingIO: 33c00e582342095f6b6afbf192386299465f59cd
+  IQKeyboardManager: 249c3946acf61345c18b038eb50863fe2793e3a8
   JSPatch: ade285ad1d8f06146ed6054a39cef87509453299
   Masonry: a1a931a0d08870ed8ae415a2ea5ea68ebcac77df
   MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
@@ -97,6 +100,6 @@ SPEC CHECKSUMS:
   tingyunApp: 8453cf5cbbd546903c11b03d9e7fb6883372ccde
   VTMagic: c69c1dd7481e0f3f4c0b2a6f27803dde55455c96
 
-PODFILE CHECKSUM: ed31fbc1d3ace27823882366b32b3c9eeb7eda56
+PODFILE CHECKSUM: 7eadc503c6dd95c5c61832fa230fad9ade6f6b39
 
 COCOAPODS: 1.0.1

@@ -17,6 +17,7 @@ def pods
     pod 'GrowingIO'         # IO运维框架
     pod 'JSPatch'           # 热更新框架
     pod 'SDCycleScrollView' # 轮播框架
+    pod 'IQKeyboardManager' # 键盘管理框架
     
     
     #pod 'MWPhotoBrowser'

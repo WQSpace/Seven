@@ -89,7 +89,7 @@ NSString *const HDAlertViewDidDismissNotification   = @"HDAlertViewDidDismissNot
 
 
 #pragma mark - HDAlertView
-@interface HDAlertView ()
+@interface HDAlertView () <CAAnimationDelegate>
 
 /** 是否动画 */
 @property (nonatomic, assign, getter = isAlertAnimating) BOOL alertAnimating;
