@@ -1,1 +1,1 @@
-../../../GrowingIO/GrowingIO/Growing.h
+../../../GrowingIO/GrowingIO-iOS-SDK/Growing.h

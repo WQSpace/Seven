@@ -946,7 +946,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		2FC936E51CD4B3945AE64CAE /* [CP] Embed Pods Frameworks */ = {
@@ -1006,7 +1006,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		F39D3C7A936A60A6EDCFFA8A /* [CP] Copy Pods Resources */ = {
@@ -1273,37 +1273,18 @@
 					"$(inherited)",
 					"-ObjC",
 					"-l\"AFNetworking\"",
-					"-l\"AsyncDisplayKit\"",
 					"-l\"BlocksKit\"",
 					"-l\"CocoaAsyncSocket\"",
 					"-l\"CocoaLumberjack\"",
-					"-l\"DACircularProgress\"",
-					"-l\"FCUUID\"",
-					"-l\"FDFullscreenPopGesture\"",
 					"-l\"FMDB\"",
-					"-l\"FXBlurView\"",
 					"-l\"Growing\"",
-					"-l\"JSONModel\"",
 					"-l\"JSPatch\"",
-					"-l\"LBXScan\"",
 					"-l\"MBProgressHUD\"",
 					"-l\"MJExtension\"",
 					"-l\"MJRefresh\"",
-					"-l\"MWPhotoBrowser\"",
 					"-l\"Masonry\"",
-					"-l\"NJKWebViewProgress\"",
-					"-l\"PINCache\"",
-					"-l\"PINRemoteImage\"",
-					"-l\"PSTCollectionView\"",
-					"-l\"ProtocolBuffers\"",
-					"-l\"RSKImageCropper\"",
 					"-l\"SDWebImage\"",
-					"-l\"SQLCipher\"",
-					"-l\"SlackTextViewController\"",
-					"-l\"UICKeyChainStore\"",
 					"-l\"VTMagic\"",
-					"-l\"YYText\"",
-					"-l\"ZXingObjC\"",
 					"-l\"c++\"",
 					"-l\"icucore\"",
 					"-l\"pop\"",
@@ -1394,37 +1375,18 @@
 					"$(inherited)",
 					"-ObjC",
 					"-l\"AFNetworking\"",
-					"-l\"AsyncDisplayKit\"",
 					"-l\"BlocksKit\"",
 					"-l\"CocoaAsyncSocket\"",
 					"-l\"CocoaLumberjack\"",
-					"-l\"DACircularProgress\"",
-					"-l\"FCUUID\"",
-					"-l\"FDFullscreenPopGesture\"",
 					"-l\"FMDB\"",
-					"-l\"FXBlurView\"",
 					"-l\"Growing\"",
-					"-l\"JSONModel\"",
 					"-l\"JSPatch\"",
-					"-l\"LBXScan\"",
 					"-l\"MBProgressHUD\"",
 					"-l\"MJExtension\"",
 					"-l\"MJRefresh\"",
-					"-l\"MWPhotoBrowser\"",
 					"-l\"Masonry\"",
-					"-l\"NJKWebViewProgress\"",
-					"-l\"PINCache\"",
-					"-l\"PINRemoteImage\"",
-					"-l\"PSTCollectionView\"",
-					"-l\"ProtocolBuffers\"",
-					"-l\"RSKImageCropper\"",
 					"-l\"SDWebImage\"",
-					"-l\"SQLCipher\"",
-					"-l\"SlackTextViewController\"",
-					"-l\"UICKeyChainStore\"",
 					"-l\"VTMagic\"",
-					"-l\"YYText\"",
-					"-l\"ZXingObjC\"",
 					"-l\"c++\"",
 					"-l\"icucore\"",
 					"-l\"pop\"",
