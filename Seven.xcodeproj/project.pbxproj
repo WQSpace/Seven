@@ -202,6 +202,7 @@
 		678F40061D55C0C000C736D8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		678F40131D55C0C000C736D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		679312141DAA381A00F74763 /* Reveal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Reveal.framework; sourceTree = "<group>"; };
+		67C97FB71DFB0AD100F2FA63 /* HDMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDMacro.h; sourceTree = "<group>"; };
 		67CC5B871D9BD17000ACA278 /* CaptainHook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CaptainHook.h; sourceTree = "<group>"; };
 		67D34A451D82520700A37A39 /* HDTableViewBaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDTableViewBaseModel.h; sourceTree = "<group>"; };
 		67D34A461D82520700A37A39 /* HDTableViewBaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDTableViewBaseModel.m; sourceTree = "<group>"; };
@@ -223,7 +224,6 @@
 		67DB7CED1D55C98F000B789E /* HDLocalizableConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDLocalizableConst.m; sourceTree = "<group>"; };
 		67DB7CF01D55C98F000B789E /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		67DB7CF11D55C98F000B789E /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.stringsdict"; sourceTree = "<group>"; };
-		67DB7CF41D55C98F000B789E /* HDDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDDefine.h; sourceTree = "<group>"; };
 		67DB7CF51D55C98F000B789E /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		67DB7CF81D55C98F000B789E /* HDDDLogManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDDDLogManager.h; sourceTree = "<group>"; };
 		67DB7CF91D55C98F000B789E /* HDDDLogManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDDDLogManager.m; sourceTree = "<group>"; };
@@ -688,8 +688,8 @@
 		67DB7CF31D55C98F000B789E /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				67C97FB71DFB0AD100F2FA63 /* HDMacro.h */,
 				67CC5B871D9BD17000ACA278 /* CaptainHook.h */,
-				67DB7CF41D55C98F000B789E /* HDDefine.h */,
 				67DB7CF51D55C98F000B789E /* PrefixHeader.pch */,
 			);
 			path = Other;

@@ -1,5 +1,5 @@
 //
-//  HDDefine.h
+//  HDMacro.h
 //  PortableTreasure
 //
 //  Created by HeDong on 15/03/20.
@@ -15,12 +15,6 @@
 //// iPhone Simulator
 //#endif
 
-#define dispatch_main_async_safe(block)             \
-if ([NSThread isMainThread]) {                      \
-block();                                            \
-} else {                                            \
-dispatch_async(dispatch_get_main_queue(), block);   \
-}
 
 #ifdef __cplusplus
 #define HD_EXTERN		extern "C" __attribute__((visibility ("default")))
@@ -28,19 +22,35 @@ dispatch_async(dispatch_get_main_queue(), block);   \
 #define HD_EXTERN	        extern __attribute__((visibility ("default")))
 #endif
 
+
 #define weakSelf(weakSelf) __weak typeof(self)weakSelf = self;
 #define strongSelf(strongSelf) __strong typeof(weakSelf)strongSelf = weakSelf; if (!strongSelf) return;
+
 
 // 由角度获取弧度
 #define HDDegreesToRadian(x) (M_PI * (x) / 180.0)
 // 由弧度获取角度
 #define HDRadianToDegrees(radian) (radian * 180.0) / (M_PI)
 
+
 #define HDNotificationCenter [NSNotificationCenter defaultCenter]
 #define HDUserDefaults [NSUserDefaults standardUserDefaults]
 #define HDFirstWindow [UIApplication sharedApplication].windows.firstObject
 #define HDRootViewController HDFirstWindow.rootViewController
 
+
+/******* 效验对象是否是空 *******/
+#define HDStringIsEmpty(str) ([str isKindOfClass:[NSNull class]] || str == nil || [str length] < 1 ? YES : NO )
+#define HDArrayIsEmpty(array) (array == nil || [array isKindOfClass:[NSNull class]] || array.count == 0)
+#define HDDictionaryIsEmpty(dic) (dic == nil || [dic isKindOfClass:[NSNull class]] || dic.allKeys == 0)
+#define HDObjectIsEmpty(_object) (_object == nil \
+|| [_object isKindOfClass:[NSNull class]] \
+|| ([_object respondsToSelector:@selector(length)] && [(NSData *)_object length] == 0) \
+|| ([_object respondsToSelector:@selector(count)] && [(NSArray *)_object count] == 0))
+/******* 效验对象是否是空 *******/
+
+
+/******* APP_INFO *******/
 /** APP版本号 */
 #define HDAppVersion [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"]
 /** APP BUILD 版本号 */
@@ -51,6 +61,24 @@ dispatch_async(dispatch_get_main_queue(), block);   \
 #define HDLocalLanguage [[NSLocale currentLocale] objectForKey:NSLocaleLanguageCode]
 /** 当前国家 */
 #define HDLocalCountry [[NSLocale currentLocale] objectForKey:NSLocaleCountryCode]
+/******* APP_INFO *******/
+
+
+/******* 回到主线程 *******/
+#define dispatch_main_sync_safe(block)\
+if ([NSThread isMainThread]) {\
+block();\
+} else {\
+dispatch_sync(dispatch_get_main_queue(), block);\
+}
+
+#define dispatch_main_async_safe(block)             \
+if ([NSThread isMainThread]) {                      \
+block();                                            \
+} else {                                            \
+dispatch_async(dispatch_get_main_queue(), block);   \
+}
+/******* 回到主线程 *******/
 
 
 /******* RGB颜色 *******/
@@ -93,6 +121,7 @@ dispatch_async(dispatch_get_main_queue(), block);   \
 #define HDiPod ([HDDeviceModel rangeOfString:@"iPod"].length > 0)
 #define HDiPad (HDDevice.userInterfaceIdiom == UIUserInterfaceIdiomPad)
 /******* 设备型号和系统 *******/
+
 
 /******* 日志打印替换 *******/
 #import <CocoaLumberjack/CocoaLumberjack.h>

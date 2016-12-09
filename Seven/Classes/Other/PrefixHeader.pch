@@ -9,7 +9,7 @@
 #ifndef PrefixHeader_pch
 #define PrefixHeader_pch
 
-#import "HDDefine.h"
+#import "HDMacro.h"
 #import "HDLocalizableConst.h"
 #import "HDNetworking.h"
 #import "NSString+HDExtension.h"
