@@ -64,6 +64,10 @@
 		678F40041D55C0C000C736D8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 678F40031D55C0C000C736D8 /* main.m */; };
 		678F40071D55C0C000C736D8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 678F40061D55C0C000C736D8 /* AppDelegate.m */; };
 		679312151DAA381A00F74763 /* Reveal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 679312141DAA381A00F74763 /* Reveal.framework */; };
+		67C8B60B1DFFB40600B38552 /* HDMuteSwitch.m in Sources */ = {isa = PBXBuildFile; fileRef = 67C8B60A1DFFB40600B38552 /* HDMuteSwitch.m */; };
+		67C8B60C1DFFB40600B38552 /* HDMuteSwitch.m in Sources */ = {isa = PBXBuildFile; fileRef = 67C8B60A1DFFB40600B38552 /* HDMuteSwitch.m */; };
+		67C8B60E1DFFB45900B38552 /* detection.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 67C8B60D1DFFB45900B38552 /* detection.aiff */; };
+		67C8B60F1DFFB45900B38552 /* detection.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 67C8B60D1DFFB45900B38552 /* detection.aiff */; };
 		67D34A4B1D82520700A37A39 /* HDTableViewBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 67D34A461D82520700A37A39 /* HDTableViewBaseModel.m */; };
 		67D34A4C1D82520700A37A39 /* HDTableViewBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 67D34A461D82520700A37A39 /* HDTableViewBaseModel.m */; };
 		67D34A4D1D82520700A37A39 /* HDTableViewGroupModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 67D34A481D82520700A37A39 /* HDTableViewGroupModel.m */; };
@@ -202,6 +206,9 @@
 		678F40061D55C0C000C736D8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		678F40131D55C0C000C736D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		679312141DAA381A00F74763 /* Reveal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Reveal.framework; sourceTree = "<group>"; };
+		67C8B6091DFFB40600B38552 /* HDMuteSwitch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDMuteSwitch.h; sourceTree = "<group>"; };
+		67C8B60A1DFFB40600B38552 /* HDMuteSwitch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDMuteSwitch.m; sourceTree = "<group>"; };
+		67C8B60D1DFFB45900B38552 /* detection.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = detection.aiff; sourceTree = "<group>"; };
 		67C97FB71DFB0AD100F2FA63 /* HDMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDMacro.h; sourceTree = "<group>"; };
 		67CC5B871D9BD17000ACA278 /* CaptainHook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CaptainHook.h; sourceTree = "<group>"; };
 		67D34A451D82520700A37A39 /* HDTableViewBaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDTableViewBaseModel.h; sourceTree = "<group>"; };
@@ -275,6 +282,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				67E82D961D56F80500725FF8 /* AudioToolbox.framework in Frameworks */,
 				67521AF81D5A106500B4BE28 /* AVFoundation.framework in Frameworks */,
 				67E82D9A1D56F82A00725FF8 /* CoreMotion.framework in Frameworks */,
 				67E82DB21D570E9700725FF8 /* ImageIO.framework in Frameworks */,
@@ -283,7 +291,6 @@
 				67E82DAE1D570E4500725FF8 /* SystemConfiguration.framework in Frameworks */,
 				67E82DAA1D570C5100725FF8 /* libsqlite3.tbd in Frameworks */,
 				67E82DA61D570C3700725FF8 /* libicucore.tbd in Frameworks */,
-				67E82D961D56F80500725FF8 /* AudioToolbox.framework in Frameworks */,
 				67E82D931D56F7EA00725FF8 /* CoreLocation.framework in Frameworks */,
 				67E82D901D56F7C000725FF8 /* CoreTelephony.framework in Frameworks */,
 				67E82D831D56F2CE00725FF8 /* CrashMaster.framework in Frameworks */,
@@ -295,6 +302,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				67E82D971D56F81000725FF8 /* AudioToolbox.framework in Frameworks */,
 				67521AF91D5A106E00B4BE28 /* AVFoundation.framework in Frameworks */,
 				67E82D991D56F82300725FF8 /* CoreMotion.framework in Frameworks */,
 				67E82DB31D570E9E00725FF8 /* ImageIO.framework in Frameworks */,
@@ -302,7 +310,6 @@
 				67E82DAF1D570E4C00725FF8 /* SystemConfiguration.framework in Frameworks */,
 				67E82DA91D570C4B00725FF8 /* libsqlite3.tbd in Frameworks */,
 				67E82DA71D570C3C00725FF8 /* libicucore.tbd in Frameworks */,
-				67E82D971D56F81000725FF8 /* AudioToolbox.framework in Frameworks */,
 				67E82D941D56F7F200725FF8 /* CoreLocation.framework in Frameworks */,
 				67E82D911D56F7C800725FF8 /* CoreTelephony.framework in Frameworks */,
 				67E82D841D56F2CE00725FF8 /* CrashMaster.framework in Frameworks */,
@@ -594,6 +601,16 @@
 			path = Reveal;
 			sourceTree = "<group>";
 		};
+		67C8B6081DFFB3FA00B38552 /* HDMuteSwitch */ = {
+			isa = PBXGroup;
+			children = (
+				67C8B60D1DFFB45900B38552 /* detection.aiff */,
+				67C8B6091DFFB40600B38552 /* HDMuteSwitch.h */,
+				67C8B60A1DFFB40600B38552 /* HDMuteSwitch.m */,
+			);
+			path = HDMuteSwitch;
+			sourceTree = "<group>";
+		};
 		67D34A441D82520700A37A39 /* TableViewCellModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -698,6 +715,7 @@
 		67DB7CF61D55C98F000B789E /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				67C8B6081DFFB3FA00B38552 /* HDMuteSwitch */,
 				67521AEE1D5A0F7900B4BE28 /* HDUserEquipmentManager */,
 				67E82DB41D571D6D00725FF8 /* HDNetworking */,
 				67E82DA01D57060C00725FF8 /* HDGrowingManager */,
@@ -904,6 +922,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				67E82D8B1D56F2CE00725FF8 /* success.2.0.7.png in Resources */,
+				67C8B60E1DFFB45900B38552 /* detection.aiff in Resources */,
 				67E82D8D1D56F2CE00725FF8 /* text.2.0.7.png in Resources */,
 				67E82D851D56F2CE00725FF8 /* hand.2.0.7.gif in Resources */,
 				67DB7CA51D55C5A5000B789E /* Images.xcassets in Resources */,
@@ -920,6 +939,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				67E82D8C1D56F2CE00725FF8 /* success.2.0.7.png in Resources */,
+				67C8B60F1DFFB45900B38552 /* detection.aiff in Resources */,
 				67E82D8E1D56F2CE00725FF8 /* text.2.0.7.png in Resources */,
 				67E82D861D56F2CE00725FF8 /* hand.2.0.7.gif in Resources */,
 				67DB7CC51D55C8E1000B789E /* Images.xcassets in Resources */,
@@ -1058,6 +1078,7 @@
 				670F17F21D88F2420073B645 /* HDNetworkingErrorCode.m in Sources */,
 				678128F71DB47AE900E31B8D /* UIBarButtonItem+HDExtension.m in Sources */,
 				67052CD11D55DB2000CF53EE /* HDHomeViewController.m in Sources */,
+				67C8B60B1DFFB40600B38552 /* HDMuteSwitch.m in Sources */,
 				67E82DBA1D571D6D00725FF8 /* HDNetworking.m in Sources */,
 				677633F21D88F8D200DDFCA7 /* HDRequestBodyModel.m in Sources */,
 				67DB7D1D1D55C98F000B789E /* HDLocalizableConst.m in Sources */,
@@ -1109,6 +1130,7 @@
 				670F17F31D88F2420073B645 /* HDNetworkingErrorCode.m in Sources */,
 				678128F81DB47AE900E31B8D /* UIBarButtonItem+HDExtension.m in Sources */,
 				67052CD21D55DB2000CF53EE /* HDHomeViewController.m in Sources */,
+				67C8B60C1DFFB40600B38552 /* HDMuteSwitch.m in Sources */,
 				67E82DBB1D571D6D00725FF8 /* HDNetworking.m in Sources */,
 				677633F31D88F8D200DDFCA7 /* HDRequestBodyModel.m in Sources */,
 				67DB7D1E1D55C98F000B789E /* HDLocalizableConst.m in Sources */,
