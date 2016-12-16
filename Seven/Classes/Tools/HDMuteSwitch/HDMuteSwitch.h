@@ -18,9 +18,10 @@
 
 @interface HDMuteSwitch : NSObject
 
+HDSingletonH(HDMuteSwitch)
+
 @property (nonatomic, weak) id<HDMuteSwitchDelegate> delegate;
 
-HDSingletonH(HDMuteSwitch)
 
 /**
  等待回调或代理
