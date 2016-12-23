@@ -105,11 +105,12 @@ dispatch_async(dispatch_get_main_queue(), block);   \
 #define HDSYSTEM_VERSION_LESS_THAN(v)                 ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] == NSOrderedAscending)
 #define HDSYSTEM_VERSION_LESS_THAN_OR_EQUAL_TO(v)     ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] != NSOrderedDescending)
 
-#define iOS5_OR_LATER HDSYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"5.0")
-#define iOS6_OR_LATER HDSYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"6.0")
-#define iOS7_OR_LATER HDSYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"7.0")
-#define iOS8_OR_LATER HDSYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"8.0")
-#define iOS9_OR_LATER HDSYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"9.0")
+#define iOS5_OR_LATER  HDSYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"5.0")
+#define iOS6_OR_LATER  HDSYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"6.0")
+#define iOS7_OR_LATER  HDSYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"7.0")
+#define iOS8_OR_LATER  HDSYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"8.0")
+#define iOS9_OR_LATER  HDSYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"9.0")
+#define iOS10_OR_LATER HDSYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"10.0")
 
 /** 系统和版本号 */
 #define HDDevice [UIDevice currentDevice]

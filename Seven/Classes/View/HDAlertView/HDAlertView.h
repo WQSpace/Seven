@@ -47,6 +47,9 @@ typedef void(^HDAlertViewHandler)(HDAlertView *alertView);
 
 @interface HDAlertView : UIView
 
+/** 图标的名字 */
+@property (nonatomic, copy) NSString *imageName;
+
 /** 标题-只支持1行 */
 @property (nonatomic, copy) NSString *title;
 

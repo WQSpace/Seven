@@ -95,6 +95,8 @@ NSString *const HDAlertViewDidDismissNotification   = @"HDAlertViewDidDismissNot
 @property (nonatomic, assign, getter = isAlertAnimating) BOOL alertAnimating;
 /** 是否可见 */
 @property (nonatomic, assign, getter = isVisible) BOOL visible;
+/** 图片 */
+@property (nonatomic, weak) UIImageView *imageView;
 /** 标题 */
 @property (nonatomic, weak) UILabel *titleLabel;
 /** 消息描述 */
@@ -399,7 +401,7 @@ NSString *const HDAlertViewDidDismissNotification   = @"HDAlertViewDidDismissNot
 
 #pragma mark - 布局
 - (void)setSubviewsFrame {
-    CGFloat margin = 20.0;
+    CGFloat margin = 25.0;
     
     CGFloat horizontalMargin = 25.0;
     // 真机才有效,模拟器统一是25.0
@@ -413,6 +415,16 @@ NSString *const HDAlertViewDidDismissNotification   = @"HDAlertViewDidDismissNot
     
     CGFloat containerViewW = (HDMainScreenWidth - horizontalMargin * 2);
     
+    /** 图片 */
+    if (self.imageName.length > 0) {
+        CGFloat imageViewH = 60;
+        CGFloat imageViewW = imageViewH;
+        CGFloat imageViewX = (containerViewW - imageViewW) * 0.5;
+        CGFloat imageViewY = margin;
+        
+        self.imageView.frame = CGRectMake(imageViewX, imageViewY, imageViewW, imageViewH);
+    }
+    
     /** 标题 */
     CGSize titleLabelSize = {0, 0};
     if (self.title.length > 0) {
@@ -422,7 +434,7 @@ NSString *const HDAlertViewDidDismissNotification   = @"HDAlertViewDidDismissNot
     CGFloat titleLabelH = titleLabelSize.height;
     CGFloat titleLabelW = containerViewW;
     CGFloat titleLabelX = 0;
-    CGFloat titleLabelY = margin;
+    CGFloat titleLabelY = CGRectGetMaxY(self.imageView.frame) + margin;
     self.titleLabel.frame = CGRectMake(titleLabelX, titleLabelY, titleLabelW, titleLabelH);
     
     /** 消息描述 */
@@ -434,7 +446,7 @@ NSString *const HDAlertViewDidDismissNotification   = @"HDAlertViewDidDismissNot
     CGFloat messageLabelH = messageLabelSize.height;
     CGFloat messageLabelW = containerViewW;
     CGFloat messageLabelX = 0;
-    CGFloat messageLabelY = CGRectGetMaxY(self.titleLabel.frame) + margin;
+    CGFloat messageLabelY = CGRectGetMaxY(self.titleLabel.frame) + (messageLabelH > 0 ? margin : 0);
     self.messageLabel.frame = CGRectMake(messageLabelX, messageLabelY, messageLabelW, messageLabelH);
     
     /** 按钮 */
@@ -496,6 +508,11 @@ NSString *const HDAlertViewDidDismissNotification   = @"HDAlertViewDidDismissNot
     [containerView addGestureRecognizer:[[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(panPressContainerView:)]];
     [self addSubview:containerView];
     self.containerView = containerView;
+    
+    /** 图片 */
+    UIImageView *imageView = [[UIImageView alloc] init];
+    [self.containerView addSubview:imageView];
+    self.imageView = imageView;
     
     /** 标题 */
     UILabel *titleLabel = [[UILabel alloc] init];
@@ -656,6 +673,13 @@ NSString *const HDAlertViewDidDismissNotification   = @"HDAlertViewDidDismissNot
 
 
 #pragma mark - setter方法
+- (void)setImageName:(NSString *)imageName {
+    if (_imageName == imageName) return;
+    
+    _imageName = imageName;
+    [self.imageView setImage:[UIImage imageNamed:imageName]];
+}
+
 - (void)setTitle:(NSString *)title {
     if (_title == title) return;
     
