@@ -31,6 +31,8 @@
 		67521AF61D5A0F8E00B4BE28 /* HDUserEquipmentManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 67521AF41D5A0F8E00B4BE28 /* HDUserEquipmentManager.m */; };
 		67521AF81D5A106500B4BE28 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67521AF71D5A106500B4BE28 /* AVFoundation.framework */; };
 		67521AF91D5A106E00B4BE28 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67521AF71D5A106500B4BE28 /* AVFoundation.framework */; };
+		677427491E1E4E9300C426E2 /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 677427451E1E4E9300C426E2 /* libWeChatSDK.a */; };
+		6774274A1E1E4E9300C426E2 /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 677427451E1E4E9300C426E2 /* libWeChatSDK.a */; };
 		677633EA1D88F8D200DDFCA7 /* HDResponseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 677633DA1D88F8D200DDFCA7 /* HDResponseModel.m */; };
 		677633EB1D88F8D200DDFCA7 /* HDResponseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 677633DA1D88F8D200DDFCA7 /* HDResponseModel.m */; };
 		677633EC1D88F8D200DDFCA7 /* HDResponseBodyModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 677633DD1D88F8D200DDFCA7 /* HDResponseBodyModel.m */; };
@@ -170,6 +172,10 @@
 		67521AF31D5A0F8E00B4BE28 /* HDUserEquipmentManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDUserEquipmentManager.h; sourceTree = "<group>"; };
 		67521AF41D5A0F8E00B4BE28 /* HDUserEquipmentManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDUserEquipmentManager.m; sourceTree = "<group>"; };
 		67521AF71D5A106500B4BE28 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		677427451E1E4E9300C426E2 /* libWeChatSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libWeChatSDK.a; sourceTree = "<group>"; };
+		677427461E1E4E9300C426E2 /* WechatAuthSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WechatAuthSDK.h; sourceTree = "<group>"; };
+		677427471E1E4E9300C426E2 /* WXApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApi.h; sourceTree = "<group>"; };
+		677427481E1E4E9300C426E2 /* WXApiObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApiObject.h; sourceTree = "<group>"; };
 		677633D51D88F8D200DDFCA7 /* HDNetModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDNetModel.h; sourceTree = "<group>"; };
 		677633D91D88F8D200DDFCA7 /* HDResponseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDResponseModel.h; sourceTree = "<group>"; };
 		677633DA1D88F8D200DDFCA7 /* HDResponseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDResponseModel.m; sourceTree = "<group>"; };
@@ -282,6 +288,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				677427491E1E4E9300C426E2 /* libWeChatSDK.a in Frameworks */,
 				67E82D961D56F80500725FF8 /* AudioToolbox.framework in Frameworks */,
 				67521AF81D5A106500B4BE28 /* AVFoundation.framework in Frameworks */,
 				67E82D9A1D56F82A00725FF8 /* CoreMotion.framework in Frameworks */,
@@ -306,6 +313,7 @@
 				67521AF91D5A106E00B4BE28 /* AVFoundation.framework in Frameworks */,
 				67E82D991D56F82300725FF8 /* CoreMotion.framework in Frameworks */,
 				67E82DB31D570E9E00725FF8 /* ImageIO.framework in Frameworks */,
+				6774274A1E1E4E9300C426E2 /* libWeChatSDK.a in Frameworks */,
 				67E82DB01D570E5600725FF8 /* Security.framework in Frameworks */,
 				67E82DAF1D570E4C00725FF8 /* SystemConfiguration.framework in Frameworks */,
 				67E82DA91D570C4B00725FF8 /* libsqlite3.tbd in Frameworks */,
@@ -412,6 +420,24 @@
 				67521AF41D5A0F8E00B4BE28 /* HDUserEquipmentManager.m */,
 			);
 			path = HDUserEquipmentManager;
+			sourceTree = "<group>";
+		};
+		677427441E1E4E9300C426E2 /* WXSDK1.7.5 */ = {
+			isa = PBXGroup;
+			children = (
+				677427451E1E4E9300C426E2 /* libWeChatSDK.a */,
+				677427461E1E4E9300C426E2 /* WechatAuthSDK.h */,
+				677427471E1E4E9300C426E2 /* WXApi.h */,
+				677427481E1E4E9300C426E2 /* WXApiObject.h */,
+			);
+			path = WXSDK1.7.5;
+			sourceTree = "<group>";
+		};
+		6774274B1E1E4F2A00C426E2 /* HDShareManager */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = HDShareManager;
 			sourceTree = "<group>";
 		};
 		677633D41D88F8D200DDFCA7 /* NetModel */ = {
@@ -715,6 +741,7 @@
 		67DB7CF61D55C98F000B789E /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				6774274B1E1E4F2A00C426E2 /* HDShareManager */,
 				67C8B6081DFFB3FA00B38552 /* HDMuteSwitch */,
 				67521AEE1D5A0F7900B4BE28 /* HDUserEquipmentManager */,
 				67E82DB41D571D6D00725FF8 /* HDNetworking */,
@@ -756,6 +783,7 @@
 		67E82D7A1D56F2C600725FF8 /* LibSDK */ = {
 			isa = PBXGroup;
 			children = (
+				677427441E1E4E9300C426E2 /* WXSDK1.7.5 */,
 				679312131DAA381A00F74763 /* Reveal */,
 				67E82D7B1D56F2CE00725FF8 /* QAMaster_iOS_SDK */,
 			);
@@ -1291,6 +1319,10 @@
 				INFOPLIST_FILE = Seven/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Seven/Classes/LibSDK/WXSDK1.7.5",
+				);
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
@@ -1393,6 +1425,10 @@
 				INFOPLIST_FILE = Seven/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Seven/Classes/LibSDK/WXSDK1.7.5",
+				);
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
@@ -1497,6 +1533,10 @@
 				INFOPLIST_FILE = "$(SRCROOT)/Seven/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Seven/Classes/LibSDK/WXSDK1.7.5",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.hedong.www.Seven-AppStore";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -1526,6 +1566,10 @@
 				INFOPLIST_FILE = "$(SRCROOT)/Seven/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Seven/Classes/LibSDK/WXSDK1.7.5",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.hedong.www.Seven-AppStore";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
