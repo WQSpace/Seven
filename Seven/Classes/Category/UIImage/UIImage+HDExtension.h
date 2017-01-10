@@ -125,7 +125,17 @@
  *
  *  @return 压缩好的图片
  */
-+ (instancetype)hd_imageWithImageSimple:(UIImage*)image scaledToSize:(CGSize)newSize;
++ (instancetype)hd_imageWithImageSimple:(UIImage *)image scaledToSize:(CGSize)newSize;
+
+/**
+ *  对图片进行压缩
+ *
+ *  @param image   要压缩的图片
+ *  @param newSize 压缩后的图片的像素尺寸
+ *
+ *  @return 压缩好的图片
+ */
++ (instancetype)hd_imageWithDataSimple:(NSData *)imageData scaledToSize:(CGSize)newSize;
 
 /**
  *  生成了一个毛玻璃效果的图片

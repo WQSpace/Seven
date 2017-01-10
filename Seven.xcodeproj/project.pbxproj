@@ -142,6 +142,12 @@
 		67E82DEA1D577B9A00725FF8 /* HDMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 67E82DE81D577B9A00725FF8 /* HDMenuViewController.m */; };
 		67E82DEE1D57829600725FF8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 67E82DF11D57829600725FF8 /* InfoPlist.strings */; };
 		67E82DEF1D57829600725FF8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 67E82DF11D57829600725FF8 /* InfoPlist.strings */; };
+		67F8B72E1E24D98C004DC2C0 /* HDHTMLAnalysisTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 67F8B72D1E24D98C004DC2C0 /* HDHTMLAnalysisTool.m */; };
+		67F8B72F1E24D98C004DC2C0 /* HDHTMLAnalysisTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 67F8B72D1E24D98C004DC2C0 /* HDHTMLAnalysisTool.m */; };
+		67F8B7321E24DA61004DC2C0 /* HDWXShareManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 67F8B7311E24DA61004DC2C0 /* HDWXShareManager.m */; };
+		67F8B7331E24DA61004DC2C0 /* HDWXShareManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 67F8B7311E24DA61004DC2C0 /* HDWXShareManager.m */; };
+		67F8B7371E24DEF8004DC2C0 /* HDOpenURLManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 67F8B7361E24DEF8004DC2C0 /* HDOpenURLManager.m */; };
+		67F8B7381E24DEF8004DC2C0 /* HDOpenURLManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 67F8B7361E24DEF8004DC2C0 /* HDOpenURLManager.m */; };
 		B3F66AEAD8ADC9C378A3606D /* libPods-Seven_AppStore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 05A2359C342F9658BB8921CB /* libPods-Seven_AppStore.a */; };
 		B492CC2AD427C28E055CDC4B /* libPods-Seven.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B23CBF08B7E1007168DC238 /* libPods-Seven.a */; };
 /* End PBXBuildFile section */
@@ -277,6 +283,12 @@
 		67E82DF01D57829600725FF8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		67E82DF21D57829800725FF8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		67E82DF31D57829900725FF8 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		67F8B72C1E24D98C004DC2C0 /* HDHTMLAnalysisTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDHTMLAnalysisTool.h; sourceTree = "<group>"; };
+		67F8B72D1E24D98C004DC2C0 /* HDHTMLAnalysisTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDHTMLAnalysisTool.m; sourceTree = "<group>"; };
+		67F8B7301E24DA61004DC2C0 /* HDWXShareManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDWXShareManager.h; sourceTree = "<group>"; };
+		67F8B7311E24DA61004DC2C0 /* HDWXShareManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDWXShareManager.m; sourceTree = "<group>"; };
+		67F8B7351E24DEF8004DC2C0 /* HDOpenURLManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDOpenURLManager.h; sourceTree = "<group>"; };
+		67F8B7361E24DEF8004DC2C0 /* HDOpenURLManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDOpenURLManager.m; sourceTree = "<group>"; };
 		6D8941992908E09827C307D7 /* Pods-Seven_AppStore.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Seven_AppStore.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Seven_AppStore/Pods-Seven_AppStore.debug.xcconfig"; sourceTree = "<group>"; };
 		731B3CF495295A80E7A1A81A /* Pods-Seven.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Seven.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Seven/Pods-Seven.debug.xcconfig"; sourceTree = "<group>"; };
 		CFF1606787AFC5D7369357E6 /* Pods-Seven_AppStore.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Seven_AppStore.release.xcconfig"; path = "Pods/Target Support Files/Pods-Seven_AppStore/Pods-Seven_AppStore.release.xcconfig"; sourceTree = "<group>"; };
@@ -436,6 +448,8 @@
 		6774274B1E1E4F2A00C426E2 /* HDShareManager */ = {
 			isa = PBXGroup;
 			children = (
+				67F8B7301E24DA61004DC2C0 /* HDWXShareManager.h */,
+				67F8B7311E24DA61004DC2C0 /* HDWXShareManager.m */,
 			);
 			path = HDShareManager;
 			sourceTree = "<group>";
@@ -741,6 +755,8 @@
 		67DB7CF61D55C98F000B789E /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				67F8B7341E24DEE2004DC2C0 /* HDOpenURLManager */,
+				67F8B72B1E24D981004DC2C0 /* HDHTMLAnalysisTool */,
 				6774274B1E1E4F2A00C426E2 /* HDShareManager */,
 				67C8B6081DFFB3FA00B38552 /* HDMuteSwitch */,
 				67521AEE1D5A0F7900B4BE28 /* HDUserEquipmentManager */,
@@ -849,6 +865,24 @@
 				67E82DE81D577B9A00725FF8 /* HDMenuViewController.m */,
 			);
 			path = Menu;
+			sourceTree = "<group>";
+		};
+		67F8B72B1E24D981004DC2C0 /* HDHTMLAnalysisTool */ = {
+			isa = PBXGroup;
+			children = (
+				67F8B72C1E24D98C004DC2C0 /* HDHTMLAnalysisTool.h */,
+				67F8B72D1E24D98C004DC2C0 /* HDHTMLAnalysisTool.m */,
+			);
+			path = HDHTMLAnalysisTool;
+			sourceTree = "<group>";
+		};
+		67F8B7341E24DEE2004DC2C0 /* HDOpenURLManager */ = {
+			isa = PBXGroup;
+			children = (
+				67F8B7351E24DEF8004DC2C0 /* HDOpenURLManager.h */,
+				67F8B7361E24DEF8004DC2C0 /* HDOpenURLManager.m */,
+			);
+			path = HDOpenURLManager;
 			sourceTree = "<group>";
 		};
 		82246E6F7810A4E0566A6415 /* Pods */ = {
@@ -1088,6 +1122,7 @@
 				6701D2C91D7FCCA7005AED94 /* HDTableViewBaseCell.m in Sources */,
 				67E82DE91D577B9A00725FF8 /* HDMenuViewController.m in Sources */,
 				67D34A4F1D82520700A37A39 /* HDTableViewPushModel.m in Sources */,
+				67F8B7371E24DEF8004DC2C0 /* HDOpenURLManager.m in Sources */,
 				6701D2C41D7FCC8B005AED94 /* HDTableViewBaseController.m in Sources */,
 				678129031DB47AE900E31B8D /* UIView+HDExtension.m in Sources */,
 				678128EF1DB47AE900E31B8D /* Foundation+HDLog.m in Sources */,
@@ -1104,6 +1139,7 @@
 				678128FB1DB47AE900E31B8D /* UIColor+HDExtension.m in Sources */,
 				67E82D9E1D56FAA300725FF8 /* HDCrashMasterManager.m in Sources */,
 				670F17F21D88F2420073B645 /* HDNetworkingErrorCode.m in Sources */,
+				67F8B7321E24DA61004DC2C0 /* HDWXShareManager.m in Sources */,
 				678128F71DB47AE900E31B8D /* UIBarButtonItem+HDExtension.m in Sources */,
 				67052CD11D55DB2000CF53EE /* HDHomeViewController.m in Sources */,
 				67C8B60B1DFFB40600B38552 /* HDMuteSwitch.m in Sources */,
@@ -1119,6 +1155,7 @@
 				6702F4F51D77C40400EAA8FA /* HDAlertView.m in Sources */,
 				678128FF1DB47AE900E31B8D /* UITableView+HDExtension.m in Sources */,
 				67052CD61D55DBE000CF53EE /* HDTabBar.m in Sources */,
+				67F8B72E1E24D98C004DC2C0 /* HDHTMLAnalysisTool.m in Sources */,
 				67E82DE01D5769A800725FF8 /* HDSquareViewController.m in Sources */,
 				678128F91DB47AE900E31B8D /* UIButton+HDExtension.m in Sources */,
 				67DB7D131D55C98F000B789E /* HDMainNavigationController.m in Sources */,
@@ -1140,6 +1177,7 @@
 				6701D2CA1D7FCCA7005AED94 /* HDTableViewBaseCell.m in Sources */,
 				67E82DEA1D577B9A00725FF8 /* HDMenuViewController.m in Sources */,
 				67D34A501D82520700A37A39 /* HDTableViewPushModel.m in Sources */,
+				67F8B7381E24DEF8004DC2C0 /* HDOpenURLManager.m in Sources */,
 				6701D2C51D7FCC8B005AED94 /* HDTableViewBaseController.m in Sources */,
 				678129041DB47AE900E31B8D /* UIView+HDExtension.m in Sources */,
 				678128F01DB47AE900E31B8D /* Foundation+HDLog.m in Sources */,
@@ -1156,6 +1194,7 @@
 				678128FC1DB47AE900E31B8D /* UIColor+HDExtension.m in Sources */,
 				67E82D9F1D56FAA300725FF8 /* HDCrashMasterManager.m in Sources */,
 				670F17F31D88F2420073B645 /* HDNetworkingErrorCode.m in Sources */,
+				67F8B7331E24DA61004DC2C0 /* HDWXShareManager.m in Sources */,
 				678128F81DB47AE900E31B8D /* UIBarButtonItem+HDExtension.m in Sources */,
 				67052CD21D55DB2000CF53EE /* HDHomeViewController.m in Sources */,
 				67C8B60C1DFFB40600B38552 /* HDMuteSwitch.m in Sources */,
@@ -1171,6 +1210,7 @@
 				6702F4F61D77C40400EAA8FA /* HDAlertView.m in Sources */,
 				678129001DB47AE900E31B8D /* UITableView+HDExtension.m in Sources */,
 				67052CD71D55DBE000CF53EE /* HDTabBar.m in Sources */,
+				67F8B72F1E24D98C004DC2C0 /* HDHTMLAnalysisTool.m in Sources */,
 				67E82DE11D5769A800725FF8 /* HDSquareViewController.m in Sources */,
 				678128FA1DB47AE900E31B8D /* UIButton+HDExtension.m in Sources */,
 				67DB7D141D55C98F000B789E /* HDMainNavigationController.m in Sources */,

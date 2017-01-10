@@ -175,6 +175,10 @@
     return newImage;
 }
 
++ (instancetype)hd_imageWithDataSimple:(NSData *)imageData scaledToSize:(CGSize)newSize {
+    return [self hd_imageWithImageSimple:[UIImage imageWithData:imageData] scaledToSize:newSize];
+}
+
 - (instancetype)hd_blurredImage:(CGFloat)blurAmount {
     if (blurAmount < 0.0 || blurAmount > 2.0) {
         blurAmount = 0.5;

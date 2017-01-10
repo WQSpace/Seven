@@ -12,6 +12,8 @@
 #import "HDCrashMasterManager.h"
 #import "HDMainTabBarController.h"
 #import <SDWebImage/SDImageCache.h>
+#import "HDWXShareManager.h"
+#import "HDOpenURLManager.h"
 
 @interface AppDelegate ()
 
@@ -22,10 +24,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    
-    [HDDDLogManager configDDLog];             // 配置日志系统
-    [HDGrowingManager configGrowingManager];  // 配置Growing数据分析
-    [HDCrashMasterManager configCrashMaster]; // 配置testin测试
+    [self config];
     
     self.window = [[UIWindow alloc] initWithFrame:HDMainScreenBounds];
     self.window.backgroundColor = [UIColor whiteColor];
@@ -59,16 +58,24 @@
 }
 
 - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
-#ifdef DEBUG
-    
-#else
-    if ([HDGrowingManager handleUrl:url]) return YES;
-#endif
-    return NO;
+    return [HDOpenURLManager handleWithURL:url];
+}
+
+- (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<NSString*, id> *)options  {
+    return [HDOpenURLManager handleWithURL:url];
 }
 
 - (void)applicationDidReceiveMemoryWarning:(UIApplication *)application {
     [[SDImageCache sharedImageCache] clearMemory];
+}
+
+
+#pragma mark - 配置环境
+- (void)config {
+    [HDDDLogManager configDDLog];             // 配置日志系统
+    [HDGrowingManager configGrowingManager];  // 配置Growing数据分析
+    [HDCrashMasterManager configCrashMaster]; // 配置testin测试
+    [[HDWXShareManager sharedHDWXShareManager] registerTRApp:@"7777777"]; // 注册微信平台
 }
 
 @end
