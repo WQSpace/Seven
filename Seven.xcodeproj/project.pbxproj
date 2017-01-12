@@ -92,6 +92,10 @@
 		67DB7D1E1D55C98F000B789E /* HDLocalizableConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 67DB7CED1D55C98F000B789E /* HDLocalizableConst.m */; };
 		67DB7D1F1D55C98F000B789E /* HDDDLogManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 67DB7CF91D55C98F000B789E /* HDDDLogManager.m */; };
 		67DB7D201D55C98F000B789E /* HDDDLogManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 67DB7CF91D55C98F000B789E /* HDDDLogManager.m */; };
+		67E38DF81E2761FE0006CC8B /* MBProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 67E38DF51E2761FE0006CC8B /* MBProgressHUD.bundle */; };
+		67E38DF91E2761FE0006CC8B /* MBProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 67E38DF51E2761FE0006CC8B /* MBProgressHUD.bundle */; };
+		67E38DFE1E27621A0006CC8B /* MBProgressHUD+HD.m in Sources */ = {isa = PBXBuildFile; fileRef = 67E38DFD1E27621A0006CC8B /* MBProgressHUD+HD.m */; };
+		67E38DFF1E27621A0006CC8B /* MBProgressHUD+HD.m in Sources */ = {isa = PBXBuildFile; fileRef = 67E38DFD1E27621A0006CC8B /* MBProgressHUD+HD.m */; };
 		67E82D831D56F2CE00725FF8 /* CrashMaster.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67E82D7C1D56F2CE00725FF8 /* CrashMaster.framework */; };
 		67E82D841D56F2CE00725FF8 /* CrashMaster.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67E82D7C1D56F2CE00725FF8 /* CrashMaster.framework */; };
 		67E82D851D56F2CE00725FF8 /* hand.2.0.7.gif in Resources */ = {isa = PBXBuildFile; fileRef = 67E82D7E1D56F2CE00725FF8 /* hand.2.0.7.gif */; };
@@ -247,6 +251,9 @@
 		67DB7CF81D55C98F000B789E /* HDDDLogManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDDDLogManager.h; sourceTree = "<group>"; };
 		67DB7CF91D55C98F000B789E /* HDDDLogManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDDDLogManager.m; sourceTree = "<group>"; };
 		67DB7CFB1D55C98F000B789E /* HDSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDSingleton.h; sourceTree = "<group>"; };
+		67E38DF51E2761FE0006CC8B /* MBProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MBProgressHUD.bundle; sourceTree = "<group>"; };
+		67E38DFC1E27621A0006CC8B /* MBProgressHUD+HD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+HD.h"; sourceTree = "<group>"; };
+		67E38DFD1E27621A0006CC8B /* MBProgressHUD+HD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+HD.m"; sourceTree = "<group>"; };
 		67E82D7C1D56F2CE00725FF8 /* CrashMaster.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CrashMaster.framework; sourceTree = "<group>"; };
 		67E82D7E1D56F2CE00725FF8 /* hand.2.0.7.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = hand.2.0.7.gif; sourceTree = "<group>"; };
 		67E82D7F1D56F2CE00725FF8 /* pen.2.0.7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pen.2.0.7.png; sourceTree = "<group>"; };
@@ -755,6 +762,7 @@
 		67DB7CF61D55C98F000B789E /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				67E38DF41E2761EF0006CC8B /* HDMBProgressHUDTool */,
 				67F8B7341E24DEE2004DC2C0 /* HDOpenURLManager */,
 				67F8B72B1E24D981004DC2C0 /* HDHTMLAnalysisTool */,
 				6774274B1E1E4F2A00C426E2 /* HDShareManager */,
@@ -794,6 +802,16 @@
 				67052CD31D55DBCA00CF53EE /* HDTabBar */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		67E38DF41E2761EF0006CC8B /* HDMBProgressHUDTool */ = {
+			isa = PBXGroup;
+			children = (
+				67E38DFC1E27621A0006CC8B /* MBProgressHUD+HD.h */,
+				67E38DFD1E27621A0006CC8B /* MBProgressHUD+HD.m */,
+				67E38DF51E2761FE0006CC8B /* MBProgressHUD.bundle */,
+			);
+			path = HDMBProgressHUDTool;
 			sourceTree = "<group>";
 		};
 		67E82D7A1D56F2C600725FF8 /* LibSDK */ = {
@@ -986,6 +1004,7 @@
 				67E82D8B1D56F2CE00725FF8 /* success.2.0.7.png in Resources */,
 				67C8B60E1DFFB45900B38552 /* detection.aiff in Resources */,
 				67E82D8D1D56F2CE00725FF8 /* text.2.0.7.png in Resources */,
+				67E38DF81E2761FE0006CC8B /* MBProgressHUD.bundle in Resources */,
 				67E82D851D56F2CE00725FF8 /* hand.2.0.7.gif in Resources */,
 				67DB7CA51D55C5A5000B789E /* Images.xcassets in Resources */,
 				67DB7D191D55C98F000B789E /* Localizable.strings in Resources */,
@@ -1003,6 +1022,7 @@
 				67E82D8C1D56F2CE00725FF8 /* success.2.0.7.png in Resources */,
 				67C8B60F1DFFB45900B38552 /* detection.aiff in Resources */,
 				67E82D8E1D56F2CE00725FF8 /* text.2.0.7.png in Resources */,
+				67E38DF91E2761FE0006CC8B /* MBProgressHUD.bundle in Resources */,
 				67E82D861D56F2CE00725FF8 /* hand.2.0.7.gif in Resources */,
 				67DB7CC51D55C8E1000B789E /* Images.xcassets in Resources */,
 				67DB7D1A1D55C98F000B789E /* Localizable.strings in Resources */,
@@ -1114,6 +1134,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				678F40071D55C0C000C736D8 /* AppDelegate.m in Sources */,
+				67E38DFE1E27621A0006CC8B /* MBProgressHUD+HD.m in Sources */,
 				678128FD1DB47AE900E31B8D /* UIImage+HDExtension.m in Sources */,
 				677633F01D88F8D200DDFCA7 /* HDRequestModel.m in Sources */,
 				67E82DD41D57686500725FF8 /* HDLookForGameViewController.m in Sources */,
@@ -1169,6 +1190,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				67DB7CC31D55C8BC000B789E /* AppDelegate.m in Sources */,
+				67E38DFF1E27621A0006CC8B /* MBProgressHUD+HD.m in Sources */,
 				678128FE1DB47AE900E31B8D /* UIImage+HDExtension.m in Sources */,
 				677633F11D88F8D200DDFCA7 /* HDRequestModel.m in Sources */,
 				67E82DD51D57686500725FF8 /* HDLookForGameViewController.m in Sources */,
