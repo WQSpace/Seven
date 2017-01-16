@@ -307,6 +307,17 @@
 - (CGSize)hd_sizeWithSystemFont:(UIFont *)font constrainedToSize:(CGSize)size lineBreakMode:(NSLineBreakMode)mode;
 
 /**
+ 计算字符串高度
+ 
+ @param font 字体
+ @param size 限制大小
+ @param mode 计算的换号模型
+ @param numberOfLine 限制计算高度
+ @return 返回计算大小
+ */
+- (CGSize)hd_sizeWithSystemFont:(UIFont *)font constrainedToSize:(CGSize)size lineBreakMode:(NSLineBreakMode)mode numberOfLine:(NSInteger)numberOfLine;
+
+/**
  *  计算文字大小
  *
  *  @param font 字体

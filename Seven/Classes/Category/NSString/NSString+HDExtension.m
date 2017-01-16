@@ -288,6 +288,21 @@
     return CGSizeMake(ceil(bounds.size.width), ceil(bounds.size.height));
 }
 
+- (CGSize)hd_sizeWithSystemFont:(UIFont *)font constrainedToSize:(CGSize)size lineBreakMode:(NSLineBreakMode)mode numberOfLine:(NSInteger)numberOfLine {
+    CGSize maxSize = [self hd_sizeWithSystemFont:font constrainedToSize:size lineBreakMode:mode];
+    CGFloat oneLineHeight = [self hd_sizeWithSystemFont:font constrainedToSize:size lineBreakMode:NSLineBreakByTruncatingTail].height;
+    CGFloat height = 0;
+    CGFloat limitHeight = oneLineHeight * numberOfLine;
+    
+    if (maxSize.height > limitHeight) {
+        height = limitHeight;
+    } else {
+        height = maxSize.height;
+    }
+    
+    return CGSizeMake(maxSize.width, height);
+}
+
 - (CGSize)hd_sizeWithSystemFont:(UIFont *)font constrainedToSize:(CGSize)size {
     return [self hd_sizeWithSystemFont:font constrainedToSize:size lineBreakMode:NSLineBreakByWordWrapping];
 }

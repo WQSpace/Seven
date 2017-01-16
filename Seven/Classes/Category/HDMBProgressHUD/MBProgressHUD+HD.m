@@ -66,7 +66,7 @@
 }
 
 + (void)hideHUD {
-    [self hideHUDForView:nil];
+    [self hideHUDForView:HDFirstWindow];
 }
 
 @end
