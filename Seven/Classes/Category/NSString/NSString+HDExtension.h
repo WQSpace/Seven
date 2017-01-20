@@ -372,4 +372,11 @@ HD_EXTERN NSString *const iPhone6_6s_7Plus;
  */
 - (BOOL)hd_isValidateMobile;
 
+/**
+ 限制字符串长度
+ 
+ @param length 限制的长度
+ */
+- (instancetype)limitLength:(NSInteger)length;
+
 @end

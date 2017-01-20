@@ -501,4 +501,13 @@ NSString *const iPhone6_6s_7Plus = @"iPhone6_6s_7Plus";
 //    }
 }
 
+- (instancetype)limitLength:(NSInteger)length {
+    NSString *str = self;
+    if (str.length > length) {
+        str = [str substringToIndex:length];
+    }
+    
+    return str;
+}
+
 @end

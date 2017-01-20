@@ -7,6 +7,7 @@
 //
 
 #import "HDHTMLAnalysisTool.h"
+#import "NSDate+HDExtension.h"
 
 @implementation HDHTMLAnalysisTool
 
@@ -114,7 +115,7 @@
     for (NSString *title in titles) {
         NSString *tempStr = [title substringFromIndex:6];
         if (tempStr.length > 0) {
-            return tempStr;
+            return [tempStr limitLength:30];
         }
     }
     
@@ -131,13 +132,15 @@
     NSArray *weixinDescriptions = [self getHTMLContentWithHTMLString:HTMLString regular:@"(?<=var msg_desc = \\\").*(?=\";)"];
     
     if (weixinDescriptions.count > 0) {
-        return weixinDescriptions.firstObject;
+        NSString *weixinDescription = weixinDescriptions.firstObject;
+        return [weixinDescription limitLength:80];
     }
     
     NSArray *descriptions = [self getHTMLContentWithHTMLString:HTMLString regular:@"(?<=<meta name=\"description\"(| itemprop=\"description\") content=\\\").*(?=\")"];
     
     if (descriptions.count > 0) {
-        return descriptions.firstObject;
+        NSString *description = descriptions.firstObject;
+        return [description limitLength:80];
     }
     
     return nil;
