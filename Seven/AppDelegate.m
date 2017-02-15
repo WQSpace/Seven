@@ -14,6 +14,7 @@
 #import <SDWebImage/SDImageCache.h>
 #import "HDWXShareManager.h"
 #import "HDOpenURLManager.h"
+#import "HDA2DynamicUITextFieldDelegateBugfix.h"
 
 @interface AppDelegate ()
 
@@ -76,6 +77,7 @@
     [HDGrowingManager configGrowingManager];  // 配置Growing数据分析
     [HDCrashMasterManager configCrashMaster]; // 配置testin测试
     [[HDWXShareManager sharedHDWXShareManager] registerTRApp:@"7777777"]; // 注册微信平台
+    [HDA2DynamicUITextFieldDelegateBugfix bugfix];
 }
 
 @end

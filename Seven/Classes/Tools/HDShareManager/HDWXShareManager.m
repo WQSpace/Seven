@@ -138,12 +138,12 @@ HDSingletonM(HDWXShareManager)
 
 #pragma mark - WXApiDelegate
 - (void)onReq:(BaseReq *)req {
-    NSLog(@"type == %d, openID == %@", req.type, req.openID);
+    HDLog(@"type == %d, openID == %@", req.type, req.openID);
 }
 
 
 - (void)onResp:(BaseResp *)resp {
-    NSLog(@"errCode == %zd, errStr == %@", resp.errCode, resp.errStr);
+    HDLog(@"errCode == %zd, errStr == %@", resp.errCode, resp.errStr);
 }
 
 @end

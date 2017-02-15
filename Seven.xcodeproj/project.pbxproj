@@ -27,6 +27,8 @@
 		670F17F31D88F2420073B645 /* HDNetworkingErrorCode.m in Sources */ = {isa = PBXBuildFile; fileRef = 670F17F11D88F2420073B645 /* HDNetworkingErrorCode.m */; };
 		670F17F61D88F38F0073B645 /* HDNetworkingServerConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 670F17F51D88F38F0073B645 /* HDNetworkingServerConfig.m */; };
 		670F17F71D88F38F0073B645 /* HDNetworkingServerConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 670F17F51D88F38F0073B645 /* HDNetworkingServerConfig.m */; };
+		67430C721E5446340060AC1C /* HDA2DynamicUITextFieldDelegateBugfix.m in Sources */ = {isa = PBXBuildFile; fileRef = 67430C711E5446340060AC1C /* HDA2DynamicUITextFieldDelegateBugfix.m */; };
+		67430C731E5446340060AC1C /* HDA2DynamicUITextFieldDelegateBugfix.m in Sources */ = {isa = PBXBuildFile; fileRef = 67430C711E5446340060AC1C /* HDA2DynamicUITextFieldDelegateBugfix.m */; };
 		67521AF51D5A0F8E00B4BE28 /* HDUserEquipmentManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 67521AF41D5A0F8E00B4BE28 /* HDUserEquipmentManager.m */; };
 		67521AF61D5A0F8E00B4BE28 /* HDUserEquipmentManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 67521AF41D5A0F8E00B4BE28 /* HDUserEquipmentManager.m */; };
 		67521AF81D5A106500B4BE28 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67521AF71D5A106500B4BE28 /* AVFoundation.framework */; };
@@ -179,6 +181,8 @@
 		670F17F11D88F2420073B645 /* HDNetworkingErrorCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDNetworkingErrorCode.m; sourceTree = "<group>"; };
 		670F17F41D88F38F0073B645 /* HDNetworkingServerConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDNetworkingServerConfig.h; sourceTree = "<group>"; };
 		670F17F51D88F38F0073B645 /* HDNetworkingServerConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDNetworkingServerConfig.m; sourceTree = "<group>"; };
+		67430C701E5446340060AC1C /* HDA2DynamicUITextFieldDelegateBugfix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDA2DynamicUITextFieldDelegateBugfix.h; sourceTree = "<group>"; };
+		67430C711E5446340060AC1C /* HDA2DynamicUITextFieldDelegateBugfix.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDA2DynamicUITextFieldDelegateBugfix.m; sourceTree = "<group>"; };
 		67521AF31D5A0F8E00B4BE28 /* HDUserEquipmentManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDUserEquipmentManager.h; sourceTree = "<group>"; };
 		67521AF41D5A0F8E00B4BE28 /* HDUserEquipmentManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDUserEquipmentManager.m; sourceTree = "<group>"; };
 		67521AF71D5A106500B4BE28 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
@@ -430,6 +434,15 @@
 				67052CD51D55DBE000CF53EE /* HDTabBar.m */,
 			);
 			path = HDTabBar;
+			sourceTree = "<group>";
+		};
+		67430C6F1E5446170060AC1C /* HDA2DynamicUITextFieldDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				67430C701E5446340060AC1C /* HDA2DynamicUITextFieldDelegateBugfix.h */,
+				67430C711E5446340060AC1C /* HDA2DynamicUITextFieldDelegateBugfix.m */,
+			);
+			path = HDA2DynamicUITextFieldDelegate;
 			sourceTree = "<group>";
 		};
 		67521AEE1D5A0F7900B4BE28 /* HDUserEquipmentManager */ = {
@@ -773,6 +786,7 @@
 		67DB7CF61D55C98F000B789E /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				67430C6F1E5446170060AC1C /* HDA2DynamicUITextFieldDelegate */,
 				67F8B7341E24DEE2004DC2C0 /* HDOpenURLManager */,
 				67F8B72B1E24D981004DC2C0 /* HDHTMLAnalysisTool */,
 				6774274B1E1E4F2A00C426E2 /* HDShareManager */,
@@ -1165,6 +1179,7 @@
 				67052CD11D55DB2000CF53EE /* HDHomeViewController.m in Sources */,
 				67C8B60B1DFFB40600B38552 /* HDMuteSwitch.m in Sources */,
 				67E82DBA1D571D6D00725FF8 /* HDNetworking.m in Sources */,
+				67430C721E5446340060AC1C /* HDA2DynamicUITextFieldDelegateBugfix.m in Sources */,
 				677633F21D88F8D200DDFCA7 /* HDRequestBodyModel.m in Sources */,
 				67DB7D1D1D55C98F000B789E /* HDLocalizableConst.m in Sources */,
 				67E82DD81D57698900725FF8 /* HDClassifyViewController.m in Sources */,
@@ -1221,6 +1236,7 @@
 				67052CD21D55DB2000CF53EE /* HDHomeViewController.m in Sources */,
 				67C8B60C1DFFB40600B38552 /* HDMuteSwitch.m in Sources */,
 				67E82DBB1D571D6D00725FF8 /* HDNetworking.m in Sources */,
+				67430C731E5446340060AC1C /* HDA2DynamicUITextFieldDelegateBugfix.m in Sources */,
 				677633F31D88F8D200DDFCA7 /* HDRequestBodyModel.m in Sources */,
 				67DB7D1E1D55C98F000B789E /* HDLocalizableConst.m in Sources */,
 				67E82DD91D57698900725FF8 /* HDClassifyViewController.m in Sources */,
