@@ -33,6 +33,8 @@
 		67521AF61D5A0F8E00B4BE28 /* HDUserEquipmentManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 67521AF41D5A0F8E00B4BE28 /* HDUserEquipmentManager.m */; };
 		67521AF81D5A106500B4BE28 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67521AF71D5A106500B4BE28 /* AVFoundation.framework */; };
 		67521AF91D5A106E00B4BE28 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67521AF71D5A106500B4BE28 /* AVFoundation.framework */; };
+		676503791E558ED000488B3F /* NSMutableAttributedString+HDExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 676503781E558ED000488B3F /* NSMutableAttributedString+HDExtension.m */; };
+		6765037A1E558ED000488B3F /* NSMutableAttributedString+HDExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 676503781E558ED000488B3F /* NSMutableAttributedString+HDExtension.m */; };
 		677427491E1E4E9300C426E2 /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 677427451E1E4E9300C426E2 /* libWeChatSDK.a */; };
 		6774274A1E1E4E9300C426E2 /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 677427451E1E4E9300C426E2 /* libWeChatSDK.a */; };
 		677633EA1D88F8D200DDFCA7 /* HDResponseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 677633DA1D88F8D200DDFCA7 /* HDResponseModel.m */; };
@@ -186,6 +188,8 @@
 		67521AF31D5A0F8E00B4BE28 /* HDUserEquipmentManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDUserEquipmentManager.h; sourceTree = "<group>"; };
 		67521AF41D5A0F8E00B4BE28 /* HDUserEquipmentManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDUserEquipmentManager.m; sourceTree = "<group>"; };
 		67521AF71D5A106500B4BE28 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		676503771E558ED000488B3F /* NSMutableAttributedString+HDExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableAttributedString+HDExtension.h"; sourceTree = "<group>"; };
+		676503781E558ED000488B3F /* NSMutableAttributedString+HDExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableAttributedString+HDExtension.m"; sourceTree = "<group>"; };
 		677427451E1E4E9300C426E2 /* libWeChatSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libWeChatSDK.a; sourceTree = "<group>"; };
 		677427461E1E4E9300C426E2 /* WechatAuthSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WechatAuthSDK.h; sourceTree = "<group>"; };
 		677427471E1E4E9300C426E2 /* WXApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApi.h; sourceTree = "<group>"; };
@@ -454,6 +458,15 @@
 			path = HDUserEquipmentManager;
 			sourceTree = "<group>";
 		};
+		676503761E558EBC00488B3F /* NSMutableAttributedString */ = {
+			isa = PBXGroup;
+			children = (
+				676503771E558ED000488B3F /* NSMutableAttributedString+HDExtension.h */,
+				676503781E558ED000488B3F /* NSMutableAttributedString+HDExtension.m */,
+			);
+			path = NSMutableAttributedString;
+			sourceTree = "<group>";
+		};
 		677427441E1E4E9300C426E2 /* WXSDK1.7.5 */ = {
 			isa = PBXGroup;
 			children = (
@@ -712,6 +725,7 @@
 		67DB7CC71D55C98F000B789E /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				676503761E558EBC00488B3F /* NSMutableAttributedString */,
 				678577D51E2C968100FD5CF1 /* HDMBProgressHUD */,
 				678128D01DB47AE900E31B8D /* Foundation */,
 				678128D21DB47AE900E31B8D /* NSDate */,
@@ -1188,6 +1202,7 @@
 				67D34A4D1D82520700A37A39 /* HDTableViewGroupModel.m in Sources */,
 				677633EA1D88F8D200DDFCA7 /* HDResponseModel.m in Sources */,
 				67DB7D1F1D55C98F000B789E /* HDDDLogManager.m in Sources */,
+				676503791E558ED000488B3F /* NSMutableAttributedString+HDExtension.m in Sources */,
 				6702F4F51D77C40400EAA8FA /* HDAlertView.m in Sources */,
 				678128FF1DB47AE900E31B8D /* UITableView+HDExtension.m in Sources */,
 				67052CD61D55DBE000CF53EE /* HDTabBar.m in Sources */,
@@ -1245,6 +1260,7 @@
 				67D34A4E1D82520700A37A39 /* HDTableViewGroupModel.m in Sources */,
 				677633EB1D88F8D200DDFCA7 /* HDResponseModel.m in Sources */,
 				67DB7D201D55C98F000B789E /* HDDDLogManager.m in Sources */,
+				6765037A1E558ED000488B3F /* NSMutableAttributedString+HDExtension.m in Sources */,
 				6702F4F61D77C40400EAA8FA /* HDAlertView.m in Sources */,
 				678129001DB47AE900E31B8D /* UITableView+HDExtension.m in Sources */,
 				67052CD71D55DBE000CF53EE /* HDTabBar.m in Sources */,

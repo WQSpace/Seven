@@ -342,7 +342,7 @@
 
 
 #pragma mark - 富文本相关
-- (NSAttributedString *)hd_conversionToAttributedStringWithLineSpeace:(CGFloat)lineSpacing kern:(CGFloat)kern range:(NSRange)range color:(UIColor *)color font:(UIFont *)font {
+- (NSAttributedString *)hd_conversionToAttributedStringWithLineSpeace:(CGFloat)lineSpacing kern:(CGFloat)kern {
     NSMutableParagraphStyle *paragraphStyle = [[NSMutableParagraphStyle alloc] init];
     paragraphStyle.lineSpacing = lineSpacing;
     
@@ -350,15 +350,6 @@
                                  NSKernAttributeName:@(kern)};
     
     NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] initWithString:self attributes:attributes];
-    
-    if (color == nil || font == nil || range.location > self.length || range.length > self.length) {
-        return attributedString;
-    }
-    
-    NSDictionary *attributes1 = @{NSForegroundColorAttributeName:color,
-                                  NSFontAttributeName:font};
-    
-    [attributedString addAttributes:attributes1 range:NSMakeRange(range.location, range.length)];
     
     return attributedString;
 }
