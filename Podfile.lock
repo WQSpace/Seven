@@ -52,6 +52,7 @@ PODS:
   - MBProgressHUD (1.0.0)
   - MJExtension (3.0.13)
   - MJRefresh (3.1.12)
+  - Onboard (2.2.0)
   - pop (1.0.9)
   - SDCycleScrollView (1.65):
     - SDWebImage (~> 3.7)
@@ -76,6 +77,7 @@ DEPENDENCIES:
   - MBProgressHUD
   - MJExtension
   - MJRefresh
+  - Onboard
   - pop
   - SDCycleScrollView
   - SDWebImage
@@ -95,12 +97,13 @@ SPEC CHECKSUMS:
   MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
   MJExtension: 5932755f451458eefa24239358817f8d291240c7
   MJRefresh: b96cdb21c4aa75a7b07654311ab2f315c497e806
+  Onboard: c46261255c0bcbe26ab2823782764c96fca7a33e
   pop: f667631a5108a2e60d9e8797c9b32ddaf2080bce
   SDCycleScrollView: f72904c77698a7f93a41bcbbc2d78b073bf7326c
   SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
   tingyunApp: 640ed24c0e63799a78e89b376f80fd370605c6f3
   VTMagic: b49e5f456dbcbfd9a3588ba92417233a105bc193
 
-PODFILE CHECKSUM: 7eadc503c6dd95c5c61832fa230fad9ade6f6b39
+PODFILE CHECKSUM: dba2e904caecdb1d4f87adc2b5046444bd7fa221
 
-COCOAPODS: 1.2.0.beta.1
+COCOAPODS: 1.2.0.beta.3
