@@ -342,9 +342,11 @@
 
 
 #pragma mark - 富文本相关
-- (NSAttributedString *)hd_conversionToAttributedStringWithLineSpeace:(CGFloat)lineSpacing kern:(CGFloat)kern {
+- (NSAttributedString *)hd_conversionToAttributedStringWithLineSpeace:(CGFloat)lineSpacing kern:(CGFloat)kern lineBreakMode:(NSLineBreakMode)lineBreakMode alignment:(NSTextAlignment)alignment {
     NSMutableParagraphStyle *paragraphStyle = [[NSMutableParagraphStyle alloc] init];
     paragraphStyle.lineSpacing = lineSpacing;
+    paragraphStyle.lineBreakMode = lineBreakMode;
+    paragraphStyle.alignment = alignment;
     
     NSDictionary *attributes = @{NSParagraphStyleAttributeName:paragraphStyle,
                                  NSKernAttributeName:@(kern)};
@@ -354,19 +356,36 @@
     return attributedString;
 }
 
-- (CGSize)hd_sizeWithAttributedStringLineSpeace:(CGFloat)lineSpeace kern:(CGFloat)kern font:(UIFont *)font size:(CGSize)size {
+- (CGSize)hd_sizeWithAttributedStringLineSpeace:(CGFloat)lineSpeace kern:(CGFloat)kern font:(UIFont *)font size:(CGSize)size lineBreakMode:(NSLineBreakMode)lineBreakMode alignment:(NSTextAlignment)alignment {
     if (font == nil) {
         return CGSizeMake(0, 0);
     }
     
     NSMutableParagraphStyle *paraStyle = [[NSMutableParagraphStyle alloc] init];
     paraStyle.lineSpacing = lineSpeace;
+    paraStyle.lineBreakMode = lineBreakMode;
+    paraStyle.alignment = alignment;
     
     NSDictionary *dic = @{NSFontAttributeName:font,
                           NSParagraphStyleAttributeName:paraStyle,
                           NSKernAttributeName:@(kern)};
     
     return [self boundingRectWithSize:size options:NSStringDrawingUsesLineFragmentOrigin attributes:dic context:nil].size;
+}
+
+- (CGSize)hd_sizeWithAttributedStringLineSpeace:(CGFloat)lineSpeace kern:(CGFloat)kern font:(UIFont *)font size:(CGSize)size lineBreakMode:(NSLineBreakMode)lineBreakMode alignment:(NSTextAlignment)alignment numberOfLine:(NSInteger)numberOfLine {
+    CGSize maxSize = [self hd_sizeWithAttributedStringLineSpeace:lineSpeace kern:kern font:font size:size lineBreakMode:lineBreakMode alignment:alignment];
+    CGFloat oneLineHeight = [self hd_sizeWithAttributedStringLineSpeace:lineSpeace kern:kern font:font size:size lineBreakMode:NSLineBreakByTruncatingTail alignment:alignment].height;
+    CGFloat height = 0;
+    CGFloat limitHeight = oneLineHeight * numberOfLine;
+    
+    if (maxSize.height > limitHeight) {
+        height = limitHeight;
+    } else {
+        height = maxSize.height;
+    }
+    
+    return CGSizeMake(maxSize.width, height);
 }
 
 

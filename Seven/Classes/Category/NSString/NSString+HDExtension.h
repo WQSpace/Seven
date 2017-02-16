@@ -375,12 +375,11 @@
  
  @param lineSpacing 行间距
  @param kern 文字间的间距
- @param range 需要变色范围
- @param color 需要变成的颜色
- @param font 字体
+ @param lineBreakMode 换行方式
+ @param alignment 文字对齐格式
  @return 转变后的富文本
  */
-- (NSAttributedString *)hd_conversionToAttributedStringWithLineSpeace:(CGFloat)lineSpacing kern:(CGFloat)kern range:(NSRange)range color:(UIColor *)color font:(UIFont *)font;
+- (NSAttributedString *)hd_conversionToAttributedStringWithLineSpeace:(CGFloat)lineSpacing kern:(CGFloat)kern lineBreakMode:(NSLineBreakMode)lineBreakMode alignment:(NSTextAlignment)alignment;
 
 /**
  计算富文本字体大小
@@ -389,9 +388,25 @@
  @param kern 文字间的间距
  @param font 字体
  @param size 计算范围
+ @param lineBreakMode 换行方式
+ @param alignment 文字对齐格式
  @return 计算后的字体大小
  */
-- (CGSize)hd_sizeWithAttributedStringLineSpeace:(CGFloat)lineSpeace kern:(CGFloat)kern font:(UIFont *)font size:(CGSize)size;
+- (CGSize)hd_sizeWithAttributedStringLineSpeace:(CGFloat)lineSpeace kern:(CGFloat)kern font:(UIFont *)font size:(CGSize)size lineBreakMode:(NSLineBreakMode)lineBreakMode alignment:(NSTextAlignment)alignment;
+
+/**
+ 计算富文本字体大小
+ 
+ @param lineSpeace 行间距
+ @param kern 文字间的间距
+ @param font 字体
+ @param size 计算范围
+ @param lineBreakMode 换行方式
+ @param alignment 文字对齐格式
+ @param numberOfLine 限制计算行数
+ @return 计算后的字体大小
+ */
+- (CGSize)hd_sizeWithAttributedStringLineSpeace:(CGFloat)lineSpeace kern:(CGFloat)kern font:(UIFont *)font size:(CGSize)size lineBreakMode:(NSLineBreakMode)lineBreakMode alignment:(NSTextAlignment)alignment numberOfLine:(NSInteger)numberOfLine;
 
 
 #pragma mark - 设备相关
