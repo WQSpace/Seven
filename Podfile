@@ -18,6 +18,7 @@ def pods
     pod 'JSPatch'           # 热更新框架
     pod 'SDCycleScrollView' # 轮播框架
     pod 'IQKeyboardManager' # 键盘管理框架
+    pod 'Onboard'           # 引导页
     
     
     #pod 'MWPhotoBrowser'

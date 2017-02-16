@@ -15,14 +15,14 @@
  *  默认加在HDFirstWindow上
  *  @param success 提醒成功文字
  */
-+ (void)showSuccess:(NSString *)success;
++ (void)hd_showSuccess:(NSString *)success;
 
 /**
  *  显示错误 1.5秒之后再消失
  *  默认加在HDFirstWindow上
  *  @param error 提醒错误文字
  */
-+ (void)showError:(NSString *)error;
++ (void)hd_showError:(NSString *)error;
 
 /**
  *  显示成功 1.5秒之后再消失
@@ -30,7 +30,7 @@
  *  @param success 提醒成功文字
  *  @param view    加在哪个view上为nil,默认加在HDFirstWindow
  */
-+ (void)showSuccess:(NSString *)success toView:(UIView *)view;
++ (void)hd_showSuccess:(NSString *)success toView:(UIView *)view;
 
 /**
  *  显示成功 1.5秒之后再消失
@@ -38,7 +38,7 @@
  *  @param error 提醒错误文字
  *  @param view  加在哪个view上为nil,默认加在HDFirstWindow
  */
-+ (void)showError:(NSString *)error toView:(UIView *)view;
++ (void)hd_showError:(NSString *)error toView:(UIView *)view;
 
 /**
  *  增加一个消息提醒挡板
@@ -48,7 +48,7 @@
  *
  *  @return 返回一个挡板
  */
-+ (MBProgressHUD *)showMessage:(NSString *)message toView:(UIView *)view;
++ (MBProgressHUD *)hd_showMessage:(NSString *)message toView:(UIView *)view;
 
 /**
  *  增加一个消息提醒挡板(默认添加到HDFirstWindow视图上)
@@ -57,18 +57,18 @@
  *
  *  @return 返回一个挡板
  */
-+ (MBProgressHUD *)showMessage:(NSString *)message;
++ (MBProgressHUD *)hd_showMessage:(NSString *)message;
 
 /**
  *  隐藏挡板
  *
  *  @param view 从哪个view隐藏
  */
-+ (void)hideHUDForView:(UIView *)view;
++ (void)hd_hideHUDForView:(UIView *)view;
 
 /**
  *  隐藏挡板(默认从HDFirstWindow视图隐藏)
  */
-+ (void)hideHUD;
++ (void)hd_hideHUD;
 
 @end

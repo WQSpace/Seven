@@ -115,7 +115,7 @@
     for (NSString *title in titles) {
         NSString *tempStr = [title substringFromIndex:6];
         if (tempStr.length > 0) {
-            return [tempStr limitLength:30];
+            return [tempStr hd_limitLength:60];
         }
     }
     
@@ -133,14 +133,14 @@
     
     if (weixinDescriptions.count > 0) {
         NSString *weixinDescription = weixinDescriptions.firstObject;
-        return [weixinDescription limitLength:80];
+        return [weixinDescription hd_limitLength:150];
     }
     
     NSArray *descriptions = [self getHTMLContentWithHTMLString:HTMLString regular:@"(?<=<meta name=\"description\"(| itemprop=\"description\") content=\\\").*(?=\")"];
     
     if (descriptions.count > 0) {
         NSString *description = descriptions.firstObject;
-        return [description limitLength:80];
+        return [description hd_limitLength:150];
     }
     
     return nil;

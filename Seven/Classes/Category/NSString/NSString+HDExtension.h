@@ -311,8 +311,8 @@
  
  @param font 字体
  @param size 限制大小
- @param mode 计算的换号模型
- @param numberOfLine 限制计算高度
+ @param mode 计算的换行模型
+ @param numberOfLine 限制计算高度的行数
  @return 返回计算大小
  */
 - (CGSize)hd_sizeWithSystemFont:(UIFont *)font constrainedToSize:(CGSize)size lineBreakMode:(NSLineBreakMode)mode numberOfLine:(NSInteger)numberOfLine;
@@ -338,8 +338,63 @@
  */
 + (CGSize)hd_sizeWithText:(NSString *)text systemFont:(UIFont *)font constrainedToSize:(CGSize)size;
 
+/**
+ 计算粗体文字大小
 
-#pragma mark - 其他
+ @param font 字体
+ @param size 计算范围的大小
+ @param mode 计算的换行模型
+ @return 计算出来的大小
+ */
+- (CGSize)hd_sizeWithBoldFont:(UIFont *)font constrainedToSize:(CGSize)size lineBreakMode:(NSLineBreakMode)mode;
+
+/**
+ 计算粗体文字大小
+
+ @param font 字体
+ @param size 计算范围的大小
+ @return 计算出来的大小
+ */
+- (CGSize)hd_sizeWithBoldFont:(UIFont *)font constrainedToSize:(CGSize)size;
+
+/**
+ 计算粗体文字大小
+
+ @param font 字体
+ @param size 计算范围的大小
+ @param mode 计算的换行模型
+ @param numberOfLine 限制计算高度的行数
+ @return 计算出来的大小
+ */
+- (CGSize)hd_sizeWithBoldFont:(UIFont *)font constrainedToSize:(CGSize)size lineBreakMode:(NSLineBreakMode)mode numberOfLine:(NSInteger)numberOfLine;
+
+
+#pragma mark - 富文本相关
+/**
+ 转变成富文本
+ 
+ @param lineSpacing 行间距
+ @param kern 文字间的间距
+ @param range 需要变色范围
+ @param color 需要变成的颜色
+ @param font 字体
+ @return 转变后的富文本
+ */
+- (NSAttributedString *)hd_conversionToAttributedStringWithLineSpeace:(CGFloat)lineSpacing kern:(CGFloat)kern range:(NSRange)range color:(UIColor *)color font:(UIFont *)font;
+
+/**
+ 计算富文本字体大小
+ 
+ @param lineSpeace 行间距
+ @param kern 文字间的间距
+ @param font 字体
+ @param size 计算范围
+ @return 计算后的字体大小
+ */
+- (CGSize)hd_sizeWithAttributedStringLineSpeace:(CGFloat)lineSpeace kern:(CGFloat)kern font:(UIFont *)font size:(CGSize)size;
+
+
+#pragma mark - 设备相关
 /**
  *  设备版本
  */
@@ -352,6 +407,8 @@ HD_EXTERN NSString *const iPhone6_6s_7;
 HD_EXTERN NSString *const iPhone6_6s_7Plus;
 + (instancetype)hd_deviceType;
 
+
+#pragma mark - 效验相关
 /**
  *  判断是否是邮箱
  */
@@ -372,11 +429,13 @@ HD_EXTERN NSString *const iPhone6_6s_7Plus;
  */
 - (BOOL)hd_isValidateMobile;
 
+
+#pragma mark - 限制相关
 /**
  限制字符串长度
  
  @param length 限制的长度
  */
-- (instancetype)limitLength:(NSInteger)length;
+- (instancetype)hd_limitLength:(NSInteger)length;
 
 @end

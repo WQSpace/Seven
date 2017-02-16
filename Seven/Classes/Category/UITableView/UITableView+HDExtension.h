@@ -7,7 +7,6 @@
 //  避免Block循环引用!!!
 //  __weak typeof(self) weakSelf = self;
 //  __strong typeof(weakSelf) strongSelf = weakSelf;
-//  __TVOS_PROHIBITED 苹果不建议使用的方法都已经注释!!!
 
 
 #import <UIKit/UIKit.h>
@@ -47,10 +46,10 @@ NS_ASSUME_NONNULL_BEGIN
 // Index
 
 // return list of section titles to display in section index view (e.g. "ABCD...Z#")
-//- (instancetype)hd_sectionIndexTitlesForTableViewBlock:(NSArray<NSString *> * (^)(UITableView *tableView))hd_sectionIndexTitlesForTableViewBlock __TVOS_PROHIBITED;
+- (instancetype)hd_sectionIndexTitlesForTableViewBlock:(NSArray<NSString *> * (^)(UITableView *tableView))hd_sectionIndexTitlesForTableViewBlock __TVOS_PROHIBITED;
 
 // tell table which section corresponds to section title/index (e.g. "B",1))
-//- (instancetype)hd_tableViewSectionForSectionIndexTitleAtIndexBlock:(NSInteger (^)(UITableView *tableView, NSString *title, NSInteger index))hd_tableViewSectionForSectionIndexTitleAtIndexBlock __TVOS_PROHIBITED;
+- (instancetype)hd_tableViewSectionForSectionIndexTitleAtIndexBlock:(NSInteger (^)(UITableView *tableView, NSString *title, NSInteger index))hd_tableViewSectionForSectionIndexTitleAtIndexBlock __TVOS_PROHIBITED;
 
 // Data manipulation - insert and delete support
 
@@ -90,7 +89,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (instancetype)hd_tableViewViewForFooterInSectionBlock:(nullable UIView * (^)(UITableView *tableView, NSInteger section))hd_tableViewViewForFooterInSectionBlock; // custom view for footer. will be adjusted to default or specified footer height
 
 // Accessories (disclosures).
-//- (instancetype)hd_tableViewAccessoryTypeForRowWithIndexPathBlock:(UITableViewCellAccessoryType (^)(UITableView *tableView, NSIndexPath *indexPath))hd_tableViewAccessoryTypeForRowWithIndexPathBlock NS_DEPRECATED_IOS(2_0, 3_0) __TVOS_PROHIBITED;
+- (instancetype)hd_tableViewAccessoryTypeForRowWithIndexPathBlock:(UITableViewCellAccessoryType (^)(UITableView *tableView, NSIndexPath *indexPath))hd_tableViewAccessoryTypeForRowWithIndexPathBlock NS_DEPRECATED_IOS(2_0, 3_0) __TVOS_PROHIBITED;
 
 - (instancetype)hd_tableViewAccessoryButtonTappedForRowWithIndexPathBlock:(void (^)(UITableView *tableView, NSIndexPath *indexPath))hd_tableViewAccessoryButtonTappedForRowWithIndexPathBlock;
 
@@ -114,15 +113,15 @@ NS_ASSUME_NONNULL_BEGIN
 
 // Allows customization of the editingStyle for a particular cell located at 'indexPath'. If not implemented, all editable cells will have UITableViewCellEditingStyleDelete set for them when the table has editing property set to YES.
 - (instancetype)hd_tableViewEditingStyleForRowAtIndexPathBlock:(UITableViewCellEditingStyle (^)(UITableView *tableView, NSIndexPath *indexPath))hd_tableViewEditingStyleForRowAtIndexPathBlock;
-//- (instancetype)hd_tableViewTitleForDeleteConfirmationButtonForRowAtIndexPathBlock:(nullable NSString * (^)(UITableView *tableView, NSIndexPath *indexPath))hd_tableViewTitleForDeleteConfirmationButtonForRowAtIndexPathBlock NS_AVAILABLE_IOS(3_0) __TVOS_PROHIBITED;
-//- (instancetype)hd_tableViewEditActionsForRowAtIndexPathBlock:(nullable NSArray<UITableViewRowAction *> * (^)(UITableView *tableView, NSIndexPath *indexPath))hd_tableViewEditActionsForRowAtIndexPathBlock NS_AVAILABLE_IOS(8_0) __TVOS_PROHIBITED; // supercedes -tableView:titleForDeleteConfirmationButtonForRowAtIndexPath: if return value is non-nil
+- (instancetype)hd_tableViewTitleForDeleteConfirmationButtonForRowAtIndexPathBlock:(nullable NSString * (^)(UITableView *tableView, NSIndexPath *indexPath))hd_tableViewTitleForDeleteConfirmationButtonForRowAtIndexPathBlock NS_AVAILABLE_IOS(3_0) __TVOS_PROHIBITED;
+- (instancetype)hd_tableViewEditActionsForRowAtIndexPathBlock:(nullable NSArray<UITableViewRowAction *> * (^)(UITableView *tableView, NSIndexPath *indexPath))hd_tableViewEditActionsForRowAtIndexPathBlock NS_AVAILABLE_IOS(8_0) __TVOS_PROHIBITED; // supercedes -tableView:titleForDeleteConfirmationButtonForRowAtIndexPath: if return value is non-nil
 
 // Controls whether the background is indented while editing.  If not implemented, the default is YES.  This is unrelated to the indentation level below.  This method only applies to grouped style table views.
 - (instancetype)hd_tableViewShouldIndentWhileEditingRowAtIndexPathBlock:(BOOL (^)(UITableView *tableView, NSIndexPath *indexPath))hd_tableViewShouldIndentWhileEditingRowAtIndexPathBlock;
 
 // The willBegin/didEnd methods are called whenever the 'editing' property is automatically changed by the table (allowing insert/delete/move). This is done by a swipe activating a single row
-//- (instancetype)hd_tableViewWillBeginEditingRowAtIndexPathBlock:(void (^)(UITableView *tableView, NSIndexPath *indexPath))hd_tableViewWillBeginEditingRowAtIndexPathBlock __TVOS_PROHIBITED;
-//- (instancetype)hd_tableViewDidEndEditingRowAtIndexPathBlock:(void (^)(UITableView *tableView, NSIndexPath *indexPath))hd_tableViewDidEndEditingRowAtIndexPathBlock __TVOS_PROHIBITED;
+- (instancetype)hd_tableViewWillBeginEditingRowAtIndexPathBlock:(void (^)(UITableView *tableView, NSIndexPath *indexPath))hd_tableViewWillBeginEditingRowAtIndexPathBlock __TVOS_PROHIBITED;
+- (instancetype)hd_tableViewDidEndEditingRowAtIndexPathBlock:(void (^)(UITableView *tableView, NSIndexPath *indexPath))hd_tableViewDidEndEditingRowAtIndexPathBlock __TVOS_PROHIBITED;
 
 // Moving/reordering
 

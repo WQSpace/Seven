@@ -311,26 +311,75 @@
     return [text hd_sizeWithSystemFont:font constrainedToSize:size];
 }
 
+- (CGSize)hd_sizeWithBoldFont:(UIFont *)font constrainedToSize:(CGSize)size lineBreakMode:(NSLineBreakMode)mode {
+    NSMutableParagraphStyle *paragraphStyle = [[NSMutableParagraphStyle alloc] init];
+    paragraphStyle.lineBreakMode = mode;
+    paragraphStyle.alignment = NSTextAlignmentLeft;
+    NSDictionary *attributes = @{NSFontAttributeName: font,
+                                 NSParagraphStyleAttributeName: paragraphStyle};
 
-#pragma mark - 其他
-/**
- *  返回二进制 Bytes 流的字符串表示形式
- *
- *  @param bytes  二进制 Bytes 数组
- *  @param length 数组长度
- *
- *  @return 字符串表示形式
- */
-- (instancetype)hd_stringFromBytes:(uint8_t *)bytes length:(int)length {
-    NSMutableString *strM = [NSMutableString string];
-    
-    for (int i = 0; i < length; i++) {
-        [strM appendFormat:@"%02x", bytes[i]];
-    }
-    
-    return [strM copy];
+    return [self boundingRectWithSize:size options:NSStringDrawingUsesLineFragmentOrigin attributes:attributes context:NULL].size;
 }
 
+- (CGSize)hd_sizeWithBoldFont:(UIFont *)font constrainedToSize:(CGSize)size {
+    return [self hd_sizeWithBoldFont:font constrainedToSize:size lineBreakMode:NSLineBreakByTruncatingTail];
+}
+
+- (CGSize)hd_sizeWithBoldFont:(UIFont *)font constrainedToSize:(CGSize)size lineBreakMode:(NSLineBreakMode)mode numberOfLine:(NSInteger)numberOfLine {
+    CGSize maxSize = [self hd_sizeWithBoldFont:font constrainedToSize:size lineBreakMode:mode];
+    CGFloat oneLineHeight = [self hd_sizeWithBoldFont:font constrainedToSize:size lineBreakMode:NSLineBreakByTruncatingTail].height;
+    CGFloat height = 0;
+    CGFloat limitHeight = oneLineHeight * numberOfLine;
+    
+    if (maxSize.height > limitHeight) {
+        height = limitHeight;
+    } else {
+        height = maxSize.height;
+    }
+    
+    return CGSizeMake(maxSize.width, height);
+}
+
+
+#pragma mark - 富文本相关
+- (NSAttributedString *)hd_conversionToAttributedStringWithLineSpeace:(CGFloat)lineSpacing kern:(CGFloat)kern range:(NSRange)range color:(UIColor *)color font:(UIFont *)font {
+    if (color == nil || font == nil || range.location > self.length || range.length > self.length) {
+        return nil;
+    }
+    
+    NSMutableParagraphStyle *paragraphStyle = [[NSMutableParagraphStyle alloc] init];
+    paragraphStyle.lineSpacing = lineSpacing;
+    
+    NSDictionary *attributes = @{NSParagraphStyleAttributeName:paragraphStyle,
+                                 NSKernAttributeName:@(kern)};
+    
+    NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] initWithString:self attributes:attributes];
+    
+    NSDictionary *attributes1 = @{NSForegroundColorAttributeName:color,
+                                  NSFontAttributeName:font};
+    
+    [attributedString addAttributes:attributes1 range:NSMakeRange(range.location, range.length)];
+    
+    return attributedString;
+}
+
+- (CGSize)hd_sizeWithAttributedStringLineSpeace:(CGFloat)lineSpeace kern:(CGFloat)kern font:(UIFont *)font size:(CGSize)size {
+    if (font == nil) {
+        return CGSizeMake(0, 0);
+    }
+    
+    NSMutableParagraphStyle *paraStyle = [[NSMutableParagraphStyle alloc] init];
+    paraStyle.lineSpacing = lineSpeace;
+    
+    NSDictionary *dic = @{NSFontAttributeName:font,
+                          NSParagraphStyleAttributeName:paraStyle,
+                          NSKernAttributeName:@(kern)};
+    
+    return [self boundingRectWithSize:size options:NSStringDrawingUsesLineFragmentOrigin attributes:dic context:nil].size;
+}
+
+
+#pragma mark - 设备相关
 /**
  *  设备版本
  */
@@ -427,6 +476,8 @@ NSString *const iPhone6_6s_7Plus = @"iPhone6_6s_7Plus";
     return deviceString;
 }
 
+
+#pragma mark - 效验相关
 - (BOOL)hd_isValidEmail {
     NSString *emailRegex = @"[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}";
     NSPredicate *emailTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", emailRegex];
@@ -447,9 +498,6 @@ NSString *const iPhone6_6s_7Plus = @"iPhone6_6s_7Plus";
     return [urlTest evaluateWithObject:self];
 }
 
-/**
- * 验证是否是手机号
- */
 - (BOOL)hd_isValidateMobile {
     if (self.length < 1) {
         return NO;
@@ -501,13 +549,35 @@ NSString *const iPhone6_6s_7Plus = @"iPhone6_6s_7Plus";
 //    }
 }
 
-- (instancetype)limitLength:(NSInteger)length {
+
+#pragma mark - 限制相关
+- (instancetype)hd_limitLength:(NSInteger)length {
     NSString *str = self;
     if (str.length > length) {
         str = [str substringToIndex:length];
     }
     
     return str;
+}
+
+
+#pragma mark - 其他
+/**
+ *  返回二进制 Bytes 流的字符串表示形式
+ *
+ *  @param bytes  二进制 Bytes 数组
+ *  @param length 数组长度
+ *
+ *  @return 字符串表示形式
+ */
+- (instancetype)hd_stringFromBytes:(uint8_t *)bytes length:(int)length {
+    NSMutableString *strM = [NSMutableString string];
+    
+    for (int i = 0; i < length; i++) {
+        [strM appendFormat:@"%02x", bytes[i]];
+    }
+    
+    return [strM copy];
 }
 
 @end

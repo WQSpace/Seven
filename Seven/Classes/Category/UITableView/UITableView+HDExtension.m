@@ -111,33 +111,33 @@
     return YES; // 默认允许重新排序附属视图选择为一个特定的行显示
 }
 
-//+ (nullable NSArray<NSString *> *)sectionIndexTitlesForTableView:(UITableView *)tableView __TVOS_PROHIBITED {
-//    if (tableView.hd_sectionIndexTitlesForTableViewBlock) {
-//        return tableView.hd_sectionIndexTitlesForTableViewBlock(tableView);
-//    }
-//    
-//    id dataSource = objc_getAssociatedObject(self, UITableViewDataSourceKey);
-//    
-//    if ([dataSource respondsToSelector:@selector(sectionIndexTitlesForTableView:)]) {
-//        return [dataSource sectionIndexTitlesForTableView:tableView];
-//    }
-//    
-//    return nil;
-//}
++ (nullable NSArray<NSString *> *)sectionIndexTitlesForTableView:(UITableView *)tableView __TVOS_PROHIBITED {
+    if (tableView.hd_sectionIndexTitlesForTableViewBlock) {
+        return tableView.hd_sectionIndexTitlesForTableViewBlock(tableView);
+    }
+    
+    id dataSource = objc_getAssociatedObject(self, UITableViewDataSourceKey);
+    
+    if ([dataSource respondsToSelector:@selector(sectionIndexTitlesForTableView:)]) {
+        return [dataSource sectionIndexTitlesForTableView:tableView];
+    }
+    
+    return nil;
+}
 
-//+ (NSInteger)tableView:(UITableView *)tableView sectionForSectionIndexTitle:(NSString *)title atIndex:(NSInteger)index __TVOS_PROHIBITED {
-//    if (tableView.hd_tableViewSectionForSectionIndexTitleAtIndexBlock) {
-//        return tableView.hd_tableViewSectionForSectionIndexTitleAtIndexBlock(tableView, title, index);
-//    }
-//    
-//    id dataSource = objc_getAssociatedObject(self, UITableViewDataSourceKey);
-//    
-//    if ([dataSource respondsToSelector:@selector(tableView:sectionForSectionIndexTitle:atIndex:)]) {
-//        return [dataSource tableView:tableView sectionForSectionIndexTitle:title atIndex:index];
-//    }
-//    
-//    return 0;
-//}
++ (NSInteger)tableView:(UITableView *)tableView sectionForSectionIndexTitle:(NSString *)title atIndex:(NSInteger)index __TVOS_PROHIBITED {
+    if (tableView.hd_tableViewSectionForSectionIndexTitleAtIndexBlock) {
+        return tableView.hd_tableViewSectionForSectionIndexTitleAtIndexBlock(tableView, title, index);
+    }
+    
+    id dataSource = objc_getAssociatedObject(self, UITableViewDataSourceKey);
+    
+    if ([dataSource respondsToSelector:@selector(tableView:sectionForSectionIndexTitle:atIndex:)]) {
+        return [dataSource tableView:tableView sectionForSectionIndexTitle:title atIndex:index];
+    }
+    
+    return 0;
+}
 
 + (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
     if (tableView.hd_tableViewCommitEditingStyleForRowAtIndexPathBlock) {
@@ -175,8 +175,8 @@ static const void *UITableViewTitleForHeaderInSectionKey             = &UITableV
 static const void *UITableViewTitleForFooterInSectionKey             = &UITableViewTitleForFooterInSectionKey;
 static const void *UITableViewCanEditRowAtIndexPathKey               = &UITableViewCanEditRowAtIndexPathKey;
 static const void *UITableViewCanMoveRowAtIndexPathKey               = &UITableViewCanMoveRowAtIndexPathKey;
-//static const void *UITableViewSectionIndexTitlesForTableViewKey      = &UITableViewSectionIndexTitlesForTableViewKey;
-//static const void *UITableViewSectionForSectionIndexTitleAtIndexKey  = &UITableViewSectionForSectionIndexTitleAtIndexKey;
+static const void *UITableViewSectionIndexTitlesForTableViewKey      = &UITableViewSectionIndexTitlesForTableViewKey;
+static const void *UITableViewSectionForSectionIndexTitleAtIndexKey  = &UITableViewSectionForSectionIndexTitleAtIndexKey;
 static const void *UITableViewCommitEditingStyleForRowAtIndexPathKey = &UITableViewCommitEditingStyleForRowAtIndexPathKey;
 static const void *UITableViewMoveRowAtIndexPathToIndexPathKey       = &UITableViewMoveRowAtIndexPathToIndexPathKey;
 
@@ -271,28 +271,28 @@ static const void *UITableViewMoveRowAtIndexPathToIndexPathKey       = &UITableV
 // Index
 
 // return list of section titles to display in section index view (e.g. "ABCD...Z#")
-//- (NSArray<NSString *> * (^)(UITableView *tableView))hd_sectionIndexTitlesForTableViewBlock {
-//    return objc_getAssociatedObject(self, UITableViewSectionIndexTitlesForTableViewKey);
-//}
+- (NSArray<NSString *> * (^)(UITableView *tableView))hd_sectionIndexTitlesForTableViewBlock {
+    return objc_getAssociatedObject(self, UITableViewSectionIndexTitlesForTableViewKey);
+}
 
-//- (instancetype)hd_sectionIndexTitlesForTableViewBlock:(NSArray<NSString *> * (^)(UITableView *tableView))hd_sectionIndexTitlesForTableViewBlock __TVOS_PROHIBITED {
-//    [self hd_setDataSourceIfDataSourceSet];
-//    objc_setAssociatedObject(self, UITableViewSectionIndexTitlesForTableViewKey, hd_sectionIndexTitlesForTableViewBlock, OBJC_ASSOCIATION_COPY);
-//    
-//    return self;
-//}
+- (instancetype)hd_sectionIndexTitlesForTableViewBlock:(NSArray<NSString *> * (^)(UITableView *tableView))hd_sectionIndexTitlesForTableViewBlock __TVOS_PROHIBITED {
+    [self hd_setDataSourceIfDataSourceSet];
+    objc_setAssociatedObject(self, UITableViewSectionIndexTitlesForTableViewKey, hd_sectionIndexTitlesForTableViewBlock, OBJC_ASSOCIATION_COPY);
+    
+    return self;
+}
 
 // tell table which section corresponds to section title/index (e.g. "B",1))
-//- (NSInteger (^)(UITableView *tableView, NSString *title, NSInteger index))hd_tableViewSectionForSectionIndexTitleAtIndexBlock {
-//    return objc_getAssociatedObject(self, UITableViewSectionForSectionIndexTitleAtIndexKey);
-//}
+- (NSInteger (^)(UITableView *tableView, NSString *title, NSInteger index))hd_tableViewSectionForSectionIndexTitleAtIndexBlock {
+    return objc_getAssociatedObject(self, UITableViewSectionForSectionIndexTitleAtIndexKey);
+}
 
-//- (instancetype)hd_tableViewSectionForSectionIndexTitleAtIndexBlock:(NSInteger (^)(UITableView *tableView, NSString *title, NSInteger index))hd_tableViewSectionForSectionIndexTitleAtIndexBlock __TVOS_PROHIBITED {
-//    [self hd_setDataSourceIfDataSourceSet];
-//    objc_setAssociatedObject(self, UITableViewSectionForSectionIndexTitleAtIndexKey, hd_tableViewSectionForSectionIndexTitleAtIndexBlock, OBJC_ASSOCIATION_COPY);
-//    
-//    return self;
-//}
+- (instancetype)hd_tableViewSectionForSectionIndexTitleAtIndexBlock:(NSInteger (^)(UITableView *tableView, NSString *title, NSInteger index))hd_tableViewSectionForSectionIndexTitleAtIndexBlock __TVOS_PROHIBITED {
+    [self hd_setDataSourceIfDataSourceSet];
+    objc_setAssociatedObject(self, UITableViewSectionForSectionIndexTitleAtIndexKey, hd_tableViewSectionForSectionIndexTitleAtIndexBlock, OBJC_ASSOCIATION_COPY);
+    
+    return self;
+}
 
 // Data manipulation - insert and delete support
 
@@ -516,19 +516,19 @@ static const void *UITableViewMoveRowAtIndexPathToIndexPathKey       = &UITableV
     return nil;
 }
 
-//+ (UITableViewCellAccessoryType)tableView:(UITableView *)tableView accessoryTypeForRowWithIndexPath:(NSIndexPath *)indexPath NS_DEPRECATED_IOS(2_0, 3_0) __TVOS_PROHIBITED {
-//    if (tableView.hd_tableViewAccessoryTypeForRowWithIndexPathBlock) {
-//        return tableView.hd_tableViewAccessoryTypeForRowWithIndexPathBlock(tableView, indexPath);
-//    }
-//    
-//    id dataSource = objc_getAssociatedObject(self, UITableViewDelegateKey);
-//    
-//    if ([dataSource respondsToSelector:@selector(tableView:accessoryTypeForRowWithIndexPath:)]) {
-//        return [dataSource tableView:tableView accessoryTypeForRowWithIndexPath:indexPath];
-//    }
-//    
-//    return UITableViewCellAccessoryNone; // 默认为none
-//}
++ (UITableViewCellAccessoryType)tableView:(UITableView *)tableView accessoryTypeForRowWithIndexPath:(NSIndexPath *)indexPath NS_DEPRECATED_IOS(2_0, 3_0) __TVOS_PROHIBITED {
+    if (tableView.hd_tableViewAccessoryTypeForRowWithIndexPathBlock) {
+        return tableView.hd_tableViewAccessoryTypeForRowWithIndexPathBlock(tableView, indexPath);
+    }
+    
+    id dataSource = objc_getAssociatedObject(self, UITableViewDelegateKey);
+    
+    if ([dataSource respondsToSelector:@selector(tableView:accessoryTypeForRowWithIndexPath:)]) {
+        return [dataSource tableView:tableView accessoryTypeForRowWithIndexPath:indexPath];
+    }
+    
+    return UITableViewCellAccessoryNone; // 默认为none
+}
 
 + (void)tableView:(UITableView *)tableView accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath {
     if (tableView.hd_tableViewAccessoryButtonTappedForRowWithIndexPathBlock) {
@@ -646,33 +646,33 @@ static const void *UITableViewMoveRowAtIndexPathToIndexPathKey       = &UITableV
     return UITableViewCellEditingStyleNone;
 }
 
-//+ (nullable NSString *)tableView:(UITableView *)tableView titleForDeleteConfirmationButtonForRowAtIndexPath:(NSIndexPath *)indexPath NS_AVAILABLE_IOS(3_0) __TVOS_PROHIBITED {
-//    if (tableView.hd_tableViewTitleForDeleteConfirmationButtonForRowAtIndexPathBlock) {
-//        return tableView.hd_tableViewTitleForDeleteConfirmationButtonForRowAtIndexPathBlock(tableView, indexPath);
-//    }
-//    
-//    id dataSource = objc_getAssociatedObject(self, UITableViewDelegateKey);
-//    
-//    if ([dataSource respondsToSelector:@selector(tableView:titleForDeleteConfirmationButtonForRowAtIndexPath:)]) {
-//        return [dataSource tableView:tableView titleForDeleteConfirmationButtonForRowAtIndexPath:indexPath];
-//    }
-//    
-//    return nil;
-//}
++ (nullable NSString *)tableView:(UITableView *)tableView titleForDeleteConfirmationButtonForRowAtIndexPath:(NSIndexPath *)indexPath NS_AVAILABLE_IOS(3_0) __TVOS_PROHIBITED {
+    if (tableView.hd_tableViewTitleForDeleteConfirmationButtonForRowAtIndexPathBlock) {
+        return tableView.hd_tableViewTitleForDeleteConfirmationButtonForRowAtIndexPathBlock(tableView, indexPath);
+    }
+    
+    id dataSource = objc_getAssociatedObject(self, UITableViewDelegateKey);
+    
+    if ([dataSource respondsToSelector:@selector(tableView:titleForDeleteConfirmationButtonForRowAtIndexPath:)]) {
+        return [dataSource tableView:tableView titleForDeleteConfirmationButtonForRowAtIndexPath:indexPath];
+    }
+    
+    return nil;
+}
 
-//+ (nullable NSArray<UITableViewRowAction *> *)tableView:(UITableView *)tableView editActionsForRowAtIndexPath:(NSIndexPath *)indexPath NS_AVAILABLE_IOS(8_0) __TVOS_PROHIBITED {
-//    if (tableView.hd_tableViewEditActionsForRowAtIndexPathBlock) {
-//        return tableView.hd_tableViewEditActionsForRowAtIndexPathBlock(tableView, indexPath);
-//    }
-//    
-//    id dataSource = objc_getAssociatedObject(self, UITableViewDelegateKey);
-//    
-//    if ([dataSource respondsToSelector:@selector(tableView:editActionsForRowAtIndexPath:)]) {
-//        return [dataSource tableView:tableView editActionsForRowAtIndexPath:indexPath];
-//    }
-//    
-//    return nil;
-//}
++ (nullable NSArray<UITableViewRowAction *> *)tableView:(UITableView *)tableView editActionsForRowAtIndexPath:(NSIndexPath *)indexPath NS_AVAILABLE_IOS(8_0) __TVOS_PROHIBITED {
+    if (tableView.hd_tableViewEditActionsForRowAtIndexPathBlock) {
+        return tableView.hd_tableViewEditActionsForRowAtIndexPathBlock(tableView, indexPath);
+    }
+    
+    id dataSource = objc_getAssociatedObject(self, UITableViewDelegateKey);
+    
+    if ([dataSource respondsToSelector:@selector(tableView:editActionsForRowAtIndexPath:)]) {
+        return [dataSource tableView:tableView editActionsForRowAtIndexPath:indexPath];
+    }
+    
+    return nil;
+}
 
 + (BOOL)tableView:(UITableView *)tableView shouldIndentWhileEditingRowAtIndexPath:(NSIndexPath *)indexPath {
     if (tableView.hd_tableViewShouldIndentWhileEditingRowAtIndexPathBlock) {
@@ -688,29 +688,29 @@ static const void *UITableViewMoveRowAtIndexPathToIndexPathKey       = &UITableV
     return YES;
 }
 
-//+ (void)tableView:(UITableView*)tableView willBeginEditingRowAtIndexPath:(NSIndexPath *)indexPath __TVOS_PROHIBITED {
-//    if (tableView.hd_tableViewWillBeginEditingRowAtIndexPathBlock) {
-//        return tableView.hd_tableViewWillBeginEditingRowAtIndexPathBlock(tableView, indexPath);
-//    }
-//    
-//    id dataSource = objc_getAssociatedObject(self, UITableViewDelegateKey);
-//    
-//    if ([dataSource respondsToSelector:@selector(tableView:willBeginEditingRowAtIndexPath:)]) {
-//        return [dataSource tableView:tableView willBeginEditingRowAtIndexPath:indexPath];
-//    }
-//}
++ (void)tableView:(UITableView*)tableView willBeginEditingRowAtIndexPath:(NSIndexPath *)indexPath __TVOS_PROHIBITED {
+    if (tableView.hd_tableViewWillBeginEditingRowAtIndexPathBlock) {
+        return tableView.hd_tableViewWillBeginEditingRowAtIndexPathBlock(tableView, indexPath);
+    }
+    
+    id dataSource = objc_getAssociatedObject(self, UITableViewDelegateKey);
+    
+    if ([dataSource respondsToSelector:@selector(tableView:willBeginEditingRowAtIndexPath:)]) {
+        return [dataSource tableView:tableView willBeginEditingRowAtIndexPath:indexPath];
+    }
+}
 
-//+ (void)tableView:(UITableView*)tableView didEndEditingRowAtIndexPath:(NSIndexPath *)indexPath __TVOS_PROHIBITED {
-//    if (tableView.hd_tableViewDidEndEditingRowAtIndexPathBlock) {
-//        return tableView.hd_tableViewDidEndEditingRowAtIndexPathBlock(tableView, indexPath);
-//    }
-//    
-//    id dataSource = objc_getAssociatedObject(self, UITableViewDelegateKey);
-//    
-//    if ([dataSource respondsToSelector:@selector(tableView:didEndEditingRowAtIndexPath:)]) {
-//        return [dataSource tableView:tableView didEndEditingRowAtIndexPath:indexPath];
-//    }
-//}
++ (void)tableView:(UITableView*)tableView didEndEditingRowAtIndexPath:(NSIndexPath *)indexPath __TVOS_PROHIBITED {
+    if (tableView.hd_tableViewDidEndEditingRowAtIndexPathBlock) {
+        return tableView.hd_tableViewDidEndEditingRowAtIndexPathBlock(tableView, indexPath);
+    }
+    
+    id dataSource = objc_getAssociatedObject(self, UITableViewDelegateKey);
+    
+    if ([dataSource respondsToSelector:@selector(tableView:didEndEditingRowAtIndexPath:)]) {
+        return [dataSource tableView:tableView didEndEditingRowAtIndexPath:indexPath];
+    }
+}
 
 + (NSIndexPath *)tableView:(UITableView *)tableView targetIndexPathForMoveFromRowAtIndexPath:(NSIndexPath *)sourceIndexPath toProposedIndexPath:(NSIndexPath *)proposedDestinationIndexPath {
     if (tableView.hd_tableViewTargetIndexPathForMoveFromRowAtIndexPathToProposedIndexPathBlock) {
@@ -854,7 +854,7 @@ static const void *UITableViewEstimatedHeightForHeaderInSectionKey              
 static const void *UITableViewEstimatedHeightForFooterInSectionKey                 = &UITableViewEstimatedHeightForFooterInSectionKey;
 static const void *UITableViewViewForHeaderInSectionKey                            = &UITableViewViewForHeaderInSectionKey;
 static const void *UITableViewViewForFooterInSectionKey                            = &UITableViewViewForFooterInSectionKey;
-//static const void *UITableViewAccessoryTypeForRowWithIndexPathKey                  = &UITableViewAccessoryTypeForRowWithIndexPathKey;
+static const void *UITableViewAccessoryTypeForRowWithIndexPathKey                  = &UITableViewAccessoryTypeForRowWithIndexPathKey;
 static const void *UITableViewAccessoryButtonTappedForRowWithIndexPathKey          = &UITableViewAccessoryButtonTappedForRowWithIndexPathKey;
 static const void *UITableViewShouldHighlightRowAtIndexPathKey                     = &UITableViewShouldHighlightRowAtIndexPathKey;
 static const void *UITableViewDidHighlightRowAtIndexPathKey                        = &UITableViewDidHighlightRowAtIndexPathKey;
@@ -864,11 +864,11 @@ static const void *UITableViewWillDeselectRowAtIndexPathKey                     
 static const void *UITableViewDidSelectRowAtIndexPathKey                           = &UITableViewDidSelectRowAtIndexPathKey;
 static const void *UITableViewDidDeselectRowAtIndexPathKey                         = &UITableViewDidDeselectRowAtIndexPathKey;
 static const void *UITableViewEditingStyleForRowAtIndexPathKey                     = &UITableViewEditingStyleForRowAtIndexPathKey;
-//static const void *UITableViewTitleForDeleteConfirmationButtonForRowAtIndexPathKey = &UITableViewTitleForDeleteConfirmationButtonForRowAtIndexPathKey;
-//static const void *UITableViewEditActionsForRowAtIndexPathKey                      = &UITableViewEditActionsForRowAtIndexPathKey;
+static const void *UITableViewTitleForDeleteConfirmationButtonForRowAtIndexPathKey = &UITableViewTitleForDeleteConfirmationButtonForRowAtIndexPathKey;
+static const void *UITableViewEditActionsForRowAtIndexPathKey                      = &UITableViewEditActionsForRowAtIndexPathKey;
 static const void *UITableViewShouldIndentWhileEditingRowAtIndexPathKey            = &UITableViewShouldIndentWhileEditingRowAtIndexPathKey;
-//static const void *UITableViewWillBeginEditingRowAtIndexPathKey                    = &UITableViewWillBeginEditingRowAtIndexPathKey;
-//static const void *UITableViewDidEndEditingRowAtIndexPathKey                       = &UITableViewDidEndEditingRowAtIndexPathKey;
+static const void *UITableViewWillBeginEditingRowAtIndexPathKey                    = &UITableViewWillBeginEditingRowAtIndexPathKey;
+static const void *UITableViewDidEndEditingRowAtIndexPathKey                       = &UITableViewDidEndEditingRowAtIndexPathKey;
 static const void *UITableViewTargetIndexPathForMoveFromRowAtIndexPathToProposedIndexPathKey = &UITableViewTargetIndexPathForMoveFromRowAtIndexPathToProposedIndexPathKey;
 static const void *UITableViewIndentationLevelForRowAtIndexPathKey                 = &UITableViewIndentationLevelForRowAtIndexPathKey;
 static const void *UITableViewShouldShowMenuForRowAtIndexPathKey                   = &UITableViewShouldShowMenuForRowAtIndexPathKey;
@@ -1039,16 +1039,16 @@ static const void *UITableViewIndexPathForPreferredFocusedViewInTableViewKey    
 }
 
 // Accessories (disclosures).
-//- (UITableViewCellAccessoryType (^)(UITableView *tableView, NSIndexPath *indexPath))hd_tableViewAccessoryTypeForRowWithIndexPathBlock {
-//    return objc_getAssociatedObject(self, UITableViewAccessoryTypeForRowWithIndexPathKey);
-//}
-//
-//- (instancetype)hd_tableViewAccessoryTypeForRowWithIndexPathBlock:(UITableViewCellAccessoryType (^)(UITableView *tableView, NSIndexPath *indexPath))hd_tableViewAccessoryTypeForRowWithIndexPathBlock NS_DEPRECATED_IOS(2_0, 3_0) __TVOS_PROHIBITED {
-//    [self hd_setDelegateIfDelegateSet];
-//    objc_setAssociatedObject(self, UITableViewAccessoryTypeForRowWithIndexPathKey, hd_tableViewAccessoryTypeForRowWithIndexPathBlock, OBJC_ASSOCIATION_COPY);
-//    
-//    return self;
-//}
+- (UITableViewCellAccessoryType (^)(UITableView *tableView, NSIndexPath *indexPath))hd_tableViewAccessoryTypeForRowWithIndexPathBlock {
+    return objc_getAssociatedObject(self, UITableViewAccessoryTypeForRowWithIndexPathKey);
+}
+
+- (instancetype)hd_tableViewAccessoryTypeForRowWithIndexPathBlock:(UITableViewCellAccessoryType (^)(UITableView *tableView, NSIndexPath *indexPath))hd_tableViewAccessoryTypeForRowWithIndexPathBlock NS_DEPRECATED_IOS(2_0, 3_0) __TVOS_PROHIBITED {
+    [self hd_setDelegateIfDelegateSet];
+    objc_setAssociatedObject(self, UITableViewAccessoryTypeForRowWithIndexPathKey, hd_tableViewAccessoryTypeForRowWithIndexPathBlock, OBJC_ASSOCIATION_COPY);
+    
+    return self;
+}
 
 - (void (^)(UITableView *tableView, NSIndexPath *indexPath))hd_tableViewAccessoryButtonTappedForRowWithIndexPathBlock {
     return objc_getAssociatedObject(self, UITableViewAccessoryButtonTappedForRowWithIndexPathKey);
@@ -1157,27 +1157,27 @@ static const void *UITableViewIndexPathForPreferredFocusedViewInTableViewKey    
     return self;
 }
 
-//- (nullable NSString * (^)(UITableView *tableView, NSIndexPath *indexPath))hd_tableViewTitleForDeleteConfirmationButtonForRowAtIndexPathBlock {
-//    return objc_getAssociatedObject(self, UITableViewTitleForDeleteConfirmationButtonForRowAtIndexPathKey);
-//}
+- (nullable NSString * (^)(UITableView *tableView, NSIndexPath *indexPath))hd_tableViewTitleForDeleteConfirmationButtonForRowAtIndexPathBlock {
+    return objc_getAssociatedObject(self, UITableViewTitleForDeleteConfirmationButtonForRowAtIndexPathKey);
+}
 
-//- (instancetype)hd_tableViewTitleForDeleteConfirmationButtonForRowAtIndexPathBlock:(nullable NSString * (^)(UITableView *tableView, NSIndexPath *indexPath))hd_tableViewTitleForDeleteConfirmationButtonForRowAtIndexPathBlock NS_AVAILABLE_IOS(3_0) __TVOS_PROHIBITED {
-//    [self hd_setDelegateIfDelegateSet];
-//    objc_setAssociatedObject(self, UITableViewTitleForDeleteConfirmationButtonForRowAtIndexPathKey, hd_tableViewTitleForDeleteConfirmationButtonForRowAtIndexPathBlock, OBJC_ASSOCIATION_COPY);
-//    
-//    return self;
-//}
+- (instancetype)hd_tableViewTitleForDeleteConfirmationButtonForRowAtIndexPathBlock:(nullable NSString * (^)(UITableView *tableView, NSIndexPath *indexPath))hd_tableViewTitleForDeleteConfirmationButtonForRowAtIndexPathBlock NS_AVAILABLE_IOS(3_0) __TVOS_PROHIBITED {
+    [self hd_setDelegateIfDelegateSet];
+    objc_setAssociatedObject(self, UITableViewTitleForDeleteConfirmationButtonForRowAtIndexPathKey, hd_tableViewTitleForDeleteConfirmationButtonForRowAtIndexPathBlock, OBJC_ASSOCIATION_COPY);
+    
+    return self;
+}
 
-//- (nullable NSArray<UITableViewRowAction *> * (^)(UITableView *tableView, NSIndexPath *indexPath))hd_tableViewEditActionsForRowAtIndexPathBlock {
-//    return objc_getAssociatedObject(self, UITableViewEditActionsForRowAtIndexPathKey);
-//}
+- (nullable NSArray<UITableViewRowAction *> * (^)(UITableView *tableView, NSIndexPath *indexPath))hd_tableViewEditActionsForRowAtIndexPathBlock {
+    return objc_getAssociatedObject(self, UITableViewEditActionsForRowAtIndexPathKey);
+}
 
-//- (instancetype)hd_tableViewEditActionsForRowAtIndexPathBlock:(nullable NSArray<UITableViewRowAction *> * (^)(UITableView *tableView, NSIndexPath *indexPath))hd_tableViewEditActionsForRowAtIndexPathBlock NS_AVAILABLE_IOS(8_0) __TVOS_PROHIBITED { // supercedes -tableView:titleForDeleteConfirmationButtonForRowAtIndexPath: if return value is non-nil
-//    [self hd_setDelegateIfDelegateSet];
-//    objc_setAssociatedObject(self, UITableViewEditActionsForRowAtIndexPathKey, hd_tableViewEditActionsForRowAtIndexPathBlock, OBJC_ASSOCIATION_COPY);
-//    
-//    return self;
-//}
+- (instancetype)hd_tableViewEditActionsForRowAtIndexPathBlock:(nullable NSArray<UITableViewRowAction *> * (^)(UITableView *tableView, NSIndexPath *indexPath))hd_tableViewEditActionsForRowAtIndexPathBlock NS_AVAILABLE_IOS(8_0) __TVOS_PROHIBITED { // supercedes -tableView:titleForDeleteConfirmationButtonForRowAtIndexPath: if return value is non-nil
+    [self hd_setDelegateIfDelegateSet];
+    objc_setAssociatedObject(self, UITableViewEditActionsForRowAtIndexPathKey, hd_tableViewEditActionsForRowAtIndexPathBlock, OBJC_ASSOCIATION_COPY);
+    
+    return self;
+}
 
 // Controls whether the background is indented while editing.  If not implemented, the default is YES.  This is unrelated to the indentation level below.  This method only applies to grouped style table views.
 - (BOOL (^)(UITableView *tableView, NSIndexPath *indexPath))hd_tableViewShouldIndentWhileEditingRowAtIndexPathBlock {
@@ -1192,27 +1192,27 @@ static const void *UITableViewIndexPathForPreferredFocusedViewInTableViewKey    
 }
 
 // The willBegin/didEnd methods are called whenever the 'editing' property is automatically changed by the table (allowing insert/delete/move). This is done by a swipe activating a single row
-//- (void (^)(UITableView *tableView, NSIndexPath *indexPath))hd_tableViewWillBeginEditingRowAtIndexPathBlock {
-//    return objc_getAssociatedObject(self, UITableViewWillBeginEditingRowAtIndexPathKey);
-//}
+- (void (^)(UITableView *tableView, NSIndexPath *indexPath))hd_tableViewWillBeginEditingRowAtIndexPathBlock {
+    return objc_getAssociatedObject(self, UITableViewWillBeginEditingRowAtIndexPathKey);
+}
 
-//- (instancetype)hd_tableViewWillBeginEditingRowAtIndexPathBlock:(void (^)(UITableView *tableView, NSIndexPath *indexPath))hd_tableViewWillBeginEditingRowAtIndexPathBlock __TVOS_PROHIBITED {
-//    [self hd_setDelegateIfDelegateSet];
-//    objc_setAssociatedObject(self, UITableViewWillBeginEditingRowAtIndexPathKey, hd_tableViewWillBeginEditingRowAtIndexPathBlock, OBJC_ASSOCIATION_COPY);
-//    
-//    return self;
-//}
+- (instancetype)hd_tableViewWillBeginEditingRowAtIndexPathBlock:(void (^)(UITableView *tableView, NSIndexPath *indexPath))hd_tableViewWillBeginEditingRowAtIndexPathBlock __TVOS_PROHIBITED {
+    [self hd_setDelegateIfDelegateSet];
+    objc_setAssociatedObject(self, UITableViewWillBeginEditingRowAtIndexPathKey, hd_tableViewWillBeginEditingRowAtIndexPathBlock, OBJC_ASSOCIATION_COPY);
+    
+    return self;
+}
 
-//- (void (^)(UITableView *tableView, NSIndexPath *indexPath))hd_tableViewDidEndEditingRowAtIndexPathBlock {
-//    return objc_getAssociatedObject(self, UITableViewDidEndEditingRowAtIndexPathKey);
-//}
+- (void (^)(UITableView *tableView, NSIndexPath *indexPath))hd_tableViewDidEndEditingRowAtIndexPathBlock {
+    return objc_getAssociatedObject(self, UITableViewDidEndEditingRowAtIndexPathKey);
+}
 
-//- (instancetype)hd_tableViewDidEndEditingRowAtIndexPathBlock:(void (^)(UITableView *tableView, NSIndexPath *indexPath))hd_tableViewDidEndEditingRowAtIndexPathBlock __TVOS_PROHIBITED {
-//    [self hd_setDelegateIfDelegateSet];
-//    objc_setAssociatedObject(self, UITableViewDidEndEditingRowAtIndexPathKey, hd_tableViewDidEndEditingRowAtIndexPathBlock, OBJC_ASSOCIATION_COPY);
-//    
-//    return self;
-//}
+- (instancetype)hd_tableViewDidEndEditingRowAtIndexPathBlock:(void (^)(UITableView *tableView, NSIndexPath *indexPath))hd_tableViewDidEndEditingRowAtIndexPathBlock __TVOS_PROHIBITED {
+    [self hd_setDelegateIfDelegateSet];
+    objc_setAssociatedObject(self, UITableViewDidEndEditingRowAtIndexPathKey, hd_tableViewDidEndEditingRowAtIndexPathBlock, OBJC_ASSOCIATION_COPY);
+    
+    return self;
+}
 
 // Moving/reordering
 

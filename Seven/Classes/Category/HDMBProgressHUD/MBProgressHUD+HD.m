@@ -12,7 +12,7 @@
 @implementation MBProgressHUD (HD)
 
 #pragma mark - 显示信息
-+ (void)show:(NSString *)text icon:(NSString *)icon view:(UIView *)view {
++ (void)hd_show:(NSString *)text icon:(NSString *)icon view:(UIView *)view {
     if (view == nil) view = HDFirstWindow;
 
     MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:view animated:YES];
@@ -28,16 +28,16 @@
 }
 
 #pragma mark - 显示错误信息
-+ (void)showError:(NSString *)error toView:(UIView *)view {
-    [self show:error icon:@"error.png" view:view];
++ (void)hd_showError:(NSString *)error toView:(UIView *)view {
+    [self hd_show:error icon:@"error.png" view:view];
 }
 
-+ (void)showSuccess:(NSString *)success toView:(UIView *)view {
-    [self show:success icon:@"success.png" view:view];
++ (void)hd_showSuccess:(NSString *)success toView:(UIView *)view {
+    [self hd_show:success icon:@"success.png" view:view];
 }
 
 #pragma mark - 显示一些信息
-+ (MBProgressHUD *)showMessage:(NSString *)message toView:(UIView *)view {
++ (MBProgressHUD *)hd_showMessage:(NSString *)message toView:(UIView *)view {
     if (view == nil) view = HDFirstWindow;
     
     MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:view animated:YES];
@@ -49,24 +49,24 @@
     return hud;
 }
 
-+ (void)showSuccess:(NSString *)success {
-    [self showSuccess:success toView:nil];
++ (void)hd_showSuccess:(NSString *)success {
+    [self hd_showSuccess:success toView:nil];
 }
 
-+ (void)showError:(NSString *)error {
-    [self showError:error toView:nil];
++ (void)hd_showError:(NSString *)error {
+    [self hd_showError:error toView:nil];
 }
 
-+ (MBProgressHUD *)showMessage:(NSString *)message {
-    return [self showMessage:message toView:nil];
++ (MBProgressHUD *)hd_showMessage:(NSString *)message {
+    return [self hd_showMessage:message toView:nil];
 }
 
-+ (void)hideHUDForView:(UIView *)view {
++ (void)hd_hideHUDForView:(UIView *)view {
     [self hideHUDForView:view animated:YES];
 }
 
-+ (void)hideHUD {
-    [self hideHUDForView:HDFirstWindow];
++ (void)hd_hideHUD {
+    [self hd_hideHUDForView:HDFirstWindow];
 }
 
 @end
