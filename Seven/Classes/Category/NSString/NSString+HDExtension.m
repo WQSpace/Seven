@@ -570,6 +570,45 @@ NSString *const iPhone6_6s_7Plus = @"iPhone6_6s_7Plus";
     return str;
 }
 
+- (NSUInteger)hd_length {
+    float number = 0.0;
+    
+    for (int i = 0; i < self.length; i++) {
+        NSString *character = [self substringWithRange:NSMakeRange(i, 1)];
+        
+        if ([character lengthOfBytesUsingEncoding:NSUTF8StringEncoding] == 3) {
+            number++;
+        } else {
+            number = number + 0.5;
+        }
+    }
+    
+    return ceil(number);
+}
+
+- (instancetype)hd_substringMaxLength:(NSUInteger)maxLength {
+    NSMutableString *ret = [[NSMutableString alloc] init];
+    float number = 0.0;
+    
+    for (int i = 0; i < self.length; i++) {
+        NSString *character = [self substringWithRange:NSMakeRange(i, 1)];
+        
+        if ([character lengthOfBytesUsingEncoding:NSUTF8StringEncoding] == 3) {
+            number++;
+        } else {
+            number = number + 0.5;
+        }
+        
+        if (number <= maxLength) {
+            [ret appendString:character];
+        } else {
+            break;
+        }
+    }
+    
+    return [ret copy];
+}
+
 
 #pragma mark - 其他
 /**

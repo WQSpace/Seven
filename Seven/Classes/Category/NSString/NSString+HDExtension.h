@@ -453,4 +453,19 @@ HD_EXTERN NSString *const iPhone6_6s_7Plus;
  */
 - (instancetype)hd_limitLength:(NSInteger)length;
 
+/**
+ 字符串长度
+
+ @return 返回字符串长度
+ */
+- (NSUInteger)hd_length;
+
+/**
+ 字符串截串
+
+ @param maxLength 最大长度
+ @return 返回截取到最大长度的字符串
+ */
+- (instancetype)hd_substringMaxLength:(NSUInteger)maxLength;
+
 @end
