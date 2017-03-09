@@ -283,9 +283,7 @@
     NSDictionary *attributes = @{NSFontAttributeName : font,
                                  NSParagraphStyleAttributeName : paragraphStyle};
     
-    CGRect bounds = [self boundingRectWithSize:size options:NSStringDrawingUsesLineFragmentOrigin attributes:attributes context:nil];
-    
-    return CGSizeMake(ceil(bounds.size.width), ceil(bounds.size.height));
+    return [self boundingRectWithSize:size options:NSStringDrawingUsesLineFragmentOrigin attributes:attributes context:nil].size;
 }
 
 - (CGSize)hd_sizeWithSystemFont:(UIFont *)font constrainedToSize:(CGSize)size lineBreakMode:(NSLineBreakMode)mode numberOfLine:(NSInteger)numberOfLine {
@@ -322,7 +320,7 @@
 }
 
 - (CGSize)hd_sizeWithBoldFont:(UIFont *)font constrainedToSize:(CGSize)size {
-    return [self hd_sizeWithBoldFont:font constrainedToSize:size lineBreakMode:NSLineBreakByTruncatingTail];
+    return [self hd_sizeWithBoldFont:font constrainedToSize:size lineBreakMode:NSLineBreakByWordWrapping];
 }
 
 - (CGSize)hd_sizeWithBoldFont:(UIFont *)font constrainedToSize:(CGSize)size lineBreakMode:(NSLineBreakMode)mode numberOfLine:(NSInteger)numberOfLine {
