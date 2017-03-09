@@ -288,7 +288,7 @@
 
 - (CGSize)hd_sizeWithSystemFont:(UIFont *)font constrainedToSize:(CGSize)size lineBreakMode:(NSLineBreakMode)mode numberOfLine:(NSInteger)numberOfLine {
     CGSize maxSize = [self hd_sizeWithSystemFont:font constrainedToSize:size lineBreakMode:mode];
-    CGFloat oneLineHeight = [self hd_sizeWithSystemFont:font constrainedToSize:size lineBreakMode:NSLineBreakByTruncatingTail].height;
+    CGFloat oneLineHeight = [self hd_sizeWithSystemFont:font constrainedToSize:size lineBreakMode:NSLineBreakByTruncatingTail].height; // 某些情况, 不到计算的一行主动换行了, NSLineBreakByTruncatingTail计算出来的不是真实一行, 这时候请使用你项目字体最大的高来计算 (控制参数size)
     CGFloat height = 0;
     CGFloat limitHeight = oneLineHeight * numberOfLine;
     
@@ -325,7 +325,7 @@
 
 - (CGSize)hd_sizeWithBoldFont:(UIFont *)font constrainedToSize:(CGSize)size lineBreakMode:(NSLineBreakMode)mode numberOfLine:(NSInteger)numberOfLine {
     CGSize maxSize = [self hd_sizeWithBoldFont:font constrainedToSize:size lineBreakMode:mode];
-    CGFloat oneLineHeight = [self hd_sizeWithBoldFont:font constrainedToSize:size lineBreakMode:NSLineBreakByTruncatingTail].height;
+    CGFloat oneLineHeight = [self hd_sizeWithBoldFont:font constrainedToSize:size lineBreakMode:NSLineBreakByTruncatingTail].height; // 某些情况, 不到计算的一行主动换行了, NSLineBreakByTruncatingTail计算出来的不是真实一行, 这时候请使用你项目字体最大的高来计算 (控制参数size)
     CGFloat height = 0;
     CGFloat limitHeight = oneLineHeight * numberOfLine;
     
