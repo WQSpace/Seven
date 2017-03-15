@@ -13,6 +13,14 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+@protocol HDTextFieldDelegate <UITextFieldDelegate>
+
+@optional
+- (void)textFieldDidDeleteBackward:(UITextField *)textField;
+
+@end
+
+
 /**
  * 摇动方向
  * 枚举指定的方向摇动
@@ -27,10 +35,17 @@ typedef NS_ENUM(NSInteger, HDShakeDirection) {
 @interface UITextField (HDExtension)
 
 /**
+ 代理
+ */
+@property (nonatomic, weak) id<HDTextFieldDelegate> delegate;
+
+/**
  *  添加TextFiled的左边视图(图片)
  */
 - (instancetype)hd_addLeftViewWithImage:(nonnull NSString *)image;
 
+
+#pragma mark - 光标
 /**
  *  获取选中光标位置
  *
@@ -42,6 +57,7 @@ typedef NS_ENUM(NSInteger, HDShakeDirection) {
  *  设置光标位置
  */
 - (instancetype)hd_setSelectedRange:(NSRange)range;
+
 
 #pragma mark - shake
 /**
@@ -106,6 +122,7 @@ typedef NS_ENUM(NSInteger, HDShakeDirection) {
  */
 - (instancetype)hd_shake:(NSUInteger)times withDelta:(CGFloat)delta speed:(NSTimeInterval)interval shakeDirection:(HDShakeDirection)shakeDirection completion:(nullable void (^)(void))handler;
 
+
 #pragma mark - UITextFieldDelegateBlcok
 // @optional
 - (instancetype)hd_shouldBegindEditingBlock:(BOOL (^)(UITextField *textField))shouldBegindEditingBlock;
@@ -115,7 +132,12 @@ typedef NS_ENUM(NSInteger, HDShakeDirection) {
 - (instancetype)hd_shouldChangeCharactersInRangeBlock:(BOOL (^)(UITextField *textField, NSRange range, NSString *string))shouldChangeCharactersInRangeBlock;
 - (instancetype)hd_shouldReturnBlock:(BOOL (^)(UITextField *textField))shouldReturnBlock;
 - (instancetype)hd_shouldClearBlock:(BOOL (^)(UITextField *textField))shouldClearBlock;
+- (instancetype)hd_setDeleteBackwardBlock:(BOOL (^)(UITextField *textField))deleteBackwardBlock;
 
 @end
 
+
+HD_EXTERN NSString * const HBTextFieldDidDeleteBackwardNotification;
+
 NS_ASSUME_NONNULL_END
+

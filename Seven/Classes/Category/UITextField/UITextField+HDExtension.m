@@ -11,6 +11,33 @@
 
 @implementation UITextField (HDExtension)
 
+NSString * const HBTextFieldDidDeleteBackwardNotification = @"HBTextFieldDidDeleteBackwardNotification";
+
++ (void)load {
+    Method originalSelector = class_getInstanceMethod([self class], NSSelectorFromString(@"deleteBackward"));
+    Method swizzledSelector = class_getInstanceMethod([self class], @selector(hd_deleteBackward));
+    method_exchangeImplementations(originalSelector, swizzledSelector);
+}
+
+- (void)hd_deleteBackward {
+    if (self.hd_deleteBackwardBlock) {
+        if (self.hd_deleteBackwardBlock(self)) {
+            [self hd_deleteBackward];
+            return;
+        }
+    }
+    
+    if ([self.delegate respondsToSelector:@selector(textFieldDidDeleteBackward:)]) {
+        id <HDTextFieldDelegate> delegate  = (id<HDTextFieldDelegate>)self.delegate;
+        [delegate textFieldDidDeleteBackward:self];
+    }
+    [HDNotificationCenter postNotificationName:HBTextFieldDidDeleteBackwardNotification object:self];
+    
+    [self hd_deleteBackward];
+}
+
+
+#pragma mark - 光标
 - (NSRange)hd_selectedRange {
     UITextPosition *beginning = self.beginningOfDocument;
     
@@ -51,6 +78,7 @@
     
     return self;
 }
+
 
 #pragma mark - shake
 - (instancetype)hd_shake {
@@ -113,6 +141,7 @@
     }];
 }
 
+
 #pragma mark - 重写UITextFieldDelegate
 static const void *UITextFieldDelegateKey                           = &UITextFieldDelegateKey;
 static const void *UITextFieldShouldBeginEditingKey                 = &UITextFieldShouldBeginEditingKey;
@@ -122,6 +151,8 @@ static const void *UITextFieldDidEndEditingKey                      = &UITextFie
 static const void *UITextFieldShouldChangeCharactersInRangeKey      = &UITextFieldShouldChangeCharactersInRangeKey;
 static const void *UITextFieldShouldClearKey                        = &UITextFieldShouldClearKey;
 static const void *UITextFieldShouldReturnKey                       = &UITextFieldShouldReturnKey;
+static const void *UITextFieldDeleteBackwardBlockKey                = &UITextFieldDeleteBackwardBlockKey;
+
 
 + (BOOL)textFieldShouldBeginEditing:(UITextField *)textField {
     if (textField.hd_shouldBegindEditingBlock) {
@@ -217,6 +248,7 @@ static const void *UITextFieldShouldReturnKey                       = &UITextFie
     return YES;
 }
 
+
 #pragma mark - UITextFieldDelegateBlock
 - (BOOL (^)(UITextField *textField))hd_shouldBegindEditingBlock {
     return objc_getAssociatedObject(self, UITextFieldShouldBeginEditingKey);
@@ -224,7 +256,7 @@ static const void *UITextFieldShouldReturnKey                       = &UITextFie
 
 - (instancetype)hd_shouldBegindEditingBlock:(BOOL (^)(UITextField *textField))shouldBegindEditingBlock {
     [self hd_setDelegateIfNoDelegateSet];
-    objc_setAssociatedObject(self, UITextFieldShouldBeginEditingKey, shouldBegindEditingBlock, OBJC_ASSOCIATION_COPY);
+    objc_setAssociatedObject(self, UITextFieldShouldBeginEditingKey, shouldBegindEditingBlock, OBJC_ASSOCIATION_COPY_NONATOMIC);
     
     return self;
 }
@@ -235,7 +267,7 @@ static const void *UITextFieldShouldReturnKey                       = &UITextFie
 
 - (instancetype)hd_shouldEndEditingBlock:(BOOL (^)(UITextField *textField))shouldEndEditingBlock {
     [self hd_setDelegateIfNoDelegateSet];
-    objc_setAssociatedObject(self, UITextFieldShouldEndEditingKey, shouldEndEditingBlock, OBJC_ASSOCIATION_COPY);
+    objc_setAssociatedObject(self, UITextFieldShouldEndEditingKey, shouldEndEditingBlock, OBJC_ASSOCIATION_COPY_NONATOMIC);
     
     return self;
 }
@@ -246,7 +278,7 @@ static const void *UITextFieldShouldReturnKey                       = &UITextFie
 
 - (instancetype)hd_didBeginEditingBlock:(void (^)(UITextField *textField))didBeginEditingBlock {
     [self hd_setDelegateIfNoDelegateSet];
-    objc_setAssociatedObject(self, UITextFieldDidBeginEditingKey, didBeginEditingBlock, OBJC_ASSOCIATION_COPY);
+    objc_setAssociatedObject(self, UITextFieldDidBeginEditingKey, didBeginEditingBlock, OBJC_ASSOCIATION_COPY_NONATOMIC);
     
     return self;
 }
@@ -257,7 +289,7 @@ static const void *UITextFieldShouldReturnKey                       = &UITextFie
 
 - (instancetype)hd_didEndEditingBlock:(void (^)(UITextField *textField))didEndEditingBlock {
     [self hd_setDelegateIfNoDelegateSet];
-    objc_setAssociatedObject(self, UITextFieldDidEndEditingKey, didEndEditingBlock, OBJC_ASSOCIATION_COPY);
+    objc_setAssociatedObject(self, UITextFieldDidEndEditingKey, didEndEditingBlock, OBJC_ASSOCIATION_COPY_NONATOMIC);
     
     return self;
 }
@@ -268,7 +300,7 @@ static const void *UITextFieldShouldReturnKey                       = &UITextFie
 
 - (instancetype)hd_shouldChangeCharactersInRangeBlock:(BOOL (^)(UITextField *textField, NSRange range, NSString *string))shouldChangeCharactersInRangeBlock {
     [self hd_setDelegateIfNoDelegateSet];
-    objc_setAssociatedObject(self, UITextFieldShouldChangeCharactersInRangeKey, shouldChangeCharactersInRangeBlock, OBJC_ASSOCIATION_COPY);
+    objc_setAssociatedObject(self, UITextFieldShouldChangeCharactersInRangeKey, shouldChangeCharactersInRangeBlock, OBJC_ASSOCIATION_COPY_NONATOMIC);
     
     return self;
 }
@@ -279,7 +311,7 @@ static const void *UITextFieldShouldReturnKey                       = &UITextFie
 
 - (instancetype)hd_shouldReturnBlock:(BOOL (^)(UITextField *textField))shouldReturnBlock {
     [self hd_setDelegateIfNoDelegateSet];
-    objc_setAssociatedObject(self, UITextFieldShouldReturnKey, shouldReturnBlock, OBJC_ASSOCIATION_COPY);
+    objc_setAssociatedObject(self, UITextFieldShouldReturnKey, shouldReturnBlock, OBJC_ASSOCIATION_COPY_NONATOMIC);
     
     return self;
 }
@@ -290,7 +322,18 @@ static const void *UITextFieldShouldReturnKey                       = &UITextFie
 
 - (instancetype)hd_shouldClearBlock:(BOOL (^)(UITextField *textField))shouldClearBlock {
     [self hd_setDelegateIfNoDelegateSet];
-    objc_setAssociatedObject(self, UITextFieldShouldClearKey, shouldClearBlock, OBJC_ASSOCIATION_COPY);
+    objc_setAssociatedObject(self, UITextFieldShouldClearKey, shouldClearBlock, OBJC_ASSOCIATION_COPY_NONATOMIC);
+    
+    return self;
+}
+
+- (BOOL (^)(UITextField *textField))hd_deleteBackwardBlock {
+    return objc_getAssociatedObject(self, UITextFieldDeleteBackwardBlockKey);
+}
+
+- (instancetype)hd_setDeleteBackwardBlock:(BOOL (^)(UITextField *textField))deleteBackwardBlock {
+    [self hd_setDelegateIfNoDelegateSet];
+    objc_setAssociatedObject(self, UITextFieldDeleteBackwardBlockKey, deleteBackwardBlock, OBJC_ASSOCIATION_COPY_NONATOMIC);
     
     return self;
 }

@@ -17,6 +17,8 @@
 		6701D2E01D7FFF07005AED94 /* HDTableViewPushCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6701D2DE1D7FFF07005AED94 /* HDTableViewPushCell.m */; };
 		6702F4F51D77C40400EAA8FA /* HDAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6702F4F41D77C40400EAA8FA /* HDAlertView.m */; };
 		6702F4F61D77C40400EAA8FA /* HDAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6702F4F41D77C40400EAA8FA /* HDAlertView.m */; };
+		670353981E78D8B000AC22BE /* UITextView+HDExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 670353971E78D8B000AC22BE /* UITextView+HDExtension.m */; };
+		670353991E78D8B000AC22BE /* UITextView+HDExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 670353971E78D8B000AC22BE /* UITextView+HDExtension.m */; };
 		67052CCC1D55D29F00CF53EE /* HDBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 67052CCB1D55D29F00CF53EE /* HDBaseViewController.m */; };
 		67052CCD1D55D29F00CF53EE /* HDBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 67052CCB1D55D29F00CF53EE /* HDBaseViewController.m */; };
 		67052CD11D55DB2000CF53EE /* HDHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 67052CD01D55DB2000CF53EE /* HDHomeViewController.m */; };
@@ -173,6 +175,8 @@
 		6701D2DE1D7FFF07005AED94 /* HDTableViewPushCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDTableViewPushCell.m; sourceTree = "<group>"; };
 		6702F4F31D77C40400EAA8FA /* HDAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDAlertView.h; sourceTree = "<group>"; };
 		6702F4F41D77C40400EAA8FA /* HDAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDAlertView.m; sourceTree = "<group>"; };
+		670353961E78D8B000AC22BE /* UITextView+HDExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextView+HDExtension.h"; sourceTree = "<group>"; };
+		670353971E78D8B000AC22BE /* UITextView+HDExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextView+HDExtension.m"; sourceTree = "<group>"; };
 		67052CCA1D55D29F00CF53EE /* HDBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDBaseViewController.h; sourceTree = "<group>"; };
 		67052CCB1D55D29F00CF53EE /* HDBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDBaseViewController.m; sourceTree = "<group>"; };
 		67052CCF1D55DB2000CF53EE /* HDHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDHomeViewController.h; sourceTree = "<group>"; };
@@ -410,6 +414,15 @@
 				6702F4F41D77C40400EAA8FA /* HDAlertView.m */,
 			);
 			path = HDAlertView;
+			sourceTree = "<group>";
+		};
+		670353951E78D88D00AC22BE /* UITextView */ = {
+			isa = PBXGroup;
+			children = (
+				670353961E78D8B000AC22BE /* UITextView+HDExtension.h */,
+				670353971E78D8B000AC22BE /* UITextView+HDExtension.m */,
+			);
+			path = UITextView;
 			sourceTree = "<group>";
 		};
 		67052CCE1D55D9A200CF53EE /* Home */ = {
@@ -725,6 +738,7 @@
 		67DB7CC71D55C98F000B789E /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				670353951E78D88D00AC22BE /* UITextView */,
 				676503761E558EBC00488B3F /* NSMutableAttributedString */,
 				678577D51E2C968100FD5CF1 /* HDMBProgressHUD */,
 				678128D01DB47AE900E31B8D /* Foundation */,
@@ -1178,6 +1192,7 @@
 				678129011DB47AE900E31B8D /* UITextField+HDExtension.m in Sources */,
 				67052CCC1D55D29F00CF53EE /* HDBaseViewController.m in Sources */,
 				678128F51DB47AE900E31B8D /* NSString+HDExtension.m in Sources */,
+				670353981E78D8B000AC22BE /* UITextView+HDExtension.m in Sources */,
 				67D34A4B1D82520700A37A39 /* HDTableViewBaseModel.m in Sources */,
 				67E82DE41D5769D000725FF8 /* HDMeViewController.m in Sources */,
 				6701D2DB1D7FCD61005AED94 /* HDMenuViewControllerBaseModel.m in Sources */,
@@ -1236,6 +1251,7 @@
 				678129021DB47AE900E31B8D /* UITextField+HDExtension.m in Sources */,
 				67052CCD1D55D29F00CF53EE /* HDBaseViewController.m in Sources */,
 				678128F61DB47AE900E31B8D /* NSString+HDExtension.m in Sources */,
+				670353991E78D8B000AC22BE /* UITextView+HDExtension.m in Sources */,
 				67D34A4C1D82520700A37A39 /* HDTableViewBaseModel.m in Sources */,
 				67E82DE51D5769D000725FF8 /* HDMeViewController.m in Sources */,
 				6701D2DC1D7FCD61005AED94 /* HDMenuViewControllerBaseModel.m in Sources */,

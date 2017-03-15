@@ -282,8 +282,8 @@
     
     NSDictionary *attributes = @{NSFontAttributeName : font,
                                  NSParagraphStyleAttributeName : paragraphStyle};
-    
-    return [self boundingRectWithSize:size options:NSStringDrawingUsesLineFragmentOrigin attributes:attributes context:nil].size;
+    CGRect rect = [self boundingRectWithSize:size options:NSStringDrawingUsesLineFragmentOrigin attributes:attributes context:nil];
+    return CGSizeMake(ceil(rect.size.width), ceil(rect.size.height));
 }
 
 - (CGSize)hd_sizeWithSystemFont:(UIFont *)font constrainedToSize:(CGSize)size lineBreakMode:(NSLineBreakMode)mode numberOfLine:(NSInteger)numberOfLine {
@@ -316,7 +316,8 @@
     NSDictionary *attributes = @{NSFontAttributeName: font,
                                  NSParagraphStyleAttributeName: paragraphStyle};
 
-    return [self boundingRectWithSize:size options:NSStringDrawingUsesLineFragmentOrigin attributes:attributes context:NULL].size;
+    CGRect rect = [self boundingRectWithSize:size options:NSStringDrawingUsesLineFragmentOrigin attributes:attributes context:nil];
+    return CGSizeMake(ceil(rect.size.width), ceil(rect.size.height));
 }
 
 - (CGSize)hd_sizeWithBoldFont:(UIFont *)font constrainedToSize:(CGSize)size {
@@ -356,6 +357,7 @@
 
 - (CGSize)hd_sizeWithAttributedStringLineSpeace:(CGFloat)lineSpeace kern:(CGFloat)kern font:(UIFont *)font size:(CGSize)size lineBreakMode:(NSLineBreakMode)lineBreakMode alignment:(NSTextAlignment)alignment {
     if (font == nil) {
+        HDAssert(!HDObjectIsEmpty(font), @"font不能为空");
         return CGSizeMake(0, 0);
     }
     
@@ -367,8 +369,8 @@
     NSDictionary *dic = @{NSFontAttributeName:font,
                           NSParagraphStyleAttributeName:paraStyle,
                           NSKernAttributeName:@(kern)};
-    
-    return [self boundingRectWithSize:size options:NSStringDrawingUsesLineFragmentOrigin attributes:dic context:nil].size;
+    CGRect rect = [self boundingRectWithSize:size options:NSStringDrawingUsesLineFragmentOrigin attributes:dic context:nil];
+    return CGSizeMake(ceil(rect.size.width), ceil(rect.size.height));
 }
 
 - (CGSize)hd_sizeWithAttributedStringLineSpeace:(CGFloat)lineSpeace kern:(CGFloat)kern font:(UIFont *)font size:(CGSize)size lineBreakMode:(NSLineBreakMode)lineBreakMode alignment:(NSTextAlignment)alignment numberOfLine:(NSInteger)numberOfLine {
