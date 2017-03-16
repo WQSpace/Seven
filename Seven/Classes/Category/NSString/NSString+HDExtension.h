@@ -408,6 +408,18 @@
  */
 - (CGSize)hd_sizeWithAttributedStringLineSpeace:(CGFloat)lineSpeace kern:(CGFloat)kern font:(UIFont *)font size:(CGSize)size lineBreakMode:(NSLineBreakMode)lineBreakMode alignment:(NSTextAlignment)alignment numberOfLine:(NSInteger)numberOfLine;
 
+/**
+ 是否是一行高度
+ 
+ @param lineSpeace 行间距
+ @param kern 文字间的间距
+ @param font 字体
+ @param size 计算范围
+ @param lineBreakMode 换行方式
+ @param alignment 文字对齐格式
+ @return 返回YES代表1行, NO代表多行
+ */
+- (BOOL)hd_numberOfLineWithLineSpeace:(CGFloat)lineSpeace kern:(CGFloat)kern font:(UIFont *)font size:(CGSize)size lineBreakMode:(NSLineBreakMode)lineBreakMode alignment:(NSTextAlignment)alignment;
 
 #pragma mark - 设备相关
 /**

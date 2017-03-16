@@ -23,12 +23,16 @@
     [super viewDidLoad];
 }
 
+- (UITableViewStyle)tableViewStyle {
+    return UITableViewStyleGrouped;
+}
+
 - (void)showBaseTableView {
     [self createTableView];
 }
 
 - (void)createTableView {
-    UITableView *tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStyleGrouped];
+    UITableView *tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:self.tableViewStyle];
     
     [tableView setTableFooterView:[[UIView alloc] initWithFrame:CGRectZero]];
     tableView.delegate = self;

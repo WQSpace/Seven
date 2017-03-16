@@ -32,4 +32,6 @@
  */
 - (void)showBaseTableView;
 
+- (UITableViewStyle)tableViewStyle;
+
 @end

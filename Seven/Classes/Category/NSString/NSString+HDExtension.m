@@ -388,6 +388,17 @@
     return CGSizeMake(maxSize.width, height);
 }
 
+- (BOOL)hd_numberOfLineWithLineSpeace:(CGFloat)lineSpeace kern:(CGFloat)kern font:(UIFont *)font size:(CGSize)size lineBreakMode:(NSLineBreakMode)lineBreakMode alignment:(NSTextAlignment)alignment {
+    CGFloat oneHeight = [self hd_sizeWithAttributedStringLineSpeace:lineSpeace kern:kern font:font size:size lineBreakMode:NSLineBreakByTruncatingTail alignment:alignment].height; // 某些情况, 不到计算的一行主动换行了, NSLineBreakByTruncatingTail计算出来的不是真实一行, 这时候请使用你项目字体最大的高来计算 (控制参数size)
+    CGFloat maxHeight = [self hd_sizeWithAttributedStringLineSpeace:lineSpeace kern:kern font:font size:size lineBreakMode:lineBreakMode alignment:alignment].height;
+    
+    if (maxHeight > oneHeight) {
+        return NO;
+    }
+    
+    return YES;
+}
+
 
 #pragma mark - 设备相关
 /**
